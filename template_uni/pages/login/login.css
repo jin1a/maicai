@@ -2,6 +2,8 @@
 .login {
     height: 100vh;
 }
+.formItem{border-bottom: #888888 solid 1px;text-align: left;}
+.formItem input{font-size: 30rpx;height: 80rpx ;}
 .login .box1 {
     height: 100%;
     border-top: 1rpx solid rgba(242, 242, 242, 1);
@@ -16,12 +18,13 @@
     margin: 0 auto;
 }
 .box1 .boxContainer .title {
-    font-size: 32rpx;
+    font-size: 26rpx;
     font-family: HarmonyOS Sans SC;
-    font-weight: 400;
+    font-weight: bold;
     color: #000000;
-    margin-top: 157rpx;
-    text-align: center;
+    margin-top: 60rpx;
+	padding-bottom: 10px;
+    text-align: left;
 }
 .box1 .boxContainer .des {
     text-align: center;

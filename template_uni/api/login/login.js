@@ -2,7 +2,7 @@
 const request = require('../request/request');
 module.exports = {
     // data可以传入 url, data, ignoreToken, form, cToken
-    apiName(data) {
+    apiLogin(data) {
         let url = 'api/login';
         return request.post({
             url,

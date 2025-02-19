@@ -5,10 +5,28 @@
             <view class="boxContainer">
                 <image class="logo" src="http://img.jxcyj.cn/images/logo.png" mode="widthFix" />
                 <view class="text-box">
-                    <view class="title">申请获取以下权限</view>
-                    <view class="des">获得你的公开信息(昵称，头像等)</view>
+                    <!-- <view class="title">申请获取以下权限</view>
+                    <view class="des">获得你的公开信息(昵称，头像等)</view> -->
                     <view class="container">
-                        <label class="checkbox-label">
+						<!-- <uni-forms ref="form" :modelValue="formData" :rules="rules">
+							<uni-forms-item label="姓名" name="name">
+								<uni-easyinput type="text" v-model="formData.name" placeholder="请输入姓名" />
+							</uni-forms-item>
+							<uni-forms-item label="邮箱" name="email">
+								<input class="input" v-model="formData.email" type="text" placeholder="请输入邮箱" @input="binddata('email',$event.detail.value)" />
+							</uni-forms-item>
+						</uni-forms> -->
+						<div >
+							<div class="formItem">
+								<div class="title">手机号</div>															
+								<input placeholder="请输入" v-model="phoneNub" />
+							</div>
+							<div class="formItem">
+								<div class="title">密码</div>														
+								<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />								
+							</div>
+						</div>
+                        <label class="checkbox-label">							
                             <view :class="'checkbox-box ' + checked" @tap="radioChange">
                                 <view :class="'iconfont icon-gouxuan ' + checked"></view>
                             </view>
@@ -20,14 +38,14 @@
                     </view>
                 </view>
                 <view class="btns">
-                    <button class="btn" v-if="canIUseGetUserProfile && checked" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">
+                    <button class="btn" v-if="canIUseGetUserProfile && checked" open-type="getPhoneNumber" @tap="loginInit">
                         <!-- <text class="iconfont icon-weixin"></text> -->
-                        <text>手机号快捷登录</text>
+                        <text>登录</text>
                         <text></text>
                     </button>
                     <button class="btn" v-else @tap="isChecked">
                         <!-- <text class="iconfont icon-weixin"></text> -->
-                        <text>手机号快捷登录</text>
+                        <text>登录</text>
                         <text></text>
                     </button>
                     <!-- <button class="btn" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">
@@ -58,7 +76,10 @@ export default {
             hasUserInfo: false,
             canIUseGetUserProfile: false,
             checked: false,
-            loadModal: false
+            loadModal: false,			
+			phoneNub:'',
+			password:'',
+			
         };
     },
     /**
@@ -108,78 +129,78 @@ export default {
 
         isChecked() {
             // #ifdef MP-WEIXIN
-            this.$scope.animate(
-                '.checkbox-box',
-                [
-                    {
-                        translateX: -20,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -5,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -20,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -5,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -20,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -0,
-                        ease: 'ease-out'
-                    }
-                ],
-                200,
-                function () {
-                    this.clearAnimation('.checkbox-box', function () {
-                        console.log('清除了.block上的所有动画属性');
-                    });
-                }.bind(this)
-            );
+            // this.$scope.animate(
+            //     '.checkbox-box',
+            //     [
+            //         {
+            //             translateX: -20,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -5,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -20,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -5,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -20,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -0,
+            //             ease: 'ease-out'
+            //         }
+            //     ],
+            //     200,
+            //     function () {
+            //         this.clearAnimation('.checkbox-box', function () {
+            //             console.log('清除了.block上的所有动画属性');
+            //         });
+            //     }.bind(this)
+            // );
             // #endif
             // #ifndef MP-WEIXIN
-            this.animate(
-                '.checkbox-box',
-                [
-                    {
-                        translateX: -20,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -5,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -20,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -5,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -20,
-                        ease: 'ease-out'
-                    },
-                    {
-                        translateX: -0,
-                        ease: 'ease-out'
-                    }
-                ],
-                200,
-                function () {
-                    this.clearAnimation('.checkbox-box', function () {
-                        console.log('清除了.block上的所有动画属性');
-                    });
-                }.bind(this)
-            );
+            // this.animate(
+            //     '.checkbox-box',
+            //     [
+            //         {
+            //             translateX: -20,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -5,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -20,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -5,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -20,
+            //             ease: 'ease-out'
+            //         },
+            //         {
+            //             translateX: -0,
+            //             ease: 'ease-out'
+            //         }
+            //     ],
+            //     200,
+            //     function () {
+            //         this.clearAnimation('.checkbox-box', function () {
+            //             console.log('清除了.block上的所有动画属性');
+            //         });
+            //     }.bind(this)
+            // );
             // #endif
             uni.showToast({
                 title: '请先阅读并同意协议！',
@@ -208,68 +229,106 @@ export default {
             }
         },
 
-        //点击微信登录按钮触发事件
-        getPhoneNumber(e) {
-            let phone_code = e.detail.code;
-            let that = this;
-            if (e.detail.errMsg != 'getPhoneNumber:ok') {
-                return false;
-            }
-            uni.login({
-                success: function (res) {
-                    if (res.code) {
-                        uni.getUserInfo({
-                            withCredentials: true,
-                            success: function (userInfo) {
-                                let encryptedData = userInfo.encryptedData;
-                                let iv = userInfo.iv;
-                                // 将登录凭证和加密数据发送到后端服务器
-                                let param = {
-                                    code: res.code,
-                                    encryptedData: encryptedData,
-                                    iv: iv,
-                                    phoneCode: phone_code
-                                };
-                                that.setData({
-                                    loadModal: true
-                                });
-                                loginApi
-                                    .apiName(param)
-                                    .then((res) => {
-                                        //保存缓存
-                                        app.globalData.saveStorage('userInfo', res.data);
-                                        app.globalData.saveStorage('isLogin', true);
-                                        app.globalData.saveStorage('token', res.data.token.token);
-                                        app.globalData.saveStorage('elderMode', res.data.elderMode == 1 ? true : false);
-                                        that.setData({
-                                            loadModal: false
-                                        });
-                                        if (res.data.firm_id == 0) {
-                                            uni.navigateTo({
-                                                url: '/pages/join/join'
-                                            });
-                                        } else {
-                                            uni.switchTab({
-                                                url: '/pages/userPages/user/user',
-                                                fail: function (e) {
-                                                    console.log(e);
-                                                }
-                                            });
-                                        }
-                                    })
-                                    .catch((err) => {
-                                        console.log(err);
-                                        that.setData({
-                                            loadModal: false
-                                        });
-                                    });
-                            }
-                        });
-                    } else {
-                        console.log('error');
-                    }
-                }
-            });
+        //点击登录按钮触发事件
+        loginInit(e) {
+			let that = this;
+			that.setData({
+			    loadModal: true
+			});
+			console.log(this.phoneNub,222)
+			let param ={"password":this.password,"phone":this.phoneNub};
+			loginApi
+			    .apiLogin(param)
+			    .then((res) => {
+					console.log(res,'loginInit111')
+			        //保存缓存
+			        app.globalData.saveStorage('userInfo', res.data);
+			        app.globalData.saveStorage('isLogin', true);
+			        app.globalData.saveStorage('token', res.data.token.token);
+			        app.globalData.saveStorage('elderMode', res.data.elderMode == 1 ? true : false);
+			        that.setData({
+			            loadModal: false
+			        });
+			        if (res.data.firm_id == 0) {
+			            uni.navigateTo({
+			                url: '/pages/join/join'
+			            });
+			        } else {
+			            uni.switchTab({
+			                url: '/pages/userPages/user/user',
+			                fail: function (e) {
+			                    console.log(e);
+			                }
+			            });
+			        }
+			    })
+			    .catch((err) => {
+			        console.log(err);
+			        that.setData({
+			            loadModal: false
+			        });
+			    });
+			return
+            // let phone_code = e.detail.code;
+            // let that = this;
+            // if (e.detail.errMsg != 'getPhoneNumber:ok') {
+            //     return false;
+            // }
+            // uni.login({
+            //     success: function (res) {
+            //         if (res.code) {
+            //             uni.getUserInfo({
+            //                 withCredentials: true,
+            //                 success: function (userInfo) {
+            //                     let encryptedData = userInfo.encryptedData;
+            //                     let iv = userInfo.iv;
+            //                     // 将登录凭证和加密数据发送到后端服务器
+            //                     let param = {
+            //                         code: res.code,
+            //                         encryptedData: encryptedData,
+            //                         iv: iv,
+            //                         phoneCode: phone_code
+            //                     };
+            //                     that.setData({
+            //                         loadModal: true
+            //                     });
+            //                     loginApi
+            //                         .apiName(param)
+            //                         .then((res) => {
+            //                             //保存缓存
+            //                             app.globalData.saveStorage('userInfo', res.data);
+            //                             app.globalData.saveStorage('isLogin', true);
+            //                             app.globalData.saveStorage('token', res.data.token.token);
+            //                             app.globalData.saveStorage('elderMode', res.data.elderMode == 1 ? true : false);
+            //                             that.setData({
+            //                                 loadModal: false
+            //                             });
+            //                             if (res.data.firm_id == 0) {
+            //                                 uni.navigateTo({
+            //                                     url: '/pages/join/join'
+            //                                 });
+            //                             } else {
+            //                                 uni.switchTab({
+            //                                     url: '/pages/userPages/user/user',
+            //                                     fail: function (e) {
+            //                                         console.log(e);
+            //                                     }
+            //                                 });
+            //                             }
+            //                         })
+            //                         .catch((err) => {
+            //                             console.log(err);
+            //                             that.setData({
+            //                                 loadModal: false
+            //                             });
+            //                         });
+            //                 }
+            //             });
+            //         } else {
+            //             console.log('error');
+            //         }
+            //     }
+            // });
         },
 
         getUserProfile(e) {
