@@ -1,0 +1,220 @@
+/* pages/changeFlows/changeFlows.wxss */
+.changeFlows {
+    flex: 1;
+    /* background-color: RGBA(246, 247, 251, 1); */
+    padding: 0 20rpx;
+    overflow: scroll;
+    height: 100vh;
+}
+.box1 {
+    padding-bottom: 20rpx;
+    border-bottom: 1px solid #f8f8f8;
+}
+.box1 .title {
+    font-size: 32rpx;
+    color: #000000;
+    font-weight: 600;
+    font-family: HarmonyOS Sans SC;
+}
+.muev {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f8f8f8;
+    font-size: 25rpx;
+    color: #333333;
+    padding: 0 20rpx;
+}
+.muev .l {
+    width: calc(100% - 130rpx);
+    display: flex;
+    overflow-y: scroll;
+}
+.muev .l .item {
+    padding: 20rpx 0;
+    margin-right: 80rpx;
+    white-space: nowrap;
+}
+.muev .l .item:last-child {
+    margin-right: 0;
+}
+.muev .l .active {
+    font-weight: 600;
+    border-bottom: 2px solid red;
+}
+.muev .r {
+    width: 100rpx;
+    text-align: center;
+    background: #78e41e;
+    padding: 20rpx 0;
+    border-radius: 20rpx;
+    color: #fff;
+}
+
+.box2 {
+    width: 100%;
+}
+
+.box2 .box2_item {
+    padding: 20rpx 15rpx;
+    font-family: HarmonyOS Sans SC;
+    border-bottom: 1px solid #f8f8f8;
+}
+.box2 .box2_item .box2_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+.box2 .box2_item .box2_top .name {
+    font-size: 32rpx;
+    color: #000000;
+    font-weight: 600;
+}
+.box2 .box2_item .box2_top .money {
+    color: #ff0000;
+    font-weight: 500;
+}
+.box2 .box2_item.true .box2_top .money {
+    color: #000000;
+}
+.box2 .box2_item.false .box2_top .money {
+    color: #ff0000;
+}
+.box2 .box2_item.finish .box2_top .money {
+    color: #000000;
+}
+
+.box2 .box2_item .box2_bom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box2 .box2_item .box2_bom .time {
+    color: #000;
+    font-size: 25rpx;
+    font-weight: 500;
+}
+.box2 .box2_item .box2_bom .state {
+    color: rgb(218, 5, 5);
+    font-size: 28rpx;
+}
+.box2 .box2_item.true .box2_bom .state {
+    color: #000000;
+}
+.box2 .box2_item.false .box2_bom .state {
+    color: #ff0000;
+}
+.box2 .box2_item.finish .box2_bom .state {
+    color: #000;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    padding: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal .container {
+    background: #ffffff;
+    border-radius: 25rpx;
+    padding: 60rpx 35rpx 30rpx;
+    width: 100%;
+}
+.modal .container .title {
+    font-size: 34rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1;
+    text-align: center;
+}
+.modal .container .input {
+    margin-top: 22rpx;
+    line-height: 85rpx;
+    display: flex;
+}
+.modal .container .input .title-2 {
+    width: 30%;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+}
+.modal .container .input input {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+    line-height: 35px;
+    height: 85rpx;
+    border-bottom: 1rpx solid rgba(191, 191, 191, 1);
+    width: 70%;
+}
+.modal .container .input .date-picker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.modal .container .input .date-picker picker {
+    background: #fafafa;
+    border-radius: 8rpx;
+    line-height: 62rpx;
+    text-align: center;
+    flex: 1;
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+}
+.modal .container .input .date-picker .line {
+    width: 9rpx;
+    height: 2rpx;
+    background: #535353;
+    margin: 0 26rpx;
+}
+.modal .container .input radio-group {
+    font-size: 28rpx;
+}
+
+.modal .container .input radio-group radio {
+    transform: scale(0.8);
+}
+.modal .container .input input-placeholder {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+    line-height: 1;
+}
+.modal .container .btns {
+    margin-top: 40rpx;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 20rpx;
+}
+.modal .container .btns .btn:first-child {
+    color: rgba(1, 197, 61, 1);
+    border: 1px solid rgba(1, 197, 61, 1);
+    background: transparent;
+}
+.modal .container .btns .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80rpx;
+    background: linear-gradient(90deg, #01c53d, #78e41e);
+    border-radius: 40rpx;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f5f5f5;
+    width: 100%;
+}

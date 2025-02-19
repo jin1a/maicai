@@ -1,0 +1,198 @@
+@import '../../iconfont.css';
+.addSubaccount {
+    height: 100vh;
+    padding-bottom: 140rpx;
+}
+.addSubaccount .box1 {
+    background-color: RGBA(246, 247, 251, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx 20rpx 0;
+}
+.addSubaccount .box1 .box-t {
+    padding: 0 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addSubaccount .box1 .box-t-l {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.addSubaccount .box1 .box-t-l .avatar {
+    position: relative;
+}
+.addSubaccount .box1 .box-t-l .avatar image {
+    width: 100rpx;
+    height: 100rpx;
+    background: #e2e2e2;
+    border-radius: 50%;
+}
+.addSubaccount .box1 .box-t-l label {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 20%);
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f6f7fb;
+    line-height: 1;
+    padding: 12rpx 15rpx;
+    background-color: rgba(1, 197, 61, 1);
+    border-radius: 23rpx;
+    white-space: nowrap;
+}
+.addSubaccount .box1 .box-t .tel {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #666666;
+    margin-left: 24rpx;
+}
+.addSubaccount .box1 .box-t-r {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #01c53d;
+}
+.addSubaccount .box1 .box-c {
+    margin-top: 50rpx;
+    background: #e2e2e2;
+    border-radius: 20rpx;
+    padding: 30rpx 35rpx;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #888888;
+    line-height: 1.48;
+}
+.addSubaccount .box1 .lists {
+    flex: 1;
+    margin-top: 30rpx;
+    overflow: scroll;
+}
+.addSubaccount .box1 .lists .box-t {
+    background-color: #fff;
+    border-radius: 20rpx;
+    padding: 20rpx 20rpx 30rpx;
+}
+.addSubaccount .box1 .lists .box-t:not(:last-child) {
+    margin-bottom: 20rpx;
+}
+.addSubaccount .box1 .lists .box-t .tel {
+    color: rgba(0, 0, 0, 1);
+}
+.addSubaccount .box1 .lists .box-t .name {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #888888;
+    margin-left: 24rpx;
+    margin-top: 10rpx;
+}
+.addSubaccount .box1 .lists .box-t .delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #888888;
+    line-height: 36px;
+}
+.addSubaccount .box1 .lists .box-t .delete .iconfont {
+    font-size: 34rpx;
+    padding-right: 10rpx;
+}
+.addSubaccountBottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: RGBA(246, 247, 251, 1);
+    padding: 20rpx 20rpx 40rpx;
+}
+.addSubaccountBottom .submit {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 80rpx;
+    background: linear-gradient(90deg, #61c50d, #78e41e);
+    border-radius: 40rpx;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f5f5f5;
+}
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50rpx;
+}
+.modal .modal-content {
+    position: relative;
+    background: #ffffff;
+    border-radius: 25rpx;
+    padding: 50rpx 35rpx 30rpx;
+}
+.modal .modal-content .title {
+    font-size: 34rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.35;
+    text-align: center;
+}
+.modal .modal-content input {
+    border-bottom: 1rpx solid rgba(191, 191, 191, 1);
+    height: 85rpx;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #333;
+    line-height: 35rpx;
+    margin-top: 20rpx;
+    display: block;
+}
+.modal .modal-content input-placeholder {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+    line-height: 35rpx;
+}
+.modal .modal-content .btns {
+    margin-top: 40rpx;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20rpx;
+}
+.modal .modal-content .btns .btn {
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1rpx solid #01c53d;
+    border-radius: 40rpx;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #01c53d;
+}
+.modal .modal-content .btns .btn:last-child {
+    color: #fff;
+    background: linear-gradient(-90deg, #01c53d, #78e41e);
+}

@@ -1,0 +1,94 @@
+@import '../../../iconfont.css';
+.allOrder {
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+}
+.allOrderContainer {
+    height: 100%;
+    display: flex;
+    background-color: RGBA(246, 247, 251, 1);
+    flex-direction: column;
+    width: 100%;
+}
+.orderContainer {
+    position: relative;
+    flex: 1;
+    overflow: scroll;
+    width: 100%;
+}
+.orderContainer scroll-view {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.orderNav {
+    border-top: 1px solid rgba(242, 242, 242, 1);
+    background-color: #fff;
+    width: 100%;
+}
+.orderNav .list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 44rpx;
+}
+.orderNav .list .item {
+    position: relative;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    line-height: 80rpx;
+    color: #323232;
+}
+.orderNav .list .item.active {
+    font-weight: bold;
+}
+.orderNav .list .item::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 0;
+    height: 8rpx;
+    background: linear-gradient(90deg, #61c50d, #78e41e);
+    border-radius: 4rpx;
+}
+.orderNav .list .item.active::before {
+    width: 100%;
+}
+.seachOrder {
+    padding: 20rpx;
+}
+.orderListBox {
+    padding: 0 20rpx 20rpx;
+}
+.orderListBox .item {
+    background: #ffffff;
+    border-radius: 20rpx;
+}
+.orderListBox .list .item:not(:last-child) {
+    margin-bottom: 20rpx;
+}
+.backTop {
+    position: fixed;
+    right: 10rpx;
+    bottom: 194rpx;
+    font-size: 26rpx;
+    width: 50rpx;
+    height: 50rpx;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-90deg, #01c53d, #78e41e);
+    /* opacity: 0;
+  visibility: hidden; */
+}
+.backTop.active {
+    visibility: visible;
+    opacity: 1;
+}

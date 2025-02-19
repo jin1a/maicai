@@ -1,0 +1,45 @@
+.nearbyBusiness {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    padding-bottom: 50rpx;
+}
+.nearbyBusiness .box1 {
+    height: 100%;
+    border-top: 1rpx solid rgba(242, 242, 242, 1);
+    background-color: #f6f7fb;
+    padding-top: 25rpx;
+}
+.nearbyBusiness .box1 .list {
+    height: 100%;
+    overflow: scroll;
+    padding: 0 20rpx;
+}
+.nearbyBusiness .box1 .list .item:not(:last-child) {
+    margin-bottom: 20rpx;
+}
+.nearbyBusiness .box1 .list .item {
+    display: flex;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    background: #ffffff;
+    border-radius: 20rpx;
+    padding: 25rpx 30rpx;
+}
+.nearbyBusiness .box1 .list .item-l {
+    flex: 1;
+    margin-right: 30rpx;
+}
+.nearbyBusiness .box1 .list .item-r {
+    opacity: 0.58;
+}
+.nearbyBusiness .box1 .empty {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    padding-top: 32rpx;
+}

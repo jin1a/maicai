@@ -1,0 +1,29 @@
+.billingInstructions {
+    height: 100vh;
+}
+.billingInstructions .box1 {
+    height: 100%;
+    overflow: scroll;
+    background-color: RGBA(246, 247, 251, 1);
+    padding: 60rpx 35rpx;
+}
+.billingInstructions .box1 .title {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+    line-height: 2;
+}
+.billingInstructions .box1 .box-c {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    line-height: 40rpx;
+}
+.billingInstructions .box1 .box-c .red {
+    color: rgba(232, 84, 84, 1);
+}
+.billingInstructions .box1 .box-c .item:not(:last-child) {
+    margin-bottom: 30rpx;
+}

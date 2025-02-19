@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'AlimamaShuHeiTi';
+    font-weight: 700;
+    src: url('//at.alicdn.com/wf/webfont/zj9uPI5yvCN4/twlL36ifcn1Y.woff2') format('woff2'), url('//at.alicdn.com/wf/webfont/zj9uPI5yvCN4/3vkjotyjFMeM.woff') format('woff');
+    font-display: swap;
+}
+image {
+    width: auto;
+    height: auto;
+}
+page {
+    position: relative;
+    /* z-index: 99999; */
+}
+view,
+text {
+    box-sizing: border-box;
+}
+.shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+@keyframes fadeUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes fadescale {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

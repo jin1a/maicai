@@ -1,0 +1,21 @@
+/* component/custom-header/custom-header.wxss */
+.custom-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+}
+.custom-header-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+.custom-header-container .title {
+    font-size: 34rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #000000;
+}

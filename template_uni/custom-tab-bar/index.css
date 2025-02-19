@@ -1,0 +1,58 @@
+@import '../iconfont.css'; /* custom-tab-bar/index.wxss */
+.tab-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px / solid rgba(24, 24, 24, 0.1);
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    height: 120rpx;
+}
+
+.tab-bar .tab-item {
+    flex: 1;
+    text-align: center;
+}
+.tab-bar .tab-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tab-bar .tab-item.tab-item-center {
+    flex: none;
+    width: 92rpx;
+    height: 92rpx;
+    background: linear-gradient(-30deg, #2d77f2, #51c2ef);
+    box-shadow: 0px 10px 15rpx 0rpx rgba(50, 121, 247, 0.15);
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 auto;
+    line-height: 92rpx;
+    color: #fff;
+    transform: translateY(-28rpx);
+}
+.tab-bar .tab-item .text {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1;
+    margin-top: 10rpx;
+}
+.tab-bar .tab-item .icon .iconfont {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 44rpx;
+    width: 44rpx;
+    margin: 0 auto;
+}
+.tab-bar .tab-item.active .icon .iconfont,
+.tab-bar .tab-item.active .text {
+    color: rgba(1, 197, 61, 1);
+}
+.tab-bar .tab-item .icon .iconfont.icon-31gouwuche {
+    transform: scale(1.2);
+}

@@ -1,0 +1,48 @@
+.orderItem .item-t {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25rpx 30rpx;
+    border-bottom: 1px solid rgba(242, 242, 242, 1);
+}
+.orderItem .item-t-l {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 30rpx;
+}
+.orderItem .item-t-l .des {
+    font-size: 20rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+    line-height: 30rpx;
+}
+.orderItem .item-t-r .title {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 30rpx;
+    text-align: right;
+}
+.orderItem .item-t-r .des {
+    font-size: 20rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+    line-height: 30rpx;
+    text-align: right;
+}
+.orderItem .item-b {
+    text-align: right;
+    padding: 0 30rpx 30rpx;
+}
+.orderItem .item-b .total {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 35rpx;
+}

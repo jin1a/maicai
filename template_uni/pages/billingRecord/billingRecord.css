@@ -1,0 +1,16 @@
+.billingRecord {
+    height: 100vh;
+    padding-bottom: 120rpx;
+}
+.billingRecord .box1 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: RGBA(246, 247, 251, 1);
+}
+.billingRecord .box1 .box-c {
+    flex: 1;
+    padding: 0 20rpx;
+    height: 100%;
+    overflow: scroll;
+}

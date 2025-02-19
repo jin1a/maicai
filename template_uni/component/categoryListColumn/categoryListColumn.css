@@ -1,0 +1,61 @@
+@import '../../iconfont.css';
+.categoryListColumn {
+    display: flex;
+}
+
+.categoryListColumn .categoryListColumn-l {
+    flex: 1;
+    height: 126rpx;
+}
+.categoryListColumn .list {
+    height: 100%;
+}
+.categoryListColumn .list .item {
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+}
+.categoryListColumn .list .item:not(:last-child) {
+    margin-right: 2.5%;
+}
+.categoryListColumn .list .item .pic image {
+    width: 77rpx;
+    display: block;
+    margin: 0 auto;
+}
+.categoryListColumn .list .item .text {
+    line-height: 1;
+    border-radius: 16rpx;
+    font-size: 22rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #555555;
+    padding: 6rpx 14rpx;
+    margin-top: 4rpx;
+    display: inline-block;
+}
+.categoryListColumn .list .item.active .text {
+    background: linear-gradient(to left, #61c50d, #78e41e);
+    color: #fff;
+}
+.elder-mode .list .item .text {
+    font-size: 24rpx;
+    font-weight: bold;
+    color: #000000;
+}
+.categoryListColumn .showListRowBtn {
+    width: 90rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #000000;
+    padding-left: 20rpx;
+    text-align: center;
+}
+.elder-mode .showListRowBtn {
+    font-size: 30rpx;
+    font-weight: bold;
+}

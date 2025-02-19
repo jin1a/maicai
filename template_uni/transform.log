@@ -1,0 +1,337 @@
+开始转换……
+小程序路径:  E:/project/maicai/template
+搜索到451个文件(含目录)，耗时：7ms
+
+开始分析文件
+分析文件信息完成，共142组数据
+开始转换文件组为vue文件
+转换进度: 1 / 284   fileKey：api/address/addAddress
+转换进度: 2 / 284   fileKey：api/address/delAddress
+转换进度: 3 / 284   fileKey：api/address/getAddressList
+转换进度: 4 / 284   fileKey：api/address/getDefaultAddress
+转换进度: 5 / 284   fileKey：api/address/getFirmAddress
+转换进度: 6 / 284   fileKey：api/address/getServiceArea
+转换进度: 7 / 284   fileKey：api/address/setDefaultAddress
+转换进度: 8 / 284   fileKey：api/faq/feedback
+转换进度: 9 / 284   fileKey：api/faq/getFaqInfo
+转换进度: 10 / 284   fileKey：api/faq/getFaqList
+转换进度: 11 / 284   fileKey：api/faq/newGoods
+转换进度: 12 / 284   fileKey：api/faq/videoList
+转换进度: 13 / 284   fileKey：api/finance/applyInvoice
+转换进度: 14 / 284   fileKey：api/finance/getInvoiceList
+转换进度: 15 / 284   fileKey：api/finance/invoiceInfo
+转换进度: 16 / 284   fileKey：api/finance/saveInvoiceInfo
+转换进度: 17 / 284   fileKey：api/goods/addCart
+转换进度: 18 / 284   fileKey：api/goods/categoryCookbookList
+转换进度: 19 / 284   fileKey：api/goods/categoryGoodsList
+转换进度: 20 / 284   fileKey：api/goods/delCart
+转换进度: 21 / 284   fileKey：api/goods/getCart
+转换进度: 22 / 284   fileKey：api/goods/getCookbookList
+转换进度: 23 / 284   fileKey：api/goods/getGoodsList
+转换进度: 24 / 284   fileKey：api/goods/searchGoods
+转换进度: 25 / 284   fileKey：api/index/agreement
+转换进度: 26 / 284   fileKey：api/index/home
+转换进度: 27 / 284   fileKey：api/index/warehouseList
+转换进度: 28 / 284   fileKey：api/index
+转换进度: 29 / 284   fileKey：api/login/addFirmUser
+转换进度: 30 / 284   fileKey：api/login/auditFirmUser
+转换进度: 31 / 284   fileKey：api/login/auditFirmUserList
+转换进度: 32 / 284   fileKey：api/login/authorizeAddress
+转换进度: 33 / 284   fileKey：api/login/createFirm
+转换进度: 34 / 284   fileKey：api/login/delFirmChildUser
+转换进度: 35 / 284   fileKey：api/login/firmUserManage
+转换进度: 36 / 284   fileKey：api/login/getAllFirm
+转换进度: 37 / 284   fileKey：api/login/getUserInfo
+转换进度: 38 / 284   fileKey：api/login/joinFirm
+转换进度: 39 / 284   fileKey：api/login/login
+转换进度: 40 / 284   fileKey：api/login/openBalance
+转换进度: 41 / 284   fileKey：api/login/saveUserinfo
+转换进度: 42 / 284   fileKey：api/login/setFirmAdmin
+转换进度: 43 / 284   fileKey：api/login/system
+转换进度: 44 / 284   fileKey：api/login/topUp
+转换进度: 45 / 284   fileKey：api/login/walletFlow
+转换进度: 46 / 284   fileKey：api/order/againOrder
+转换进度: 47 / 284   fileKey：api/order/cancelOrder
+转换进度: 48 / 284   fileKey：api/order/createOrder
+转换进度: 49 / 284   fileKey：api/order/delOrder
+转换进度: 50 / 284   fileKey：api/order/getAllOrder
+转换进度: 51 / 284   fileKey：api/order/getOrderInfo
+转换进度: 52 / 284   fileKey：api/order/getToolkit
+转换进度: 53 / 284   fileKey：api/order/orderReport
+转换进度: 54 / 284   fileKey：api/order/orderTake
+转换进度: 55 / 284   fileKey：api/order/pay
+转换进度: 56 / 284   fileKey：api/order/sendOrderEmail
+转换进度: 57 / 284   fileKey：api/order/switchoverAddress
+转换进度: 58 / 284   fileKey：api/recruit/applyJob
+转换进度: 59 / 284   fileKey：api/recruit/getJobsInfo
+转换进度: 60 / 284   fileKey：api/recruit/jobsList
+转换进度: 61 / 284   fileKey：api/recruit/recruitList
+转换进度: 62 / 284   fileKey：api/recruit/saveJobsInfo
+转换进度: 63 / 284   fileKey：api/request/config
+转换进度: 64 / 284   fileKey：api/request/request
+转换进度: 65 / 284   fileKey：api/request/statusCode
+转换进度: 66 / 284   fileKey：app
+
+[Tip]这里引用的全是网络字体，可能在app上面有兼容问题（如字体图标显示不出来，运行后没问题就不用管）  fileKey: app
+转换进度: 67 / 284   fileKey：component/addressItem/addressItem
+转换进度: 68 / 284   fileKey：component/bargainGoods/bargainGoods
+转换进度: 69 / 284   fileKey：component/cartControl/cartControl
+转换进度: 70 / 284   fileKey：component/cartControl1/cartControl1
+转换进度: 71 / 284   fileKey：component/categoryCartModal/categoryCartModal
+转换进度: 72 / 284   fileKey：component/categoryListColumn/categoryListColumn
+转换进度: 73 / 284   fileKey：component/categoryListRow/categoryListRow
+转换进度: 74 / 284   fileKey：component/custom-header/custom-header
+转换进度: 75 / 284   fileKey：component/custom-header-back/custom-header-back
+转换进度: 76 / 284   fileKey：component/custom-header-index/custom-header-index
+转换进度: 77 / 284   fileKey：component/deleteModal/deleteModal
+转换进度: 78 / 284   fileKey：component/goodItem/goodItem
+[ERROR]prop priceDecimals 的默认值 0 与类型 String 不一致。    fileKey: component/goodItem/goodItem
+转换进度: 79 / 284   fileKey：component/indexColumnTitle/indexColumnTitle
+转换进度: 80 / 284   fileKey：component/inputSearch/inputSearch
+转换进度: 81 / 284   fileKey：component/leftNav/leftNav
+转换进度: 82 / 284   fileKey：component/orderAddressMsg/orderAddressMsg
+转换进度: 83 / 284   fileKey：component/orderBtnBar/orderBtnBar
+[ERROR]prop currentId 的默认值 0 与类型 String 不一致。    fileKey: component/orderBtnBar/orderBtnBar
+[ERROR]prop currId 的默认值 0 与类型 String 不一致。    fileKey: component/orderBtnBar/orderBtnBar
+[ERROR]prop price 的默认值 0 与类型 String 不一致。    fileKey: component/orderBtnBar/orderBtnBar
+[ERROR]prop time 的默认值 0 与类型 String 不一致。    fileKey: component/orderBtnBar/orderBtnBar
+转换进度: 84 / 284   fileKey：component/orderGoodItem/orderGoodItem
+转换进度: 85 / 284   fileKey：component/orderItem/orderItem
+[ERROR]prop currId 的默认值 0 与类型 String 不一致。    fileKey: component/orderItem/orderItem
+转换进度: 86 / 284   fileKey：component/queryForm/queryForm
+转换进度: 87 / 284   fileKey：component/queryReportBottom/queryReportBottom
+[ERROR]prop price 的默认值 0 与类型 String 不一致。    fileKey: component/queryReportBottom/queryReportBottom
+[ERROR]prop freightPrice 的默认值 0 与类型 String 不一致。    fileKey: component/queryReportBottom/queryReportBottom
+转换进度: 88 / 284   fileKey：component/recommendGoods/recommendGoods
+转换进度: 89 / 284   fileKey：component/reportForms/reportForms
+转换进度: 90 / 284   fileKey：component/selectList/selectList
+转换进度: 91 / 284   fileKey：component/shoppingCartBar/shoppingCartBar
+转换进度: 92 / 284   fileKey：component/shoppingCartListItem/shoppingCartListItem
+[ERROR]prop currentId 的默认值 -1 与类型 Number 不一致。    fileKey: component/shoppingCartListItem/shoppingCartListItem
+转换进度: 93 / 284   fileKey：custom-tab-bar/index
+转换进度: 94 / 284   fileKey：iconfont
+
+[Tip]这里引用的全是网络字体，可能在app上面有兼容问题（如字体图标显示不出来，运行后没问题就不用管）  fileKey: iconfont
+转换进度: 95 / 284   fileKey：pages/addAddress/addAddress
+转换进度: 96 / 284   fileKey：pages/addPersonalInformation/addPersonalInformation
+转换进度: 97 / 284   fileKey：pages/address/address
+转换进度: 98 / 284   fileKey：pages/addSubaccount/addSubaccount
+转换进度: 99 / 284   fileKey：pages/agreement/agreement
+转换进度: 100 / 284   fileKey：pages/answerDetails/answerDetails
+转换进度: 101 / 284   fileKey：pages/billingApplication/billingApplication
+转换进度: 102 / 284   fileKey：pages/billingInstructions/billingInstructions
+转换进度: 103 / 284   fileKey：pages/billingRecord/billingRecord
+转换进度: 104 / 284   fileKey：pages/category/category
+转换进度: 105 / 284   fileKey：pages/changeFlows/changeFlows
+转换进度: 106 / 284   fileKey：pages/cookbook/cookbook
+转换进度: 107 / 284   fileKey：pages/cookVideo/cookVideo
+转换进度: 108 / 284   fileKey：pages/cookVideoDetails/cookVideoDetails
+转换进度: 109 / 284   fileKey：pages/deliveryNote/deliveryNote
+转换进度: 110 / 284   fileKey：pages/FAQ/FAQ
+转换进度: 111 / 284   fileKey：pages/feedback/feedback
+转换进度: 112 / 284   fileKey：pages/index/index
+转换进度: 113 / 284   fileKey：pages/invoiceInformation/invoiceInformation
+转换进度: 114 / 284   fileKey：pages/join/join
+转换进度: 115 / 284   fileKey：pages/login/login
+转换进度: 116 / 284   fileKey：pages/logs/logs
+转换进度: 117 / 284   fileKey：pages/nearbyBusiness/nearbyBusiness
+转换进度: 118 / 284   fileKey：pages/newProductDemand/newProductDemand
+转换进度: 119 / 284   fileKey：pages/protocol/protocol
+转换进度: 120 / 284   fileKey：pages/queryReport/queryReport
+转换进度: 121 / 284   fileKey：pages/recharge/recharge
+转换进度: 122 / 284   fileKey：pages/rechargeCenter/rechargeCenter
+转换进度: 123 / 284   fileKey：pages/recruit/recruit
+转换进度: 124 / 284   fileKey：pages/recruitDetails/recruitDetails
+转换进度: 125 / 284   fileKey：pages/selectOrderInvoicing/selectOrderInvoicing
+转换进度: 126 / 284   fileKey：pages/shoppingCart/shoppingCart
+转换进度: 127 / 284   fileKey：pages/signContract/signContract
+转换进度: 128 / 284   fileKey：pages/statement/statement
+转换进度: 129 / 284   fileKey：pages/subAccountAddressPermission/subAccountAddressPermission
+转换进度: 130 / 284   fileKey：pages/subAccountAdminister/subAccountAdminister
+转换进度: 131 / 284   fileKey：pages/subAccountApplyList/subAccountApplyList
+转换进度: 132 / 284   fileKey：pages/tofuBoard/tofuBoard
+转换进度: 133 / 284   fileKey：pages/turnoverBasket/turnoverBasket
+转换进度: 134 / 284   fileKey：pages/userPages/allOrder/allOrder
+转换进度: 135 / 284   fileKey：pages/userPages/orderDetails/orderDetails
+转换进度: 136 / 284   fileKey：pages/userPages/personalInformation/personalInformation
+转换进度: 137 / 284   fileKey：pages/userPages/user/user
+转换进度: 138 / 284   fileKey：project.config
+转换进度: 139 / 284   fileKey：project.private.config
+转换进度: 140 / 284   fileKey：sitemap
+转换进度: 141 / 284   fileKey：utils/debounce
+转换进度: 142 / 284   fileKey：utils/util
+开始二次遍历及生成vue文件
+转换进度: 143 / 284   fileKey：api/address/addAddress
+转换进度: 144 / 284   fileKey：api/address/delAddress
+转换进度: 145 / 284   fileKey：api/address/getAddressList
+转换进度: 146 / 284   fileKey：api/address/getDefaultAddress
+转换进度: 147 / 284   fileKey：api/address/getFirmAddress
+转换进度: 148 / 284   fileKey：api/address/getServiceArea
+转换进度: 149 / 284   fileKey：api/address/setDefaultAddress
+转换进度: 150 / 284   fileKey：api/faq/feedback
+转换进度: 151 / 284   fileKey：api/faq/getFaqInfo
+转换进度: 152 / 284   fileKey：api/faq/getFaqList
+转换进度: 153 / 284   fileKey：api/faq/newGoods
+转换进度: 154 / 284   fileKey：api/faq/videoList
+转换进度: 155 / 284   fileKey：api/finance/applyInvoice
+转换进度: 156 / 284   fileKey：api/finance/getInvoiceList
+转换进度: 157 / 284   fileKey：api/finance/invoiceInfo
+转换进度: 158 / 284   fileKey：api/finance/saveInvoiceInfo
+转换进度: 159 / 284   fileKey：api/goods/addCart
+转换进度: 160 / 284   fileKey：api/goods/categoryCookbookList
+转换进度: 161 / 284   fileKey：api/goods/categoryGoodsList
+转换进度: 162 / 284   fileKey：api/goods/delCart
+转换进度: 163 / 284   fileKey：api/goods/getCart
+转换进度: 164 / 284   fileKey：api/goods/getCookbookList
+转换进度: 165 / 284   fileKey：api/goods/getGoodsList
+转换进度: 166 / 284   fileKey：api/goods/searchGoods
+转换进度: 167 / 284   fileKey：api/index/agreement
+转换进度: 168 / 284   fileKey：api/index/home
+转换进度: 169 / 284   fileKey：api/index/warehouseList
+转换进度: 170 / 284   fileKey：api/index
+转换进度: 171 / 284   fileKey：api/login/addFirmUser
+转换进度: 172 / 284   fileKey：api/login/auditFirmUser
+转换进度: 173 / 284   fileKey：api/login/auditFirmUserList
+转换进度: 174 / 284   fileKey：api/login/authorizeAddress
+转换进度: 175 / 284   fileKey：api/login/createFirm
+转换进度: 176 / 284   fileKey：api/login/delFirmChildUser
+转换进度: 177 / 284   fileKey：api/login/firmUserManage
+转换进度: 178 / 284   fileKey：api/login/getAllFirm
+转换进度: 179 / 284   fileKey：api/login/getUserInfo
+转换进度: 180 / 284   fileKey：api/login/joinFirm
+转换进度: 181 / 284   fileKey：api/login/login
+转换进度: 182 / 284   fileKey：api/login/openBalance
+转换进度: 183 / 284   fileKey：api/login/saveUserinfo
+转换进度: 184 / 284   fileKey：api/login/setFirmAdmin
+转换进度: 185 / 284   fileKey：api/login/system
+转换进度: 186 / 284   fileKey：api/login/topUp
+转换进度: 187 / 284   fileKey：api/login/walletFlow
+转换进度: 188 / 284   fileKey：api/order/againOrder
+转换进度: 189 / 284   fileKey：api/order/cancelOrder
+转换进度: 190 / 284   fileKey：api/order/createOrder
+转换进度: 191 / 284   fileKey：api/order/delOrder
+转换进度: 192 / 284   fileKey：api/order/getAllOrder
+转换进度: 193 / 284   fileKey：api/order/getOrderInfo
+转换进度: 194 / 284   fileKey：api/order/getToolkit
+转换进度: 195 / 284   fileKey：api/order/orderReport
+转换进度: 196 / 284   fileKey：api/order/orderTake
+转换进度: 197 / 284   fileKey：api/order/pay
+转换进度: 198 / 284   fileKey：api/order/sendOrderEmail
+转换进度: 199 / 284   fileKey：api/order/switchoverAddress
+转换进度: 200 / 284   fileKey：api/recruit/applyJob
+转换进度: 201 / 284   fileKey：api/recruit/getJobsInfo
+转换进度: 202 / 284   fileKey：api/recruit/jobsList
+转换进度: 203 / 284   fileKey：api/recruit/recruitList
+转换进度: 204 / 284   fileKey：api/recruit/saveJobsInfo
+转换进度: 205 / 284   fileKey：api/request/config
+转换进度: 206 / 284   fileKey：api/request/request
+转换进度: 207 / 284   fileKey：api/request/statusCode
+转换进度: 208 / 284   fileKey：app
+转换进度: 209 / 284   fileKey：component/addressItem/addressItem
+转换进度: 210 / 284   fileKey：component/bargainGoods/bargainGoods
+转换进度: 211 / 284   fileKey：component/cartControl/cartControl
+转换进度: 212 / 284   fileKey：component/cartControl1/cartControl1
+转换进度: 213 / 284   fileKey：component/categoryCartModal/categoryCartModal
+转换进度: 214 / 284   fileKey：component/categoryListColumn/categoryListColumn
+转换进度: 215 / 284   fileKey：component/categoryListRow/categoryListRow
+转换进度: 216 / 284   fileKey：component/custom-header/custom-header
+转换进度: 217 / 284   fileKey：component/custom-header-back/custom-header-back
+转换进度: 218 / 284   fileKey：component/custom-header-index/custom-header-index
+转换进度: 219 / 284   fileKey：component/deleteModal/deleteModal
+转换进度: 220 / 284   fileKey：component/goodItem/goodItem
+转换进度: 221 / 284   fileKey：component/indexColumnTitle/indexColumnTitle
+转换进度: 222 / 284   fileKey：component/inputSearch/inputSearch
+转换进度: 223 / 284   fileKey：component/leftNav/leftNav
+转换进度: 224 / 284   fileKey：component/orderAddressMsg/orderAddressMsg
+转换进度: 225 / 284   fileKey：component/orderBtnBar/orderBtnBar
+转换进度: 226 / 284   fileKey：component/orderGoodItem/orderGoodItem
+转换进度: 227 / 284   fileKey：component/orderItem/orderItem
+转换进度: 228 / 284   fileKey：component/queryForm/queryForm
+转换进度: 229 / 284   fileKey：component/queryReportBottom/queryReportBottom
+转换进度: 230 / 284   fileKey：component/recommendGoods/recommendGoods
+转换进度: 231 / 284   fileKey：component/reportForms/reportForms
+转换进度: 232 / 284   fileKey：component/selectList/selectList
+转换进度: 233 / 284   fileKey：component/shoppingCartBar/shoppingCartBar
+转换进度: 234 / 284   fileKey：component/shoppingCartListItem/shoppingCartListItem
+转换进度: 235 / 284   fileKey：custom-tab-bar/index
+转换进度: 236 / 284   fileKey：iconfont
+转换进度: 237 / 284   fileKey：pages/addAddress/addAddress
+转换进度: 238 / 284   fileKey：pages/addPersonalInformation/addPersonalInformation
+转换进度: 239 / 284   fileKey：pages/address/address
+转换进度: 240 / 284   fileKey：pages/addSubaccount/addSubaccount
+转换进度: 241 / 284   fileKey：pages/agreement/agreement
+转换进度: 242 / 284   fileKey：pages/answerDetails/answerDetails
+转换进度: 243 / 284   fileKey：pages/billingApplication/billingApplication
+转换进度: 244 / 284   fileKey：pages/billingInstructions/billingInstructions
+转换进度: 245 / 284   fileKey：pages/billingRecord/billingRecord
+转换进度: 246 / 284   fileKey：pages/category/category
+转换进度: 247 / 284   fileKey：pages/changeFlows/changeFlows
+转换进度: 248 / 284   fileKey：pages/cookbook/cookbook
+转换进度: 249 / 284   fileKey：pages/cookVideo/cookVideo
+转换进度: 250 / 284   fileKey：pages/cookVideoDetails/cookVideoDetails
+转换进度: 251 / 284   fileKey：pages/deliveryNote/deliveryNote
+转换进度: 252 / 284   fileKey：pages/FAQ/FAQ
+转换进度: 253 / 284   fileKey：pages/feedback/feedback
+转换进度: 254 / 284   fileKey：pages/index/index
+转换进度: 255 / 284   fileKey：pages/invoiceInformation/invoiceInformation
+转换进度: 256 / 284   fileKey：pages/join/join
+转换进度: 257 / 284   fileKey：pages/login/login
+转换进度: 258 / 284   fileKey：pages/logs/logs
+转换进度: 259 / 284   fileKey：pages/nearbyBusiness/nearbyBusiness
+转换进度: 260 / 284   fileKey：pages/newProductDemand/newProductDemand
+转换进度: 261 / 284   fileKey：pages/protocol/protocol
+转换进度: 262 / 284   fileKey：pages/queryReport/queryReport
+转换进度: 263 / 284   fileKey：pages/recharge/recharge
+转换进度: 264 / 284   fileKey：pages/rechargeCenter/rechargeCenter
+转换进度: 265 / 284   fileKey：pages/recruit/recruit
+转换进度: 266 / 284   fileKey：pages/recruitDetails/recruitDetails
+转换进度: 267 / 284   fileKey：pages/selectOrderInvoicing/selectOrderInvoicing
+转换进度: 268 / 284   fileKey：pages/shoppingCart/shoppingCart
+转换进度: 269 / 284   fileKey：pages/signContract/signContract
+转换进度: 270 / 284   fileKey：pages/statement/statement
+转换进度: 271 / 284   fileKey：pages/subAccountAddressPermission/subAccountAddressPermission
+转换进度: 272 / 284   fileKey：pages/subAccountAdminister/subAccountAdminister
+转换进度: 273 / 284   fileKey：pages/subAccountApplyList/subAccountApplyList
+转换进度: 274 / 284   fileKey：pages/tofuBoard/tofuBoard
+转换进度: 275 / 284   fileKey：pages/turnoverBasket/turnoverBasket
+转换进度: 276 / 284   fileKey：pages/userPages/allOrder/allOrder
+转换进度: 277 / 284   fileKey：pages/userPages/orderDetails/orderDetails
+转换进度: 278 / 284   fileKey：pages/userPages/personalInformation/personalInformation
+转换进度: 279 / 284   fileKey：pages/userPages/user/user
+转换进度: 280 / 284   fileKey：project.config
+转换进度: 281 / 284   fileKey：project.private.config
+转换进度: 282 / 284   fileKey：sitemap
+转换进度: 283 / 284   fileKey：utils/debounce
+转换进度: 284 / 284   fileKey：utils/util
+write pages.json success!
+write manifest.json success!
+write main.js success!
+write package.json success!
+
+
+统计信息：
+
+Component数量: 27
+Page数量: 43
+支付api数量: 2
+登录api数量: 1
+chooseMedia数量: 0
+getLocation数量: 1
+getRelationNodes数量: 1
+<ad/>数量: 0
+<map/>数量: 1
+<video/>数量: 0
+Vant组件: ， 数量：0
+
+项目转换完成！
+用时: 34.097s
+工具版本：v2.2.6
+在该小程序项目的同级目录可以看到_uni结尾的项目，即是转换好的uniapp项目，相关日志在该目录里。
+
+使用说明：
+    1.因各种原因，本工具并非100%完美转换！部分语法仍需人工处理！
+    2.工具转换原理及说明文档参考：https://l4rz4zwpx7.k.topthink.com/@kmrvzg72lx/
+    3.如遇运行报错，请添加QQ群(五群：536178289)带图反馈或https://github.com/zhangdaren/miniprogram-to-uniapp提交Issue！
+    4.转换后请查阅_uni目录或_uni-cli目录里的 README.md 和 transform.log
+
+

@@ -1,0 +1,98 @@
+.selectOrderInvoicing {
+    height: 100vh;
+    padding-bottom: 140rpx;
+}
+.selectOrderInvoicing .box1 {
+    height: 100%;
+    padding: 30rpx 20rpx;
+    background-color: RGBA(246, 247, 251, 1);
+    overflow: scroll;
+}
+.selectOrderInvoicing .box1 .box-container {
+    background: #ffffff;
+    border-radius: 20rpx;
+    padding: 30rpx;
+}
+.selectOrderInvoicing .box1 .box-container .item {
+    display: flex;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 44rpx;
+}
+.selectOrderInvoicing .box1 .box-container .item:not(:last-child) {
+    margin-bottom: 34rpx;
+}
+.selectOrderInvoicing .box1 .box-container .item-l {
+    min-width: 160rpx;
+}
+.selectOrderInvoicing .box1 .box-container .item-r {
+    flex: 1;
+}
+.selectOrderInvoicing .box1 .box-container .item-r radio-group {
+    display: flex;
+    gap: 30rpx;
+}
+.selectOrderInvoicing .box1 .box-container .item-r radio-group .label {
+    display: flex;
+    align-items: center;
+}
+.selectOrderInvoicing .box1 .box-container .item-r radio-group label radio {
+    transform: scale(0.8);
+}
+.selectOrderInvoicingBottom {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: RGBA(246, 247, 251, 1);
+    height: 140rpx;
+    padding: 30rpx 20rpx;
+}
+.selectOrderInvoicingBottom .submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-90deg, #61c50d, #78e41e);
+    border-radius: 40rpx;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f5f5f5;
+}
+.selectOrderInvoicing .box1 .box-container:not(:last-child) {
+    margin-bottom: 20rpx;
+}
+.selectOrderInvoicing .box1 .box-container .item-r input {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #333;
+}
+.selectOrderInvoicing .box1 .box-container .item-r .input-placeholder {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #aaaaaa;
+}
+.selectOrderInvoicing .box1 .box-container .item-r .price {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #ff6f01;
+}
+.selectOrderInvoicing .box1 .box-container .item-r .price text {
+    font-size: 32rpx;
+}
+.selectOrderInvoicing .box1 .tips {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #aaaaaa;
+    text-align: center;
+    margin-top: 20rpx;
+}

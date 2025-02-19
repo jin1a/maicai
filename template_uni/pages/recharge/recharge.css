@@ -1,0 +1,29 @@
+.recharge {
+    height: 100vh;
+}
+.recharge .box1 {
+    height: 100%;
+    background-color: RGBA(246, 247, 251, 1);
+}
+.recharge .box1 .empty {
+    padding: 238rpx 20rpx 0;
+    text-align: center;
+}
+.recharge .box1 .empty .title {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #666666;
+    margin-bottom: 60rpx;
+}
+.recharge .box1 .empty navigator {
+    padding: 22rpx 62rpx;
+    border: 1rpx solid #01c53d;
+    border-radius: 40rpx;
+    line-height: 1;
+    display: inline-block;
+    font-size: 36rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #01c53d;
+}

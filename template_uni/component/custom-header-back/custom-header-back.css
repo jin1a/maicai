@@ -1,0 +1,61 @@
+@import '../../iconfont.css'; /* component/custom-header/custom-header.wxss */
+.custom-header-back {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.custom-header-container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.custom-header-back .title {
+    font-size: 34rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+}
+.custom-header-back .backBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    min-width: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-header-back .backBtn .icon-right-1-copy {
+    font-size: 40rpx;
+    font-weight: bold;
+    transform: rotate(180deg);
+    margin-right: 10rpx;
+}
+.custom-header-back .backTitle {
+    font-size: 36rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1;
+}
+.custom-header-back .backTime,
+.custom-header-back .backDes {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #333333;
+    line-height: 1;
+    margin-top: 10rpx;
+}
+.custom-header-back .backTime {
+    color: #ff6f01;
+}

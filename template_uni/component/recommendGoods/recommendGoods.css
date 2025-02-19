@@ -1,0 +1,36 @@
+.recommendGoods {
+    padding-bottom: 40rpx;
+}
+.recommendGoods .pic image {
+    display: block;
+    width: 100%;
+}
+.recommendGoods .text-box {
+    text-align: right;
+    padding: 0 27rpx 22rpx;
+    margin-top: -65rpx;
+}
+.recommendGoods .text-box .name {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #111111;
+}
+.recommendGoods .text-box .new-price {
+    font-size: 22rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #fe3434;
+}
+.recommendGoods .text-box .new-price text {
+    font-size: 30rpx;
+}
+.recommendGoods .text-box .old-price {
+    font-size: 20rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #111111;
+    opacity: 0.5;
+    text-decoration: line-through;
+    padding-left: 13rpx;
+}

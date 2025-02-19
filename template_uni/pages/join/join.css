@@ -1,0 +1,166 @@
+@import '../../iconfont.css';
+.join {
+    height: 100vh;
+}
+.join .box1 {
+    height: 100%;
+    width: 100%;
+    background-color: RGBA(246, 247, 251, 1);
+    padding: 25rpx 20rpx;
+}
+.join .box1 .input-box {
+    background: #ffffff;
+    border-radius: 20rpx;
+    padding: 20rpx 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.join .box1 .input-box text {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+}
+.join .box1 .input-box input {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #000000;
+    flex: 1;
+    margin-left: 30rpx;
+    width: 100%;
+    text-align: right;
+}
+.join .box1 .input-box .input-placeholder {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #000000;
+    opacity: 0.5;
+}
+.join .box1 .btns {
+    margin-top: 50rpx;
+}
+.join .box1 .btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30rpx;
+}
+.join .box1 .btns .btn {
+    line-height: 90rpx;
+    background: #61c50d;
+    border-radius: 45rpx;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+}
+.join .box1 .btns .btn:last-child {
+    background-color: rgba(1, 197, 61, 1);
+}
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    padding: 0 35rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20rpx;
+    padding: 50rpx 40rpx 60rpx;
+    width: 100%;
+}
+.modal-content .close {
+    position: absolute;
+    right: 10rpx;
+    top: 10rpx;
+    z-index: 3;
+}
+.modal-content .close .iconfont {
+    display: block;
+    transform: rotate(45deg);
+    font-size: 36rpx;
+}
+.modal-content .title {
+    text-align: center;
+    font-size: 34rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #000000;
+}
+.modal-content form {
+    display: block;
+    margin-top: 37rpx;
+}
+.modal-content .input {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.modal-content .input:not(:last-child) {
+    margin-bottom: 30rpx;
+}
+.modal-content .input input {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #333;
+    flex: 1;
+    width: 100%;
+    border-bottom: 1rpx solid rgba(220, 220, 220, 1);
+    height: 66rpx;
+}
+.modal-content .input .input-placeholder {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #888888;
+}
+.modal-content .input .verifyCode {
+    margin-left: 15rpx;
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #888888;
+    text-align: center;
+    line-height: 1;
+}
+.modal-content .input .verifyCode image {
+    width: 185rpx;
+    display: block;
+}
+.modal-content .input .msgVerifyCode {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 196rpx;
+    line-height: 50rpx;
+    background: #01c53d;
+    border-radius: 25rpx;
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    z-index: 3;
+}
+.modal-content .submit {
+    line-height: 70rpx;
+    background: #01c53d;
+    border-radius: 35rpx;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 40rpx;
+}

@@ -1,0 +1,34 @@
+@import '../../iconfont.css';
+.orderAddressMsg {
+    background: #ffffff;
+    border-radius: 20rpx;
+    padding: 30rpx 25rpx 35rpx;
+}
+.orderAddressMsg .item {
+    display: flex;
+}
+.orderAddressMsg .item:not(:last-child) {
+    margin-bottom: 10rpx;
+}
+.orderAddressMsg .item-l {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #888888;
+    width: 150rpx;
+    line-height: 1.8;
+}
+.orderAddressMsg .item-r {
+    flex: 1;
+    margin-left: 14rpx;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1.8;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

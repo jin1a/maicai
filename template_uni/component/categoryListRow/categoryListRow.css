@@ -1,0 +1,44 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30rpx 40rpx;
+    text-align: center;
+}
+.list1 {
+    gap: 37rpx 28rpx;
+}
+.list .pic image {
+    display: block;
+    width: 100%;
+}
+.list1 .pic image {
+    width: 77rpx;
+    margin: 0 auto;
+}
+.list .text {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #111111;
+    text-align: center;
+    margin-top: 11rpx;
+}
+.elder-mode .list .text {
+    font-size: 26rpx;
+    /* font-weight: bold; */
+}
+.list1 .item .text {
+    line-height: 1;
+    border-radius: 16rpx;
+    font-size: 22rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #555555;
+    padding: 6rpx 14rpx;
+    margin-top: 4rpx;
+    display: inline-block;
+}
+.list1 .item.active .text {
+    background: linear-gradient(90deg, #61c50d, #78e41e);
+    color: #fff;
+}

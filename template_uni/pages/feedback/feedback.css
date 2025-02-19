@@ -1,0 +1,125 @@
+/* pages/feedback/feedback.wxss */
+.feedback {
+    height: 100vh;
+    padding-bottom: 140rpx;
+}
+.feedback .box1 {
+    height: 100%;
+    overflow: scroll;
+    padding: 30rpx 20rpx;
+    background-color: RGBA(246, 247, 251, 1);
+}
+.feedback .box1 .box-c {
+    background: #ffffff;
+    border-radius: 20rpx;
+    padding: 25rpx;
+}
+.feedback .box1 .box-c .item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.feedback .box1 .box-c .item:not(:last-child) {
+    margin-bottom: 50rpx;
+}
+.feedback .box1 .box-c .item-l {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    width: 170rpx;
+}
+.feedback .box1 .box-c .item-r {
+    flex: 1;
+}
+.feedback .box1 .box-c .item-r input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    color: #333;
+}
+.feedback .box1 .box-c .item-r .input-placeholder {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    color: #888888;
+}
+.feedback .box1 .box-c .item-r1 {
+    width: 100%;
+    margin-top: 30rpx;
+}
+.feedback .box1 .box-c .item-r1 textarea {
+    display: block;
+    width: 100%;
+    height: 300rpx;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    color: #000000;
+}
+.feedback .box1 .box-c .item-r1 textarea::placeholder {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    color: #888888;
+}
+.feedback .contact {
+    font-size: 28rpx;
+    margin-top: 30rpx;
+    line-height: 40rpx;
+    background-color: #fff;
+    padding: 20rpx 40rpx;
+    border-radius: 15rpx;
+}
+.feedback .contact .contact_title {
+    font-size: 40rpx;
+    line-height: 50rpx;
+    /* padding-top: 20rpx; */
+    margin: 20rpx 0;
+}
+.feedback .contact .phone {
+    font-size: 32rpx;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f7e7e7;
+    margin-bottom: 10rpx;
+}
+.feedback .contact .phone .contact_name {
+    font-size: 28rpx;
+    color: #333;
+    font-weight: 600;
+    font-family: HarmonyOS Sans SC;
+}
+.feedback .contact .phone .contact_btn {
+    padding: 10rpx;
+    background: linear-gradient(-90deg, #61c50d, #78e41e);
+    border-radius: 20rpx;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+.feedbackBottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 140rpx;
+    background-color: RGBA(246, 247, 251, 1);
+    padding: 30rpx 20rpx;
+}
+.feedbackBottom .submit {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-90deg, #61c50d, #78e41e);
+    border-radius: 40rpx;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f5f5f5;
+}

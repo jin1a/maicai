@@ -1,0 +1,218 @@
+@import '../../../iconfont.css';
+.user {
+    height: 100vh;
+    background: linear-gradient(-90deg, #d5fef6, #daffee, #e5fde3);
+    padding-bottom: 120rpx;
+}
+.user .userContainer {
+    height: 100%;
+    overflow: hidden;
+}
+.user .userView {
+    height: 100%;
+    overflow: scroll;
+    padding: 25rpx 20rpx 20rpx;
+}
+.user .box1 {
+    padding: 0 10rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user .box1 .avatar image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user .box1 .text-box {
+    margin-left: 23rpx;
+    /* padding-top: 16rpx; */
+    flex: 1;
+    display: flex;
+}
+.user .box1 .text-box-l {
+    flex: 1;
+}
+.user .box1 .name {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #000000;
+}
+.user .box1 .des {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #666666;
+    margin-top: 10rpx;
+}
+.user .box1 .text-box-r {
+    color: #333;
+}
+.user .box1 .text-box-r .iconfont {
+    font-size: 42rpx;
+}
+.user .box2 {
+    margin-top: 50rpx;
+    background: linear-gradient(-90deg, #085759, #147e32);
+    border-radius: 15rpx;
+    padding: 18rpx 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.user .box2 .box-l {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-right: 40rpx;
+}
+.user .box2 .box-l image {
+    display: block;
+    width: 29rpx;
+}
+.user .box2 .box-l text {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f6f7fb;
+    margin-left: 15rpx;
+}
+.user .box2 .box-r {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f6f7fb;
+    line-height: 1;
+    padding: 12rpx 20rpx;
+    background: #01c53d;
+    border-radius: 24rpx;
+}
+.user .box3 {
+    margin-top: 20rpx;
+    padding: 40rpx 23rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+.user .box3 .title {
+    margin-bottom: 35rpx;
+}
+.user .box3 .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35rpx 30rpx;
+}
+.user .box3 .list .item {
+    text-align: center;
+}
+.user .box3 .list .item sup {
+    position: relative;
+    width: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    border-radius: 15rpx;
+    background-color: #ff5722;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22rpx;
+    top: -30rpx;
+    text-align: center;
+    display: inline-block;
+}
+.user .box3 .list .icon .iconfont {
+    font-size: 44rpx;
+    color: rgba(0, 0, 0, 0.6);
+}
+.user .box3 .list .icon1 .iconfont {
+    color: #01c53d;
+}
+.user .box3 .text {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 20rpx;
+}
+.elder-mode .box3 .text {
+    font-size: 28rpx;
+}
+/* button自带样式清除 */
+.user .box3 .list button::after {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.user .box3 .list button {
+    background-color: transparent !important;
+    padding: 0 !important;
+    line-height: inherit !important;
+    margin: 0 !important;
+    width: auto !important;
+    font-weight: 500 !important;
+    border-radius: none !important;
+}
+.title {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+}
+.user .box4 {
+    padding: 40rpx 23rpx;
+    background: #ffffff;
+    border-radius: 20rpx;
+    margin-top: 20rpx;
+}
+.user .box4 .box-c {
+    margin-top: 30rpx;
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+.user .box4 .box-c .text {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    margin-right: 43rpx;
+}
+.user .box4 .box-c .tel {
+    line-height: 54rpx;
+    background: #efefef;
+    border-radius: 27rpx;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    padding: 0 30rpx;
+    margin-bottom: 20rpx;
+}
+.user .box4 .box-c .tel .iconfont {
+    color: rgba(1, 197, 61, 1);
+    font-size: 24rpx;
+    padding-right: 10rpx;
+}
+.user .box6,
+.user .box5 {
+    background-color: #fff;
+    border-radius: 20rpx;
+    padding: 40rpx 23rpx;
+    margin-top: 20rpx;
+}
+.user .box5 map {
+    margin-top: 40rpx;
+    display: block;
+    width: 100%;
+    height: 490rpx;
+}
+.user .box6 {
+    margin-top: 60rpx;
+}
+.user .box6 .pic {
+    margin-top: 40rpx;
+}
+.user .box6 .pic image {
+    display: block;
+    width: 100%;
+}

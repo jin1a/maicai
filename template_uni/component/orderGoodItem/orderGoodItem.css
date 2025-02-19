@@ -1,0 +1,85 @@
+@import '../../iconfont.css';
+.orderGoodItem .item-c {
+    padding: 34rpx 30rpx;
+}
+.orderGoodItem .item-c .view {
+    display: flex;
+}
+.orderGoodItem .item-c .view:not(:last-child) {
+    margin-bottom: 30rpx;
+}
+.orderGoodItem .item-c .view .pic {
+    width: 140rpx;
+    height: 140rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orderGoodItem .item-c .view .pic image {
+    width: 100%;
+    height: 100%;
+}
+.orderGoodItem .item-c .view .text-box {
+    flex: 1;
+    margin-left: 23rpx;
+    padding-top: 14rpx;
+}
+.orderGoodItem .item-c .view .text-box text {
+    font-size: 22rpx;
+    color: #333333;
+}
+.orderGoodItem .item-c .view .text-title {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 30rpx;
+}
+.orderGoodItem .item-c .view .text-box-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 25rpx;
+}
+.orderGoodItem .item-c .view .price {
+    font-size: 32rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #ff6f01;
+}
+.orderGoodItem .item-c .view .amount {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+}
+.orderGoodItem .item-c .hide {
+    display: none;
+    margin-top: 30px;
+}
+.orderGoodItem .item-c .hide.active {
+    display: block;
+}
+.orderGoodItem .showAll {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #333333;
+    line-height: 35rpx;
+    text-align: center;
+    padding: 20rpx;
+    margin-bottom: 15rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orderGoodItem .showAll .text {
+    margin-right: 10rpx;
+}
+.orderGoodItem .showAll .iconfont {
+    font-size: 26rpx;
+}
+.orderGoodItem .showAll.active .iconfont {
+    transform: rotate(-180deg);
+    margin-top: -6rpx;
+}

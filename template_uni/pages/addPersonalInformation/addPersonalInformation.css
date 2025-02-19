@@ -1,0 +1,99 @@
+.addPersonalInformation {
+    height: 100vh;
+    padding-bottom: 160rpx;
+}
+.addPersonalInformation .box1 {
+    height: 100%;
+    background-color: RGBA(246, 247, 251, 1);
+    padding: 25rpx 20rpx;
+}
+.addPersonalInformation .box1 .box-c {
+    padding: 30rpx 23rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+.addPersonalInformation .box1 .item {
+    display: flex;
+    align-items: center;
+    min-height: 36rpx;
+    flex-wrap: wrap;
+}
+.addPersonalInformation .box1 .item:not(:last-child) {
+    margin-bottom: 30rpx;
+}
+.addPersonalInformation .box1 .item .item-l {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    width: 150rpx;
+    margin-right: 35rpx;
+}
+.addPersonalInformation .box1 .item .item-r {
+    flex: 1;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #333333;
+    display: flex;
+}
+.addPersonalInformation .box1 .item .item-r input {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+    width: 100%;
+}
+.addPersonalInformation .box1 .item .item-r .input-placeholder {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #aaaaaa;
+}
+.addPersonalInformation .box1 .item-r .label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #333333;
+}
+.addPersonalInformation .box1 .item-r label:not(:last-child) {
+    margin-right: 40rpx;
+}
+.addPersonalInformation .box1 .item-r label radio {
+    transform: scale(0.8);
+    transform-origin: center;
+}
+.addPersonalInformation .box1 .item textarea {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    color: #333;
+    margin-top: 25rpx;
+    width: 100%;
+    height: 100rpx;
+    /* padding-bottom: 200rpx; */
+}
+.addPersonalInformation-bottom {
+    position: absolute;
+    left: 0;
+    /* bottom: 0; */
+    width: 100%;
+    height: 160rpx;
+    background-color: RGBA(246, 247, 251, 1);
+    padding: 20rpx 20rpx 60rpx;
+}
+.addPersonalInformation-bottom .submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-90deg, #61c50d, #78e41e);
+    border-radius: 40rpx;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f5f5f5;
+}

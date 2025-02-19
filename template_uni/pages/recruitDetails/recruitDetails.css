@@ -1,0 +1,83 @@
+@import '../../iconfont.css';
+.recruitDetails {
+    height: 100vh;
+}
+.recruitDetails .box1 {
+    height: 100%;
+    background-color: RGBA(246, 247, 251, 1);
+    overflow: scroll;
+    padding: 25rpx 20rpx;
+}
+.recruitDetails .box1 .box-c {
+    background: #ffffff;
+    box-shadow: 0px 12rpx 35rpx 0rpx rgba(101, 101, 101, 0.15);
+    border-radius: 20rpx;
+    padding: 40rpx 30rpx 0;
+}
+.recruitDetails .box1 .box-c .title {
+    font-size: 46rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+}
+.recruitDetails .box1 .box-c .salary {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #de3b3b;
+    margin-top: 10rpx;
+}
+.recruitDetails .box1 .box-c .msg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rpx 26rpx;
+    margin-top: 28rpx;
+}
+.recruitDetails .box1 .box-c .msg .label {
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+}
+.recruitDetails .box1 .box-c .msg .label .iconfont {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #888888;
+    margin-right: 6rpx;
+}
+.recruitDetails .box1 .box-c .des {
+    border-top: 1rpx solid rgba(238, 238, 238, 1);
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    padding: 25rpx 0;
+}
+.recruitDetails .box1 .box-b {
+    margin: 40rpx 30rpx;
+}
+.recruitDetails .box1 .box-b .title {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+}
+.recruitDetails .box1 .box-b .text-box {
+    margin-top: 27rpx;
+}
+.recruitDetails .box1 .box-b .text {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 2;
+}
+.recruitDetails .box1 .box-b .text:not(:last-child) {
+    margin-bottom: 14rpx;
+}
+.recruitDetails .box1 .box-b .text-title {
+    font-weight: bold;
+}

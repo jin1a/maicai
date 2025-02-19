@@ -1,0 +1,285 @@
+@import '../../iconfont.css'; /* component/reportForms/reportForms.wxss */
+.reportForms {
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #fff;
+}
+.reportForms-t {
+    padding: 33rpx 18rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+.reportForms-t .icon {
+    padding: 4rpx 0 4rpx 10rpx;
+}
+.reportForms-t .icon .iconfont {
+    font-size: 26rpx;
+}
+.reportForms-t .radio-group {
+    flex: 1;
+}
+.reportForms-t .label {
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+}
+.reportForms-c .good-item radio,
+.reportForms-c .item1-t-l .label radio,
+.reportForms-c .item-t-l .label radio,
+.reportForms-t .label radio {
+    transform: scale(0.8);
+}
+.reportForms-t .icon .icon-xia {
+    color: RGBA(171, 171, 171, 1);
+}
+.reportForms-c {
+    position: relative;
+    /* padding-top: 30rpx; */
+    border-top: 1rpx solid rgba(242, 242, 242, 1);
+}
+/* .reportForms-c-container{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-height: 100%;
+  overflow: scroll;
+} */
+.reportForms-c-container .list {
+    border-radius: 0 0 20rpx 20rpx;
+    overflow: hidden;
+}
+.reportForms-c .item {
+    background-color: #fff;
+    padding-left: 18rpx;
+}
+.reportForms-c .item {
+    padding-bottom: 30rpx;
+}
+.reportForms-c .item:first-child {
+    padding-top: 40rpx;
+}
+.reportForms-c .item-t {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20rpx;
+}
+.reportForms-c .item-t-l {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1;
+}
+.reportForms-c .item-t-r {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1;
+}
+.reportForms-c .item-t-r .price {
+    font-size: 36rpx;
+}
+.reportForms-c .item-c {
+    padding-left: 55rpx;
+    margin-top: 24rpx;
+}
+.reportForms-c .item-c scroll-view {
+    width: 100%;
+    white-space: nowrap;
+}
+.reportForms-c .item-c scroll-view .good-item {
+    display: inline-block;
+    margin-right: 24rpx;
+}
+.reportForms-c .item-c scroll-view .good-item image {
+    width: 100rpx;
+}
+.reportForms-c .item1 {
+    background-color: #fff;
+    padding: 40rpx 20rpx 50rpx 18rpx;
+}
+.reportForms-c .item1:not(:last-child) {
+    border-bottom: 1rpx solid rgba(242, 242, 242, 1);
+}
+.reportForms-c .item1-t {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reportForms-c .item1-t-l {
+    display: flex;
+    align-items: center;
+}
+.reportForms-c .item1-t-l .label {
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1;
+}
+.reportForms-c .item1-t-l .date {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 30rpx;
+    margin-left: 30rpx;
+}
+.reportForms-c .item1-t-r {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1;
+}
+.reportForms-c .item1-t-r .price {
+    color: #ff6f01;
+    font-weight: bold;
+}
+.reportForms-c .item1-t-r .price text {
+    font-size: 36rpx;
+}
+.reportForms-c .item1-c {
+    margin-top: 50rpx;
+}
+.reportForms-c .item1-c .good-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.reportForms-c .item1-c .good-item:not(:last-child) {
+    margin-bottom: 40rpx;
+}
+.reportForms-c .item1-c radio-group {
+    flex: 1;
+}
+.reportForms-c .item1-c .label {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1;
+}
+.reportForms-c .item1-c .label text {
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.reportForms-c .item1-c .amount {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+    text-align: center;
+    min-width: 80rpx;
+    margin: 0 20rpx;
+}
+.reportForms-c .item1-c .money {
+    font-size: 32rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #333333;
+    text-align: right;
+    min-width: 150rpx;
+}
+.reportForms-c .item2 {
+    background-color: #fff;
+    padding: 40rpx 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.reportForms-c .item2:not(:last-child) {
+    border-bottom: 1rpx solid rgba(242, 242, 242, 1);
+}
+.reportForms-c .item2 .item2-l {
+    display: flex;
+}
+.reportForms-c .item2 .item2-l radio {
+    transform: scale(0.8);
+}
+.reportForms-c .item2 .item2-l .text-title {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 6rpx;
+}
+.reportForms-c .item2 .item2-l .tag {
+    color: blue;
+}
+.reportForms-c .item2 .item2-l .text-des {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1;
+    margin-top: 8rpx;
+}
+.reportForms-c .item2 .item2-r {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+}
+.reportForms-c .item2 .item2-r text {
+    font-size: 36rpx;
+}
+.reportForms-c .item3 {
+    padding: 40rpx 20rpx;
+}
+.reportForms-c .item3 .item3-t {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+}
+.reportForms-c .item3 .item3-t1 {
+    width: 50%;
+}
+.reportForms-c .item3 .item3-t2,
+.reportForms-c .item3 .item3-t3 {
+    width: 20%;
+    text-align: center;
+}
+.reportForms-c .item3 .item3-c {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 30rpx;
+    margin-top: 48rpx;
+}
+.reportForms-c .item3 .item3-c .number {
+    color: #999999;
+}
+.reportForms-c .item3 .item3-c .status {
+    color: rgba(255, 111, 1, 1);
+}
+.reportForms-c .item3 .item3-c .status1 {
+    color: rgba(1, 197, 61, 1);
+}

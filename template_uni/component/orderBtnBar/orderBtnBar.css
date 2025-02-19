@@ -1,0 +1,101 @@
+.orderBtn.btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.orderBtn .btns-l {
+    position: relative;
+    /* padding: 20rpx; */
+}
+.orderBtn .btns-l .more {
+    position: relative;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #333333;
+    line-height: 35rpx;
+}
+.orderBtn .btns-l .tips {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 130%;
+}
+.orderBtn .btns-l .tips view {
+    position: relative;
+    padding: 15rpx 20rpx;
+    white-space: nowrap;
+    font-size: 20rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #ff6f01;
+    line-height: 1;
+    border: 1rpx solid rgba(219, 219, 219, 1);
+    border-radius: 24rpx;
+    background-color: #fff;
+    z-index: 2;
+}
+.orderBtn .btns-l .tips::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0;
+    width: 14rpx;
+    height: 14rpx;
+    transform: translate(-50%, 50%) rotate(45deg);
+    background-color: #fff;
+    border: 1rpx solid rgba(219, 219, 219, 1);
+    border-top: none;
+    border-left: none;
+    z-index: 5;
+}
+.orderBtn .btns-r {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    margin-left: 40rpx;
+    flex-wrap: wrap;
+    gap: 20rpx;
+}
+.orderBtn .btns-r .btn {
+    min-width: 160rpx;
+    line-height: 62rpx;
+    background: #ffffff;
+    border: 1rpx solid #dbdbdb;
+    border-radius: 32rpx;
+    text-align: center;
+    padding: 0 15rpx;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #333333;
+}
+.orderBtn .btns-r .green {
+    background: linear-gradient(-90deg, #01c53d, #78e41e);
+    color: #fff;
+    border-color: transparent;
+}
+.orderBtn .btns-l .time {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #333333;
+}
+.orderBtn .btns-l .time text {
+    color: rgba(255, 111, 1, 1);
+}
+.orderBtn .btns-l .unpaid {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #333333;
+}
+.orderBtn .btns-l .unpaid .price {
+    color: rgba(255, 111, 1, 1);
+    font-weight: bold;
+}
+.orderBtn .btns-l .unpaid .price text {
+    font-size: 36rpx;
+    font-weight: bold;
+    font-family: HarmonyOS Sans SC;
+}

@@ -1,0 +1,56 @@
+.subAccountAddressPermission {
+    height: 100vh;
+    background-color: #fff;
+}
+.subAccountAddressPermission .box1 {
+    background-color: RGBA(246, 247, 251, 1);
+    height: 100%;
+    overflow: auto;
+    padding: 54rpx 40rpx;
+}
+.subAccountAddressPermission .box1 .item {
+    background: #ffffff;
+    box-shadow: 0px 0px 10rpx 0px rgba(82, 91, 124, 0.06);
+    border-radius: 10rpx;
+    padding: 35rpx 30rpx 45rpx;
+}
+.subAccountAddressPermission .box1 .item:not(:last-child) {
+    margin-bottom: 25rpx;
+}
+.subAccountAddressPermission .box1 .item-t {
+    display: flex;
+    justify-content: space-between;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    font-size: 28rpx;
+    color: #000000;
+    line-height: 1.35;
+}
+.subAccountAddressPermission .box1 .item-c {
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    font-size: 22rpx;
+    color: #000000;
+    line-height: 1.8;
+    margin-top: 30rpx;
+}
+.subAccountAddressPermission .box1 .item-b {
+    margin-top: 30rpx;
+    border-top: 1rpx solid rgba(222, 225, 235, 1);
+    padding-top: 30rpx;
+}
+.subAccountAddressPermission .box1 .item-b .radio {
+    display: inline-flex;
+    align-items: center;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    font-size: 22rpx;
+    color: #181818;
+}
+.subAccountAddressPermission .box1 .item-b .radio radio {
+    transform: scale(0.7);
+    transform-origin: left center;
+}
+.subAccountAddressPermission .box1 .item-b .radio text {
+    transform: translateX(-30%);
+}

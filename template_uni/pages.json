@@ -1,0 +1,457 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"usingComponents": {
+					"customHeaderIndex": "../../component/custom-header-index/custom-header-index",
+					"indexColumnTitle": "../../component/indexColumnTitle/indexColumnTitle",
+					"bargainGoods": "../../component/bargainGoods/bargainGoods",
+					"categoryListRow": "../../component/categoryListRow/categoryListRow"
+				}
+			}
+		},
+		{
+			"path": "pages/billingRecord/billingRecord",
+			"style": {
+				"usingComponents": {
+					"queryReportBottom": "../../component/queryReportBottom/queryReportBottom",
+					"reportForms": "../../component/reportForms/reportForms",
+					"queryForm": "../../component/queryForm/queryForm",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/billingApplication/billingApplication",
+			"style": {
+				"usingComponents": {
+					"queryReportBottom": "../../component/queryReportBottom/queryReportBottom",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back",
+					"reportForms": "../../component/reportForms/reportForms",
+					"queryForm": "../../component/queryForm/queryForm"
+				}
+			}
+		},
+		{
+			"path": "pages/subAccountAdminister/subAccountAdminister",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back",
+					"deleteModal": "../../component/deleteModal/deleteModal"
+				}
+			}
+		},
+		{
+			"path": "pages/rechargeCenter/rechargeCenter",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/recharge/recharge",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/category/category",
+			"style": {
+				"usingComponents": {
+					"custom-header": "../../component/custom-header/custom-header",
+					"inputSearch": "../../component/inputSearch/inputSearch",
+					"categoryListColumn": "../../component/categoryListColumn/categoryListColumn",
+					"categoryListRow": "../../component/categoryListRow/categoryListRow",
+					"goodItem": "../../component/goodItem/goodItem",
+					"leftNav": "../../component/leftNav/leftNav",
+					"shoppingCartBar": "../../component/shoppingCartBar/shoppingCartBar"
+				}
+			}
+		},
+		{
+			"path": "pages/userPages/user/user",
+			"style": {
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/addSubaccount/addSubaccount",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back",
+					"deleteModal": "../../component/deleteModal/deleteModal"
+				}
+			}
+		},
+		{
+			"path": "pages/answerDetails/answerDetails",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/FAQ/FAQ",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/feedback/feedback",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/addAddress/addAddress",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/address/address",
+			"style": {
+				"usingComponents": {
+					"deleteModal": "../../component/deleteModal/deleteModal",
+					"addressItem": "../../component/addressItem/addressItem",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/turnoverBasket/turnoverBasket",
+			"style": {
+				"usingComponents": {
+					"queryReportBottom": "../../component/queryReportBottom/queryReportBottom",
+					"queryForm": "../../component/queryForm/queryForm",
+					"reportForms": "../../component/reportForms/reportForms",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/tofuBoard/tofuBoard",
+			"style": {
+				"usingComponents": {
+					"queryReportBottom": "../../component/queryReportBottom/queryReportBottom",
+					"queryForm": "../../component/queryForm/queryForm",
+					"reportForms": "../../component/reportForms/reportForms",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/statement/statement",
+			"style": {
+				"usingComponents": {
+					"queryReportBottom": "../../component/queryReportBottom/queryReportBottom",
+					"reportForms": "../../component/reportForms/reportForms",
+					"queryForm": "../../component/queryForm/queryForm",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/deliveryNote/deliveryNote",
+			"style": {
+				"usingComponents": {
+					"queryReportBottom": "../../component/queryReportBottom/queryReportBottom",
+					"reportForms": "../../component/reportForms/reportForms",
+					"queryForm": "../../component/queryForm/queryForm",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/selectOrderInvoicing/selectOrderInvoicing",
+			"style": {
+				"usingComponents": {
+					"reportForms": "../../component/reportForms/reportForms",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/queryReport/queryReport",
+			"style": {
+				"usingComponents": {
+					"queryReportBottom": "../../component/queryReportBottom/queryReportBottom",
+					"reportForms": "../../component/reportForms/reportForms",
+					"queryForm": "../../component/queryForm/queryForm",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/invoiceInformation/invoiceInformation",
+			"style": {
+				"usingComponents": {
+					"reportForms": "../../component/reportForms/reportForms",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/billingInstructions/billingInstructions",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/newProductDemand/newProductDemand",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/signContract/signContract",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/join/join",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/recruit/recruit",
+			"style": {
+				"usingComponents": {
+					"inputSearch": "../../component/inputSearch/inputSearch",
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/addPersonalInformation/addPersonalInformation",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/recruitDetails/recruitDetails",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/nearbyBusiness/nearbyBusiness",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/protocol/protocol",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/cookVideo/cookVideo",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/userPages/allOrder/allOrder",
+			"style": {
+				"usingComponents": {
+					"inputSearch": "../../../component/inputSearch/inputSearch",
+					"orderItem": "../../../component/orderItem/orderItem",
+					"custom-header-back": "../../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/userPages/orderDetails/orderDetails",
+			"style": {
+				"usingComponents": {
+					"orderBtnBar": "../../../component/orderBtnBar/orderBtnBar",
+					"orderGoodItem": "../../../component/orderGoodItem/orderGoodItem",
+					"orderAddressMsg": "../../../component/orderAddressMsg/orderAddressMsg",
+					"custom-header-back": "../../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/userPages/personalInformation/personalInformation",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/shoppingCart/shoppingCart",
+			"style": {
+				"usingComponents": {
+					"custom-header": "../../component/custom-header/custom-header",
+					"deleteModal": "../../component/deleteModal/deleteModal",
+					"shoppingCartListItem": "../../component/shoppingCartListItem/shoppingCartListItem"
+				}
+			}
+		},
+		{
+			"path": "pages/cookbook/cookbook",
+			"style": {
+				"usingComponents": {
+					"custom-header": "../../component/custom-header/custom-header",
+					"inputSearch": "../../component/inputSearch/inputSearch",
+					"shoppingCartBar": "../../component/shoppingCartBar/shoppingCartBar",
+					"categoryListColumn": "../../component/categoryListColumn/categoryListColumn",
+					"leftNav": "../../component/leftNav/leftNav",
+					"cartControl": "../../component/cartControl/cartControl"
+				}
+			}
+		},
+		{
+			"path": "pages/logs/logs",
+			"style": {
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/cookVideoDetails/cookVideoDetails",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/subAccountAddressPermission/subAccountAddressPermission",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back",
+					"deleteModal": "../../component/deleteModal/deleteModal"
+				}
+			}
+		},
+		{
+			"path": "pages/subAccountApplyList/subAccountApplyList",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back",
+					"deleteModal": "../../component/deleteModal/deleteModal"
+				}
+			}
+		},
+		{
+			"path": "pages/agreement/agreement",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
+			"path": "pages/changeFlows/changeFlows",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		}
+	],
+	"tabBar": {
+		"custom": true,
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/custom-tab-bar-icon1.png",
+				"selectedIconPath": "static/images/custom-tab-bar-icon1-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/category/category",
+				"iconPath": "static/images/custom-tab-bar-icon2.png",
+				"selectedIconPath": "static/images/custom-tab-bar-icon2-active.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/cookbook/cookbook",
+				"iconPath": "static/images/custom-tab-bar-icon3.png",
+				"selectedIconPath": "static/images/custom-tab-bar-icon3-active.png",
+				"text": "菜谱"
+			},
+			{
+				"pagePath": "pages/shoppingCart/shoppingCart",
+				"iconPath": "static/images/custom-tab-bar-icon4.png",
+				"selectedIconPath": "static/images/custom-tab-bar-icon4-active.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/userPages/user/user",
+				"iconPath": "static/images/custom-tab-bar-icon5.png",
+				"selectedIconPath": "static/images/custom-tab-bar-icon5-active.png",
+				"text": "我的"
+			}
+		]
+	},
+	"style": "v2",
+	"componentFramework": "glass-easel",
+	"sitemapLocation": "sitemap.json",
+	"lazyCodeLoading": "requiredComponents",
+	"requiredPrivateInfos": [
+		"getLocation",
+		"chooseLocation"
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "需要获取你当前位置信息"
+		}
+	},
+	"enableShareAppMessage": true,
+	"enableShareTimeline ": true,
+	"enablePullDownRefresh": true,
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Weixin",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationStyle": "custom"
+	},
+	"subPackages": []
+}

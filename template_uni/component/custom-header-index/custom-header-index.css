@@ -1,0 +1,59 @@
+@import '../../iconfont.css';
+.custom-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    transition: all 0.6s ease-in-out;
+}
+.custom-header.active {
+    background-color: RGBA(246, 247, 251, 1);
+}
+.custom-header-t {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-header-t .address {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.custom-header-t .address .picker {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #ffffff;
+    transition: all 1s;
+}
+.elder-mode .custom-header-t .address .picker {
+    font-size: 32rpx;
+    font-weight: bold;
+}
+.custom-header.active .custom-header-t .title,
+.custom-header.active .custom-header-t .address .picker {
+    color: #333;
+}
+.custom-header-t .address .picker .iconfont {
+    font-size: 28rpx;
+    margin-left: 5rpx;
+    margin-top: 2rpx;
+}
+.custom-header-t .title {
+    font-size: 34rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    transition: all 1s;
+}
+.custom-header-c {
+    margin-top: 13rpx;
+    padding-bottom: 20rpx;
+}

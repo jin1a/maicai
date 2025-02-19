@@ -1,0 +1,41 @@
+@import '../../iconfont.css';
+.indexColumnTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.indexColumnTitle-l {
+    display: flex;
+    align-items: center;
+}
+.indexColumnTitle-l .line {
+    width: 6rpx;
+    height: 28rpx;
+    background: linear-gradient(0deg, #61c50d, #78e41e);
+    border-radius: 3rpx;
+}
+.indexColumnTitle-l .title {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 9rpx;
+}
+.indexColumnTitle-l .title text {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #f5a313;
+}
+.indexColumnTitle-r {
+    display: flex;
+    align-items: center;
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: rgba(1, 197, 61, 1);
+}
+.indexColumnTitle-r .iconfont {
+    font-size: 24rpx;
+    margin-left: 12rpx;
+}

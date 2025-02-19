@@ -1,0 +1,168 @@
+@import '../../iconfont.css';
+.rechargeCenter {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.rechargeCenter .box1 {
+    flex: 1;
+    background-color: RGBA(246, 247, 251, 1);
+    padding: 30rpx 20px 100rpx;
+    overflow: scroll;
+}
+.rechargeCenter .box1 .title {
+    font-size: 32rpx;
+    color: #333;
+    font-weight: bold;
+    font-family: HarmonyOS Sans SC;
+}
+.rechargeCenter .box1 .list {
+    margin-top: 35rpx;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20rpx;
+}
+.rechargeCenter .box1 .list .item {
+    border: 1rpx solid #dbdbdb;
+    border-radius: 10rpx;
+    text-align: center;
+    padding: 20rpx;
+}
+.rechargeCenter .box1 .list .item.active {
+    border-color: #f17575;
+    background-color: #fef3f1;
+}
+.rechargeCenter .box1 .list .item .text-title {
+    font-size: 32rpx;
+    color: #333;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+}
+.rechargeCenter .box1 .list .item .text-des {
+    color: #fb3930;
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+}
+.rechargeCenter .box1 .list .item.active .text-title {
+    color: #fb3930;
+}
+.rechargeCenter .box1 form {
+    display: block;
+    margin-top: 30px;
+}
+.rechargeCenter .box1 form .input {
+    border: 1px solid #e4e4e4;
+    height: 80rpx;
+    border-radius: 5rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 50rpx;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    color: #222;
+}
+.rechargeCenter .box1 form input {
+    display: inline-block;
+    flex: 1;
+    margin-right: 30rpx;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    color: #222;
+}
+.rechargeCenter .box1 form .input-placeholder {
+    font-family: HarmonyOS Sans SC;
+    color: #bfbfc1;
+}
+.rechargeCenter .box1 .text-box {
+    margin-top: 40rpx;
+    font-size: 28rpx;
+    line-height: 2;
+    font-family: HarmonyOS Sans SC;
+    color: #222;
+}
+.rechargeCenter .box1 .text-box .text-title {
+    font-weight: bold;
+}
+.rechargeCenterBottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 4;
+}
+.rechargeCenterBottom .rechargeCenterBottom-text {
+    padding: 10rpx 20rpx;
+    background-color: #e6e6e6;
+    font-size: 24rpx;
+    color: #747474;
+    font-family: HarmonyOS Sans SC;
+}
+.rechargeCenterBottom .rechargeCenterBottom-text .label {
+    display: flex;
+    align-items: center;
+}
+.rechargeCenterBottom .rechargeCenterBottom-text radio {
+    transform: scale(0.8);
+}
+.rechargeCenterBottom-bottom {
+    padding: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rechargeCenterBottom-bottom .price {
+    font-size: 24rpx;
+    color: #333;
+    font-family: HarmonyOS Sans SC;
+}
+.rechargeCenterBottom-bottom .price text {
+    font-size: 42rpx;
+    font-weight: bold;
+    padding-right: 10rpx;
+}
+.rechargeCenterBottom-bottom .btn {
+    background: linear-gradient(to left, #01c53d, #78e41e);
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    text-align: center;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    color: #fff;
+    width: 240rpx;
+}
+/* 加 */
+.page_list {
+    width: 100%;
+    padding: 30rpx;
+    margin: 20rpx auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: #f0eded;
+    border-radius: 20rpx;
+    /* justify-content: space-around; */
+}
+.page_list .page_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'HarmonyOS Sans SC';
+}
+.page_list .page_item .iconfont {
+    width: 80rpx;
+    height: 80rpx;
+    background: #78e41e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 10rpx;
+    font-size: 50rpx;
+}
+
+.page_list .page_item .text_zi {
+    font-size: 30rpx;
+    font-family: 'HarmonyOS Sans SC';
+    color: #333;
+}

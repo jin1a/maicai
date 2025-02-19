@@ -1,0 +1,164 @@
+@import '../../iconfont.css';
+.shoppingCart {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+    padding-bottom: 210rpx;
+}
+.shoppingCart .box1 {
+    padding: 20rpx;
+    margin-top: 20rpx;
+    background-color: RGBA(246, 247, 251, 1);
+}
+.shoppingCart .box1 .content {
+    background: #ffffff;
+    border-radius: 20rpx;
+    padding: 23rpx 25rpx;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.shoppingCart .box1 .icon {
+    width: 45rpx;
+    line-height: 45rpx;
+    background: linear-gradient(to left, #01c53d, #78e41e);
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+.shoppingCart .box1 .content .icon .iconfont {
+    font-size: 26rpx;
+}
+.shoppingCart .box1 .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #000000;
+    flex: 1;
+    margin: 0 13rpx;
+}
+.shoppingCart .box1 .icon-right-1-copy {
+    color: RGBA(172, 172, 172, 1);
+    font-weight: bold;
+    font-size: 32rpx;
+}
+.shoppingCart .box2 {
+    position: relative;
+    flex: 1;
+}
+.shoppingCart .box2 .list {
+    background: #ffffff;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+.shoppingCart .box2 scroll-view {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 20rpx;
+    background-color: RGBA(246, 247, 251, 1);
+    box-sizing: border-box;
+}
+.shoppingCart .box2 .empty {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 107rpx 25rpx;
+    text-align: center;
+    background-color: RGBA(246, 247, 251, 1);
+}
+.shoppingCart .box2 .empty image {
+    width: 506rpx;
+    display: block;
+    margin: 0 auto;
+}
+.shoppingCart .box2 .empty .title {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #888888;
+    margin-top: -79rpx;
+}
+.shoppingCart .box2 .empty .btn {
+    width: 330rpx;
+    line-height: 90rpx;
+    background: linear-gradient(to left, #01c53d, #78e41e);
+    border-radius: 45rpx;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 59rpx auto 0;
+}
+
+.shoppingTotalBar {
+    position: fixed;
+    bottom: 125rpx;
+    width: 100%;
+    left: 0;
+    padding: 10rpx 20rpx;
+    background-color: #fff;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.shoppingTotalBar .radio {
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+.shoppingTotalBar .radio radio {
+    transform: scale(0.8);
+}
+.shoppingTotalBar .radio text {
+    margin-left: 10rpx;
+}
+.shoppingTotalBar-r {
+    display: flex;
+    align-items: center;
+}
+.shoppingTotalBar-r .amount {
+    font-size: 24rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+}
+.shoppingTotalBar-r .amount:first-child {
+    margin-right: 10rpx;
+}
+.shoppingTotalBar-r .amount text {
+    color: rgba(255, 111, 1, 1);
+}
+.shoppingTotalBar-r .amount .price {
+    font-size: 36rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: bold;
+    color: #01c53d, #78e41e;
+}
+.shoppingTotalBar-r navigator {
+    width: 200rpx;
+    line-height: 80rpx;
+    background: linear-gradient(to left, #01c53d, #78e41e);
+    border-radius: 40rpx;
+    text-align: center;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #ffffff;
+    margin-left: 18rpx;
+}
