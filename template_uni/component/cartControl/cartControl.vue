@@ -8,28 +8,29 @@
     <text class="iconfont icon-jia_sekuai"></text>
   </view>
 </view> -->
-    <view class="cartControlContainer">
+    <view class="cartControlContainer">		
         <view class="ani-icon" v-if="showBall" :style="'left:' + shoppCartX + 'px;top: ' + shoppCartY + 'px;'"></view>
         <!-- <view class="ani-icon"  hidden="{{ballDisplay}}"  style="top:{{ballTop}};left:{{ballLeft}}"></view> -->
-        <block v-if="defaultActiveClone || numberClone < 1">
+        <!-- defaultActiveClone || numberClone < 1 -->
+		<block v-if=" numberClone < 1">
             <block v-if="skuType == 2">
                 <view class="addBtn2" @tap.stop.prevent="toggleContent">
                     <text v-if="!showContent">选规格</text>
                     <text v-else-if="">收起</text>
                 </view>
             </block>
-            <block v-else-if="">
+            <block v-else>
                 <view class="addBtn" @tap.stop.prevent="addCart" :style="'color: ' + color + ';background-color: ' + bordrColor + ';'">
                     <text class="iconfont icon-jia_sekuai"></text>
                 </view>
             </block>
         </block>
-        <block v-else-if="">
+        <block v-else>
             <view class="cartControl" :style="'border-color: ' + bordrColor + ';'">
                 <view :class="'cart-decrease ' + (numberClone >= 2 ? '' : 'disable')" @tap.stop.prevent="decreaseCart" :style="'color: ' + color + ';'">
                     <text class="iconfont icon-jian_sekuai"></text>
                 </view>
-                <input class="cart-count" @blur="inputBlur" type="number" :value="numberClone" @input="inputChange" :style="'border-color: ' + bordrColor + ';'" />
+                <input class="cart-count" @blur="inputBlur" type="number" v-model="numberClone" @input="inputChange" :style="'border-color: ' + bordrColor + ';'" />
                 <view class="cart-add" @tap.stop.prevent="addCart" :style="'color: ' + color + ';'">
                     <text class="iconfont icon-jia_sekuai"></text>
                 </view>
@@ -123,7 +124,7 @@ export default {
     methods: {
         addCart: function (e) {
             let that = this;
-            let num = this.number + 1;
+            let num = this.numberClone + 1;
             this.addCartApi('inc', num, function (res) {
                 if (that.defaultActive) {
                     that.setData({
@@ -168,8 +169,8 @@ export default {
             this.$emit('toggleContent');
         },
         decreaseCart: function () {
-            if (this.number >= 1) {
-                let num = this.number - 1;
+            if (this.numberClone >= 1) {
+                let num = this.numberClone - 1;
                 let that = this;
                 that.addCartApi('dec', num, function (res) {
                     that.setData({

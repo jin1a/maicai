@@ -37,7 +37,7 @@
                         </view>
                     </scroll-view>
                 </block>
-                <block v-else-if="">
+                <block v-else>
                     <view class="empty">
                         <image src="http://img.jxcyj.cn/images/empty.png" mode="widthFix" />
                         <view class="title">购物车是空的，赶快添加吧！</view>
