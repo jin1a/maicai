@@ -8,5 +8,12 @@ module.exports = {
             url,
             data
         });
-    }
+    },
+	apiGetVerificationCode(data) {
+	    let url = 'api/verify_code';
+	    return request.post({
+	        url,
+	        data
+	    });
+	}
 };

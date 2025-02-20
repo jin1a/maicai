@@ -243,6 +243,14 @@
 			}
 		},
 		{
+			"path": "pages/register/register",
+			"style": {
+				"usingComponents": {
+					"custom-header-back": "../../component/custom-header-back/custom-header-back"
+				}
+			}
+		},
+		{
 			"path": "pages/recruit/recruit",
 			"style": {
 				"usingComponents": {

@@ -25,6 +25,21 @@
 								<div class="title">密码</div>														
 								<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />								
 							</div>
+							<div class="formItem">
+								<div class="title">确认密码</div>														
+								<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />								
+							</div>
+							<div class="formItem2">
+								<div class="title">短信验证码</div>	
+								<div class="inputItem">
+									<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />									
+									<button class="btn2"  open-type="getPhoneNumber" @tap="getVerificationCode">
+										<!-- <text class="iconfont icon-weixin"></text> -->
+										<text>{{verificationText}}</text>
+										<text></text>
+									</button>									
+								</div>																
+							</div>
 						</div>
                         <label class="checkbox-label">							
                             <view :class="'checkbox-box ' + checked" @tap="radioChange">
@@ -40,12 +55,12 @@
                 <view class="btns">
                     <button class="btn" v-if="canIUseGetUserProfile && checked" open-type="getPhoneNumber" @tap="loginInit">
                         <!-- <text class="iconfont icon-weixin"></text> -->
-                        <text>登录</text>
+                        <text>注册</text>
                         <text></text>
                     </button>
                     <button class="btn" v-else @tap="isChecked">
                         <!-- <text class="iconfont icon-weixin"></text> -->
-                        <text>登录</text>
+                        <text>注册</text>
                         <text></text>
                     </button>
                     <!-- <button class="btn" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">
@@ -53,8 +68,7 @@
         <text>授权登录</text>
         <text></text>
         </button> -->
-                    <view class="btn cancelLogin" @tap="chennelLogin" hover-class="none">取消登录</view>
-					<view class="register" hover-class="none">还没有账号？<span  @tap="toRegister">去注册</span></view>
+                    <view class="btn cancelLogin" @tap="chennelLogin" hover-class="none">取消注册</view>
                 </view>
             </view>
         </view>
@@ -80,7 +94,8 @@ export default {
             loadModal: false,			
 			phoneNub:'',
 			password:'',
-			
+			verificationText:'获取验证码',
+			isCountdown:false,
         };
     },
     /**
@@ -214,11 +229,7 @@ export default {
                 url: '/pages/index/index'
             });
         },
-		toRegister(){
-			uni.navigateTo({
-			    url: '/pages/register/register'
-			});
-		},
+
         openAgreement(e) {
             let type = e.currentTarget.dataset.type;
             if (type === 'user') {
@@ -233,23 +244,50 @@ export default {
                 });
             }
         },
-
+		// 获取验证码
+		getVerificationCode(){
+			if(this.isCountdown){
+				return
+			}
+			let that = this;
+			that.setData({
+			    loadModal: true
+			});
+			console.log(this.phoneNub,222)
+			let param ={"phone":this.phoneNub,"type":1};
+			loginApi
+			    .apiGetVerificationCode(param)
+			    .then((res) => {
+					this.isCountdown = true;
+					this.countdown();
+					console.log(res,'getVerificationCode');
+					that.setData({
+						loadModal: false
+					});
+			    })
+			    .catch((err) => {
+			        console.log(err);
+			        that.setData({
+			            loadModal: false
+			        });
+			    });
+		},
+		// 倒计时
+		countdown(){
+			let i=30
+			var time = setInterval(()=>{
+				i--;
+				this.verificationText=i
+				if(i<=0){
+					this.verificationText=`获取验证码`
+					this.isCountdown = false
+					clearInterval(time)
+					
+				}
+			},1000)
+		},
         //点击登录按钮触发事件
         loginInit(e) {
-			if(this.phoneNub.length===0){
-				uni.showToast({
-					title: '请输入手机号码',
-					icon: 'none'
-				});
-				return
-			}
-			if(this.password.length===0){
-				uni.showToast({
-					title: '请输入密码',
-					icon: 'none'
-				});
-				return
-			}
 			let that = this;
 			that.setData({
 			    loadModal: true
@@ -376,5 +414,5 @@ export default {
 };
 </script>
 <style>
-@import './login.css';
+@import './register.css';
 </style>
