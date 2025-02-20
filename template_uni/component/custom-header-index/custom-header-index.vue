@@ -1,7 +1,7 @@
 <template>
     <!-- component/custom-header-index/custom-header-index.wxml -->
-    <view :class="'custom-header ' + (scrollTop > 30 ? 'active' : '') + ' ' + (elderMode ? 'elder-mode' : '')" :style="'padding: ' + menu.top + 'px ' + menuLeft + 'px 0; '">
-        <view class="custom-header-t" :style="'height: ' + menu.height + 'px;'">
+    <view :class="'custom-header ' + (scrollTop > 30 ? 'active' : '') + ' ' + (elderMode ? 'elder-mode' : '')" style="padding: 10px">
+        <view class="custom-header-t" style="height: 30px;">
             <view class="address">
                 <picker @change="bindPickerChange" :value="citiesIndex" :range="cities">
                     <view class="picker">

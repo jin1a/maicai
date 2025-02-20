@@ -21,7 +21,7 @@ export default {
                 this.system = res;
             }
         });
-        this.menu = 100//uni.getMenuButtonBoundingClientRect();
+        this.menu = 0//uni.getMenuButtonBoundingClientRect();
         this.menuLeft = this.system.windowWidth - this.menu.right;
         this.menuHeight = this.menu.top + this.menu.height;
         this.globalData.screenSize();
