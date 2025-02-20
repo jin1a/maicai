@@ -254,7 +254,7 @@ export default {
 			    loadModal: true
 			});
 			console.log(this.phoneNub,222)
-			let param ={"phone":this.phoneNub,"type":1};
+			let param ={"phone":this.phoneNub,"type":"1"};
 			loginApi
 			    .apiGetVerificationCode(param)
 			    .then((res) => {

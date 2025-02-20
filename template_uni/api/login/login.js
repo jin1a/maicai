@@ -15,5 +15,12 @@ module.exports = {
 	        url,
 	        data
 	    });
+	},
+	apiRetrievePassword(data) {
+	    let url = 'api/recover_password';
+	    return request.post({
+	        url,
+	        data
+	    });
 	}
 };

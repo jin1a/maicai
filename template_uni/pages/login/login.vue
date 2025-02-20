@@ -4,9 +4,7 @@
         <view class="box1">
             <view class="boxContainer">
                 <image class="logo" src="http://img.jxcyj.cn/images/logo.png" mode="widthFix" />
-                <view class="text-box">
-                    <!-- <view class="title">申请获取以下权限</view>
-                    <view class="des">获得你的公开信息(昵称，头像等)</view> -->
+                <view class="text-box">                   
                     <view class="container">
 						<!-- <uni-forms ref="form" :modelValue="formData" :rules="rules">
 							<uni-forms-item label="姓名" name="name">

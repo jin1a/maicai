@@ -1,6 +1,6 @@
 <template>
     <view class="login" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="菜亿家"></custom-header-back>
+        <custom-header-back title="找回密码"></custom-header-back>
         <view class="box1">
             <view class="boxContainer">
                 <image class="logo" src="http://img.jxcyj.cn/images/logo.png" mode="widthFix" />
@@ -22,17 +22,17 @@
 								<input placeholder="请输入" v-model="phoneNub" />
 							</div>
 							<div class="formItem">
-								<div class="title">密码</div>														
+								<div class="title">新密码</div>														
 								<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />								
 							</div>
 							<div class="formItem">
 								<div class="title">确认密码</div>														
-								<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />								
+								<input class="uni-input" password type="text" placeholder="请输入" v-model="rePassword"   />								
 							</div>
 							<div class="formItem2">
 								<div class="title">短信验证码</div>	
 								<div class="inputItem">
-									<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />									
+									<input class="uni-input"  type="text" placeholder="请输入" v-model="code"   />									
 									<button class="btn2"  open-type="getPhoneNumber" @tap="getVerificationCode">
 										<!-- <text class="iconfont icon-weixin"></text> -->
 										<text>{{verificationText}}</text>
@@ -40,35 +40,17 @@
 									</button>									
 								</div>																
 							</div>
-						</div>
-                        <label class="checkbox-label">							
-                            <view :class="'checkbox-box ' + checked" @tap="radioChange">
-                                <view :class="'iconfont icon-gouxuan ' + checked"></view>
-                            </view>
-                            <text>已阅读并同意</text>
-                            <text class="link" data-type="user" @tap="openAgreement">《用户协议》</text>
-                            <text>与</text>
-                            <text class="link" data-type="privacy" @tap="openAgreement">《隐私协议》</text>
-                        </label>
+						</div>                        
                     </view>
                 </view>
                 <view class="btns">
-                    <button class="btn" v-if="canIUseGetUserProfile && checked" open-type="getPhoneNumber" @tap="loginInit">
+                    <button class="btn" open-type="getPhoneNumber" @tap="retrievePasswordFn">
                         <!-- <text class="iconfont icon-weixin"></text> -->
-                        <text>注册</text>
+                        <text>确认修改</text>
                         <text></text>
                     </button>
-                    <button class="btn" v-else @tap="isChecked">
-                        <!-- <text class="iconfont icon-weixin"></text> -->
-                        <text>注册</text>
-                        <text></text>
-                    </button>
-                    <!-- <button class="btn" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">
-          <text class="iconfont icon-weixin"></text>
-        <text>授权登录</text>
-        <text></text>
-        </button> -->
-                    <view class="btn cancelLogin" @tap="chennelLogin" hover-class="none">取消注册</view>
+                  
+                    <view class="btn cancelLogin" @tap="chennelLogin" hover-class="none">返回</view>
                 </view>
             </view>
         </view>
@@ -94,10 +76,13 @@ export default {
             loadModal: false,			
 			phoneNub:'',
 			password:'',
+			rePassword:'',
+			code:'',
 			verificationText:'获取验证码',
 			isCountdown:false,
         };
     },
+	
     /**
      * 生命周期函数--监听页面加载
      */
@@ -136,93 +121,9 @@ export default {
      * 用户点击右上角分享
      */
     onShareAppMessage() {},
-    methods: {
-        radioChange() {
-            this.setData({
-                checked: !this.checked
-            });
-        },
+    methods: {        
 
-        isChecked() {
-            // #ifdef MP-WEIXIN
-            // this.$scope.animate(
-            //     '.checkbox-box',
-            //     [
-            //         {
-            //             translateX: -20,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -5,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -20,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -5,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -20,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -0,
-            //             ease: 'ease-out'
-            //         }
-            //     ],
-            //     200,
-            //     function () {
-            //         this.clearAnimation('.checkbox-box', function () {
-            //             console.log('清除了.block上的所有动画属性');
-            //         });
-            //     }.bind(this)
-            // );
-            // #endif
-            // #ifndef MP-WEIXIN
-            // this.animate(
-            //     '.checkbox-box',
-            //     [
-            //         {
-            //             translateX: -20,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -5,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -20,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -5,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -20,
-            //             ease: 'ease-out'
-            //         },
-            //         {
-            //             translateX: -0,
-            //             ease: 'ease-out'
-            //         }
-            //     ],
-            //     200,
-            //     function () {
-            //         this.clearAnimation('.checkbox-box', function () {
-            //             console.log('清除了.block上的所有动画属性');
-            //         });
-            //     }.bind(this)
-            // );
-            // #endif
-            uni.showToast({
-                title: '请先阅读并同意协议！',
-                icon: 'none'
-            });
-        },
+        
 
         chennelLogin() {
             uni.switchTab({
@@ -254,7 +155,7 @@ export default {
 			    loadModal: true
 			});
 			console.log(this.phoneNub,222)
-			let param ={"phone":this.phoneNub,"type":1};
+			let param ={"phone":this.phoneNub,"type":"4"};
 			loginApi
 			    .apiGetVerificationCode(param)
 			    .then((res) => {
@@ -287,37 +188,28 @@ export default {
 			},1000)
 		},
         //点击登录按钮触发事件
-        loginInit(e) {
+        retrievePasswordFn(e) {
 			let that = this;
 			that.setData({
 			    loadModal: true
 			});
 			console.log(this.phoneNub,222)
-			let param ={"password":this.password,"phone":this.phoneNub};
+			let param =  {"phone":this.phoneNub,"password":this.password,"rePassword":this.rePassword,"code":this.code};
 			loginApi
-			    .apiLogin(param)
+			    .apiRetrievePassword(param)
 			    .then((res) => {
-					console.log(res,'loginInit111')
+					console.log(res,'retrievePasswordFn')
 			        //保存缓存
-			        app.globalData.saveStorage('userInfo', res.data);
-			        app.globalData.saveStorage('isLogin', true);
-			        app.globalData.saveStorage('token', res.data.token.token);
-			        app.globalData.saveStorage('elderMode', res.data.elderMode == 1 ? true : false);
+			       
 			        that.setData({
 			            loadModal: false
 			        });
-			        if (res.data.firm_id == 0) {
-			            uni.navigateTo({
-			                url: '/pages/join/join'
-			            });
-			        } else {
-			            uni.switchTab({
-			                url: '/pages/userPages/user/user',
-			                fail: function (e) {
-			                    console.log(e);
-			                }
-			            });
-			        }
+			        uni.switchTab({
+			            url: '/pages/userPages/user/user',
+			            fail: function (e) {
+			                console.log(e);
+			            }
+			        });
 			    })
 			    .catch((err) => {
 			        console.log(err);
@@ -414,5 +306,5 @@ export default {
 };
 </script>
 <style>
-@import './register.css';
+@import './retrievePassword.css';
 </style>
