@@ -47,7 +47,7 @@
                     </view>
                 </view>
             </block>
-            <block v-else-if="">
+            <block v-else>
                 <view class="searchResult">
                     <view class="item" v-for="(item, index) in searchList" :key="index">
                         <goodItem
