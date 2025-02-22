@@ -4,7 +4,7 @@ import App from './App';
 import zpMixins from '@/uni_modules/zp-mixins/index.js';
 
 // #ifndef VUE3
-import Vue from 'vue';
+import Vue from 'vue'
 
 Vue.use(zpMixins);
 
