@@ -1,58 +1,31 @@
 {
-    "name" : "caiyijia",
-    "appid" : "__UNI__60EF941",
+    "name" : "",
+    "appid" : "",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
     "transformPx" : false,
     "app-plus" : {
-        "usingComponents" : true,
-        "nvueStyleCompiler" : "uni-app",
-        "compilerVersion" : 3,
-        "splashscreen" : {
-            "alwaysShowBeforeRender" : true,
-            "waiting" : true,
-            "autoclose" : true,
-            "delay" : 0
+        "maps" : {
+            "qqmap" : {
+                "key" : "SUDBZ-GY7LQ-Z5H55-2QGFE-H6TY6-PMBUO"
+            }
         },
         "modules" : {
-            "Maps" : {},
-            "Payment" : {}
+            "Share" : {},
+            "Maps" : {}
         },
         "distribute" : {
-            "android" : {
-                "permissions" : [
-                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
-                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
-                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
-                    "<uses-feature android:name=\"android.hardware.camera\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-                ]
-            },
-            "ios" : {
-                "dSYMs" : false
-            },
             "sdkConfigs" : {
-                "maps" : {
-                    "tencent" : {
-                        "key" : "SUDBZ-GY7LQ-Z5H55-2QGFE-H6TY6-PMBUO"
-                    }
-                },
-                "payment" : {
+                "share" : {
                     "weixin" : {
-                        "__platform__" : [ "ios", "android" ],
                         "appid" : "wxcd93b3d1cbb801d9",
                         "UniversalLinks" : ""
+                    }
+                },
+                "maps" : {
+                    "qqmap" : {
+                        "key" : "SUDBZ-GY7LQ-Z5H55-2QGFE-H6TY6-PMBUO"
                     }
                 }
             }
@@ -84,5 +57,14 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "h5" : {
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "SUDBZ-GY7LQ-Z5H55-2QGFE-H6TY6-PMBUO"
+                }
+            }
+        }
+    }
 }

@@ -31,7 +31,7 @@
                 </view>
             </view>
         </block>
-        <block v-else-if="">
+        <block v-else>
             <block v-if="url != 'billingRecord'">
                 <view class="freight">运费 ￥{{ freightPrice }}</view>
             </block>
