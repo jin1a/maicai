@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import customHeader from '../../component/custom-header/custom-header';
+
 import inputSearch from '../../component/inputSearch/inputSearch';
 import shoppingCartBar from '../../component/shoppingCartBar/shoppingCartBar';
 import categoryListColumn from '../../component/categoryListColumn/categoryListColumn';
@@ -44,7 +44,7 @@ const { getCategoryCookbookApi, getCookbookListApi, getCartApi } = require('../.
 const app = getApp();
 export default {
     components: {
-        customHeader,
+       
         inputSearch,
         shoppingCartBar,
         categoryListColumn,

@@ -328,14 +328,15 @@
 			"path": "pages/shoppingCart/shoppingCart",
 			"style": {
 				"usingComponents": {
-					"custom-header": "../../component/custom-header/custom-header",
-					"deleteModal": "../../component/deleteModal/deleteModal",
-					"shoppingCartListItem": "../../component/shoppingCartListItem/shoppingCartListItem"
+					
 				}
 			}
 		},
 		{
-			"path": "pages/cookbook/cookbook"			
+			"path": "pages/cookbook/cookbook",
+			"style": {
+				"usingComponents": {}
+			}			
 		},
 		{
 			"path": "pages/logs/logs",
