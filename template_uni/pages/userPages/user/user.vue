@@ -1,7 +1,7 @@
 <template>
 
     <view :class="'user ' + (elderMode ? 'elder-mode' : '')" style="padding-top:25px;">
-        <scroll-view scroll-y="true" class="userContainer" @scoll="scroll">
+        <scroll-view scroll-y="true" class="userContainer" >
             <view class="userView">
                 <view class="box1" v-if="isLogin">
                     <view class="avatar">
@@ -198,8 +198,9 @@
                 <view class="box5">
                     <view class="title">仓库位置</view>
 					<view class="mapbox" id="mapbox" v-if="showMap" ref="mapbox">
-						<map class="map" :longitude="longitude" :latitude="latitude" :markers="markers"></map>
-						<!-- <web-view :webview-styles="webviewStyles" :fullscreen="false" src="/static/map.html"></web-view> -->
+						<iframe id="mapiframe" ref="mapiframe" :src="mapUrl" @load="onIframeLoad"></iframe>
+						
+						<!-- <map class="map" :longitude="longitude" :latitude="latitude" :markers="markers"></map> -->
 					</view>
                 </view>
                 <view class="box6">
@@ -246,7 +247,8 @@ export default {
             selected: 0,
             longitude: 0,
             latitude: 0,
-            markers: []
+            markers: [],
+			mapUrl:''
         };
     }
     /**
@@ -277,47 +279,11 @@ export default {
             })
             .catch((err) => {});
     },
-	onPageScroll(e) {
-	    console.log('页面滚动距离:', e.scrollTop);
-	    // 在这里编写滚动相关的逻辑
-	  },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady() {
-		// var currentWebview = this.$scope.$getAppWebview() //此对象相当于html5plus里的plus.webview.currentWebview()。在uni-app里vue页面直接使用plus.webview.currentWebview()无效
-		// 		console.log(currentWebview.children(),'currentWebview')
-		// 		setTimeout(function() {
-		// 			let wv = currentWebview.children()[0]
-		// 			console.log(wv,'wv')
-		// 			wv.setStyle({position:'relative',top:10,height:300})
-		// 		}, 1000); //如果是页面初始化调用时，需要延时一下
-				
-				// #ifdef APP-PLUS
-					// 获取元素的top
-					let ele = this.$refs.mapbox
-					
-					console.log(ele)
-					const query = uni.createSelectorQuery();
-					      query.select('#mapbox').boundingClientRect(function(rect) {
-					        // rect是一个对象，包含了元素的详细信息，例如top, left, width, height等
-					        console.log('元素的top位置:',JSON.stringify(rect));
-							
-					      }).exec();
-					
-						let wv = plus.webview.create("","custom-webview",{
-							plusrequire:"none", //禁止远程网页使用plus的API，有些使用mui制作的网页可能会监听plus.key，造成关闭页面混乱，可以通过这种方式禁止
-							'uni-app': 'none', //不加载uni-app渲染层框架，避免样式冲突
-							height:'235px',
-							top:760 //放置在titleNView下方。如果还想在webview上方加个地址栏的什么的，可以继续降低TOP值
-						})
-						wv.loadURL("/static/map.html")
-						var currentWebview = this.$scope.$getAppWebview(); //此对象相当于html5plus里的plus.webview.currentWebview()。在uni-app里vue页面直接使用plus.webview.currentWebview()无效
-						currentWebview.append(wv);//一定要append到当前的页面里！！！才能跟随当前页面一起做动画，一起关闭
-						setTimeout(function() {
-							console.log(wv.getStyle())
-						}, 1000);//如果是首页的onload调用时需要延时一下，二级页面无需延时，可直接获取
-						// #endif
+
 	},
     /**
      * 生命周期函数--监听页面显示
@@ -362,11 +328,10 @@ export default {
                         }
                     ]
                 });
-				setTimeout(()=>{
-					$this.setData({
-						showMap:true
-					})
-				},3000)
+				$this.setData({
+					showMap:true,
+					mapUrl:`https://m.amap.com/navi/?dest=115.004229,25.832464&destName=青峰大道199号&hideRouteIcon=1&key=30d9b0207cec4b75936ffdbfe748ff56&jscode=06e18b75b08a91b031be90cd29f81cd4`
+				})
             }
         });
     },
@@ -392,8 +357,8 @@ export default {
     onShareAppMessage(res) {},
     onShareTimeline: function () {},
     methods: {
-		scroll(){
-				console.log('sscroll')
+		onIframeLoad(){
+			
 		},
 		share() {
 			console.log('share',uni.share) 
@@ -424,14 +389,13 @@ export default {
 .mapbox{
 	position: relative;
 	z-index: 999;
-	height: 235px;
+	height: 260px;
+	overflow: hidden;
 }
-.map{
-	/* position: absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0; */
+#mapiframe{
+	height: 326px;
+	    margin-top: -50px;
 }
+
 
 </style>
