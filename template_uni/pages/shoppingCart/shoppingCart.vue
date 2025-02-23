@@ -1,6 +1,6 @@
 <template>
-    <view>
-        <view class="shoppingCart" :style="'padding-top: ' + menuHeight + 'px;'">
+    <view style="height: 100vh;display: flex;flex-direction: column;">
+        <view class="shoppingCart" style="padding-top:25px;">
             <custom-header title="购物车"></custom-header>
             <view class="box1">
                 <navigator :url="url" class="content">
@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import customHeader from '../../component/custom-header/custom-header';
+// import customHeader from '../../component/custom-header/custom-header';
 import deleteModal from '../../component/deleteModal/deleteModal';
 import shoppingCartListItem from '../../component/shoppingCartListItem/shoppingCartListItem';
 // pages/shoppingCart/shoppingCart.js
@@ -78,13 +78,13 @@ const { getCartApi, delCartApi, getDefaultAddressApi, createOrderApi } = require
 const app = getApp();
 export default {
     components: {
-        customHeader,
+        // customHeader,
         deleteModal,
         shoppingCartListItem
     },
     data() {
         return {
-            menuHeight: app.globalData.menuHeight,
+            // menuHeight: app.globalData.menuHeight,
             currentId: -1,
             deleteId: '-1',
             shoppingCartList: [],

@@ -2,7 +2,7 @@
 .user {
     height: 100vh;
     background: linear-gradient(-90deg, #d5fef6, #daffee, #e5fde3);
-    padding-bottom: 120rpx;
+    padding-bottom: 0rpx;
 }
 .user .userContainer {
     height: 100%;

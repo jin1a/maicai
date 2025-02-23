@@ -1,5 +1,5 @@
 <template>
-    <view class="allOrder" :style="'padding-top: ' + (menuHeight + 10) + 'px;'">
+    <view class="allOrder" style="padding-top: 25px;">
         <custom-header-back title="我的订单"></custom-header-back>
         <view class="allOrderContainer">
             <view class="orderNav">
@@ -66,19 +66,17 @@
 <script>
 import inputSearch from '../../../component/inputSearch/inputSearch';
 import orderItem from '../../../component/orderItem/orderItem';
-import customHeaderBack from '../../../component/custom-header-back/custom-header-back';
+// import customHeaderBack from '../../../component/custom-header-back/custom-header-back';
 // pages/userPages/allOrder/allOrder.js
 const { getAllOrderApi, cancelOrderApi, orderTakeApi, delOrderApi } = require('../../../api/index');
 const app = getApp();
 export default {
     components: {
         inputSearch,
-        orderItem,
-        customHeaderBack
+        orderItem        
     },
     data() {
-        return {
-            menuHeight: app.globalData.menuHeight,
+        return {           
             currentId: 3,
             list: ['全部', '待付款', '待发货', '待收货'],
             orderList: [],

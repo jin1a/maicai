@@ -301,9 +301,7 @@
 			"path": "pages/userPages/allOrder/allOrder",
 			"style": {
 				"usingComponents": {
-					"inputSearch": "../../../component/inputSearch/inputSearch",
-					"orderItem": "../../../component/orderItem/orderItem",
-					"custom-header-back": "../../../component/custom-header-back/custom-header-back"
+					
 				}
 			}
 		},
@@ -337,17 +335,7 @@
 			}
 		},
 		{
-			"path": "pages/cookbook/cookbook",
-			"style": {
-				"usingComponents": {
-					"custom-header": "../../component/custom-header/custom-header",
-					"inputSearch": "../../component/inputSearch/inputSearch",
-					"shoppingCartBar": "../../component/shoppingCartBar/shoppingCartBar",
-					"categoryListColumn": "../../component/categoryListColumn/categoryListColumn",
-					"leftNav": "../../component/leftNav/leftNav",
-					"cartControl": "../../component/cartControl/cartControl"
-				}
-			}
+			"path": "pages/cookbook/cookbook"			
 		},
 		{
 			"path": "pages/logs/logs",
