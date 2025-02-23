@@ -1,6 +1,6 @@
 <template>
-    <view class="category" :style="'padding-top: ' + menuHeight + 'px;'">
-        <custom-header title="全部菜品"></custom-header>
+    <view class="category" style="padding-top:25px;">
+        <!-- <custom-header title="全部菜品"></custom-header> -->
         <view class="category-t">
             <inputSearch :title="searchTitle" @cancel="cancel" @search="search" :isSearch="isSearch" bgColor="rgba(249, 249, 251, 1)" placeholder="搜索商品"></inputSearch>
         </view>
@@ -66,7 +66,6 @@
                 </view>
             </block>
         </view>
-
         <shoppingCartBar :cartList="cartList" :price="price"></shoppingCartBar>
     </view>
 </template>
@@ -94,9 +93,9 @@ export default {
     },
     data() {
         return {
-            menu: app.globalData.menu,
-            menuLeft: app.globalData.menuLeft,
-            menuHeight: app.globalData.menuHeight,
+            // menu: app.globalData.menu,
+            // menuLeft: app.globalData.menuLeft,
+            // menuHeight: app.globalData.menuHeight,
             typeList: [],
             goodsList: [],
             typeListId: 0,

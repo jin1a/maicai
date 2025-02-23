@@ -1,5 +1,6 @@
 <template>
-    <view :class="'user ' + (elderMode ? 'elder-mode' : '')" :style="'padding-top: ' + (menuHeight + 10) + 'px;'">
+
+    <view :class="'user ' + (elderMode ? 'elder-mode' : '')" style="padding-top:25px;">
         <scroll-view scroll-y="true" class="userContainer" @scoll="scroll">
             <view class="userView">
                 <view class="box1" v-if="isLogin">

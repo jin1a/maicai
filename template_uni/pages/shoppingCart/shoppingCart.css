@@ -1,10 +1,11 @@
 @import '../../iconfont.css';
 .shoppingCart {
+	flex: 1;
     display: flex;
     flex-direction: column;
     height: 100vh;
     background-color: #ffffff;
-    padding-bottom: 210rpx;
+    padding-bottom: 0rpx;
 }
 .shoppingCart .box1 {
     padding: 20rpx;
@@ -102,9 +103,7 @@
     margin: 59rpx auto 0;
 }
 
-.shoppingTotalBar {
-    position: fixed;
-    bottom: 125rpx;
+.shoppingTotalBar {    
     width: 100%;
     left: 0;
     padding: 10rpx 20rpx;

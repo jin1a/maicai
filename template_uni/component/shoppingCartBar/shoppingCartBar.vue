@@ -1,5 +1,5 @@
 <template>
-    <view>
+    <view style="height: 90rpx;">
         <view class="shoppingCartBar">
             <view class="shoppingCartBar-l" @tap="showCategoryCartModal">
                 <view class="icon">

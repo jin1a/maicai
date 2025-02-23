@@ -28,7 +28,6 @@ export default {
     },
     globalData: {
         userInfo: null,
-
         screenSize: function () {
             var that = this;
             uni.getSystemInfo({
