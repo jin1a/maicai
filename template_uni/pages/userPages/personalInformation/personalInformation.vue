@@ -7,8 +7,8 @@
                     <view class="item">
                         <view class="text">头像</view>
                         <view class="item-r">
-                            <image class="avatar" :src="userinfo.avatar" v-if="userinfo.avatar != ''" mode="" />
-                            <image class="avatar" src="http://img.jxcyj.cn/images/user.png" v-else-if="" mode="" />
+                            <image class="avatar" :src="userinfo.avatar" v-if="userinfo.avatar" mode="" />
+                            <image class="avatar" src="http://img.jxcyj.cn/images/user.png" v-else mode="" />
                         </view>
                     </view>
                     <view class="item">
@@ -36,7 +36,7 @@
                                 <radio-group @change="radioChange">
                                     <label v-for="(item, index) in radios" :key="index">
                                         <view class="label">
-                                            <radio :value="item.value" :checked="item.value == userinfo.sex ? 'true' : ''" />
+                                            <radio :value="item.value" :checked="item.value == userinfo.sex ? true : false" />
                                             <text>{{ item.name }}</text>
                                         </view>
                                     </label>
@@ -103,7 +103,7 @@ export default {
             Processing: '0',
             radios: [
                 {
-                    value: '1',
+                    value:'1',
                     name: '男'
                 },
                 {
@@ -227,7 +227,7 @@ export default {
                 is_show: userinfo.is_show == false ? 0 : 1,
                 elder_mode: userinfo.elder_mode == false ? 0 : 1
             };
-            if (data.sex == null) {
+            if (data.sex === null) {
                 uni.showToast({
                     title: '请填写完整！',
                     icon: 'none',

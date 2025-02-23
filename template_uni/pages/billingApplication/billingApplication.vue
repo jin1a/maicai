@@ -68,7 +68,7 @@
                         <view class="btn" @tap="cancel">取消</view>
                         <button class="btn" formType="submit">保存</button>
                     </view>
-                    <view class="btns" v-else-if="">
+                    <view class="btns" v-else>
                         <view class="btn" @tap="cancel">取消</view>
                         <view class="btn" @tap="invoicingSubmit">确定申请</view>
                     </view>
@@ -211,7 +211,14 @@ export default {
                     });
                     that.cancel();
                 })
-                .catch((err) => {});
+                .catch((err) => {
+					console.log(err.msg)
+					uni.showToast({
+					    title: err.msg,
+					    icon: 'none',
+					    duration: 1000
+					});
+				});
         },
 
         invoicingInfo(type) {
@@ -305,6 +312,7 @@ export default {
                     isShowMOdal: !this.isShowMOdal
                 });
             }
+			console.log(this.isShowMOdal,'isShowMOdal')
             e.detail.flag = 'fapiao';
             this.setData({
                 addressId: e.detail.addressId

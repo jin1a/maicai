@@ -1,6 +1,7 @@
 <template>
+
     <view :class="'user ' + (elderMode ? 'elder-mode' : '')" style="padding-top:25px;">
-        <view class="userContainer">
+        <scroll-view scroll-y="true" class="userContainer" >
             <view class="userView">
                 <view class="box1" v-if="isLogin">
                     <view class="avatar">
@@ -165,14 +166,14 @@
                             </div>
                             <view class="text">在线反馈</view>
                         </navigator>
-                        <navigator :url="false" class="item" hover-class="none">
-                            <button open-type="share">
+                        <view :url="false" class="item" hover-class="none">
+                            <button @tap="share">
                                 <div class="icon">
                                     <text class="iconfont icon-fenxiang1"></text>
                                 </div>
                                 <view class="text">分享</view>
                             </button>
-                        </navigator>
+                        </view>
                         <navigator url="/pages/FAQ/FAQ" class="item" hover-class="none">
                             <div class="icon">
                                 <text class="iconfont icon-jichu21-xianxing"></text>
@@ -196,7 +197,11 @@
                 </view>
                 <view class="box5">
                     <view class="title">仓库位置</view>
-                    <map :longitude="longitude" :latitude="latitude" :markers="markers"></map>
+					<view class="mapbox" id="mapbox" v-if="showMap" ref="mapbox">
+						<iframe id="mapiframe" ref="mapiframe" :src="mapUrl" @load="onIframeLoad"></iframe>
+						
+						<!-- <map class="map" :longitude="longitude" :latitude="latitude" :markers="markers"></map> -->
+					</view>
                 </view>
                 <view class="box6">
                     <view class="title">公司信息</view>
@@ -206,7 +211,7 @@
                     </view>
                 </view>
             </view>
-        </view>
+        </scroll-view>
     </view>
 </template>
 
@@ -217,8 +222,14 @@ const app = getApp();
 export default {
     data() {
         return {
+			showMap:false,
             menuHeight: app.globalData.menuHeight,
-
+			webviewStyles: {
+								progress: {
+									color: '#FF3333'
+								},
+								height:'200'
+							},
             userinfo: {
                 firm_name: '',
                 username: '',
@@ -236,7 +247,8 @@ export default {
             selected: 0,
             longitude: 0,
             latitude: 0,
-            markers: []
+            markers: [],
+			mapUrl:''
         };
     }
     /**
@@ -270,7 +282,9 @@ export default {
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady() {},
+    onReady() {
+
+	},
     /**
      * 生命周期函数--监听页面显示
      */
@@ -314,6 +328,10 @@ export default {
                         }
                     ]
                 });
+				$this.setData({
+					showMap:true,
+					mapUrl:`https://m.amap.com/navi/?dest=115.004229,25.832464&destName=青峰大道199号&hideRouteIcon=1&key=30d9b0207cec4b75936ffdbfe748ff56&jscode=06e18b75b08a91b031be90cd29f81cd4`
+				})
             }
         });
     },
@@ -338,9 +356,46 @@ export default {
      */
     onShareAppMessage(res) {},
     onShareTimeline: function () {},
-    methods: {}
+    methods: {
+		onIframeLoad(){
+			
+		},
+		share() {
+			console.log('share',uni.share) 
+		    uni.share({
+		        provider: 'weixin',
+		        scene: 'WXSceneSession', // 分享到聊天界面
+		        type: 5, // 小程序类型
+		        title: '这是一个分享示例',
+				miniProgram:{
+					id:'wxcd93b3d1cbb801d9',
+					path:'pages/index/index',
+					type:0,
+					webUrl:'https://ask.dcloud.net.cn/article/287'
+				},
+		        success(res) {
+		          console.log('分享成功', res);
+		        },
+		        fail(err) {
+		          console.log('分享失败', err);
+		        }
+			})
+		}
+	}
 };
 </script>
 <style>
 @import './user.css';
+.mapbox{
+	position: relative;
+	z-index: 999;
+	height: 260px;
+	overflow: hidden;
+}
+#mapiframe{
+	height: 326px;
+	    margin-top: -50px;
+}
+
+
 </style>
