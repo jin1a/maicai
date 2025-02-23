@@ -1,8 +1,8 @@
 .cookbook {
-    padding-bottom: 210rpx;
+    height:calc(100vh - 0px) ;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    padding-bottom: 0px;
 }
 .cookbook .box1 {
     padding: 13rpx 20rpx 0;

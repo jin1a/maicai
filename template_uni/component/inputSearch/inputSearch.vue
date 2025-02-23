@@ -87,7 +87,7 @@ export default {
             this.$emit('search', {
                 detail: {
                     type: this.currId,
-                    title: inputValue
+                    title: this.titleClone
                 }
             });
         },

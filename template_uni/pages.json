@@ -59,18 +59,8 @@
 			}
 		},
 		{
-			"path": "pages/category/category",
-			"style": {
-				"usingComponents": {
-					"custom-header": "../../component/custom-header/custom-header",
-					"inputSearch": "../../component/inputSearch/inputSearch",
-					"categoryListColumn": "../../component/categoryListColumn/categoryListColumn",
-					"categoryListRow": "../../component/categoryListRow/categoryListRow",
-					"goodItem": "../../component/goodItem/goodItem",
-					"leftNav": "../../component/leftNav/leftNav",
-					"shoppingCartBar": "../../component/shoppingCartBar/shoppingCartBar"
-				}
-			}
+			"path": "pages/category/category"
+			
 		},
 		{
 			"path": "pages/userPages/user/user",

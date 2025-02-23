@@ -1,5 +1,5 @@
 <template>
-    <view class="cookbook" :style="'padding-top: ' + menuHeight + 'px;'">
+    <view class="cookbook" style="padding-top:25px">
         <custom-header title="全部菜品"></custom-header>
         <view class="box1">
             <inputSearch bgColor="rgba(249, 249, 251, 1)" placeholder="搜索菜品"></inputSearch>
@@ -53,7 +53,7 @@ export default {
     },
     data() {
         return {
-            menuHeight: app.globalData.menuHeight,
+            // menuHeight: app.globalData.menuHeight,
             typeListId: 0,
             typeList: [],
             goodsTypeList: [],

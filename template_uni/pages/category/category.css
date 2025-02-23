@@ -1,9 +1,9 @@
 @import '../../iconfont.css';
 .category {
-    height: 100vh;
+    height:calc(100vh - 0px) ;
     display: flex;
     flex-direction: column;
-    padding-bottom: 210rpx;
+    padding-bottom: 0px;
 }
 .category-t {
     position: relative;
