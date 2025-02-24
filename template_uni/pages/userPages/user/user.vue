@@ -84,7 +84,7 @@
                             </div>
                             <view class="text">钱包充值</view>
                         </navigator>
-                        <navigator v-else-if="" url="/pages/recharge/recharge" class="item" hover-class="none">
+                        <navigator v-else url="/pages/recharge/recharge" class="item" hover-class="none">
                             <div class="icon">
                                 <text class="iconfont icon-qianbao2-xianxing"></text>
                             </div>
