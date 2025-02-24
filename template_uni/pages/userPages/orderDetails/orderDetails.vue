@@ -271,11 +271,24 @@ export default {
                         const payParams = res.data;
                         // 调用微信支付接口发起支付请求
                         uni.requestPayment({
-                            timeStamp: payParams.timestamp,
-                            nonceStr: payParams.nonceStr,
-                            package: payParams.package,
-                            signType: payParams.signType,
-                            paySign: payParams.paySign,
+							// appid:,
+       //                      timeStamp: payParams.timestamp,
+       //                      nonceStr: payParams.nonceStr,
+       //                      package: payParams.package,
+       //                      signType: payParams.signType,
+       //                      paySign: payParams.paySign,
+							
+							"provider": "wxpay",
+							"orderInfo": {
+								"appid": payParams.appId,  // 微信开放平台 - 应用 - AppId，注意和微信小程序、公众号 AppId 可能不一致
+								"noncestr": payParams.nonceStr, // 随机字符串
+								"package": "Sign=WXPay",        // 固定值
+								"partnerid": payParams.appid,      // 微信支付商户号
+								"prepayid": payParams.appid, // 统一下单订单号
+								"timestamp": payParams.timesTamp,        // 时间戳（单位：秒）
+								"sign": payParams.paySign // 签名，这里用的 MD5/RSA 签名
+							},
+							
                             success: function (res) {
                                 that.currentId = 1;
                                 uni.showToast({

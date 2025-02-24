@@ -28,6 +28,14 @@
                         "key" : "SUDBZ-GY7LQ-Z5H55-2QGFE-H6TY6-PMBUO"
                     }
                 }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "E:/项目资料/卖菜/app图标/72-72.png",
+                    "xhdpi" : "E:/项目资料/卖菜/app图标/96-96.png",
+                    "xxhdpi" : "E:/项目资料/卖菜/app图标/144-144.png",
+                    "xxxhdpi" : "E:/项目资料/卖菜/app图标/192-192.png"
+                }
             }
         }
     },
@@ -61,7 +69,7 @@
     "h5" : {
         "sdkConfigs" : {
             "maps" : {
-                "qqmap" : {
+                "tencent" : {
                     "key" : "SUDBZ-GY7LQ-Z5H55-2QGFE-H6TY6-PMBUO"
                 }
             }
