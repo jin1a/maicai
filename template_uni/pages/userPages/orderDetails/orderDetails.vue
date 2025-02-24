@@ -1,5 +1,5 @@
 <template>
-    <view class="orderDetails" :style="'padding-top: ' + (menuHeight + 30) + 'px;'">
+    <view class="orderDetails" style="padding-top: 25px;">
         <block v-if="currentId == 2 || currentId == 0">
             <custom-header-back bgColor="RGBA(246, 247, 251, 1)" backTitle="商品已送达" backDes="包裹已送至前台"></custom-header-back>
         </block>
@@ -142,7 +142,7 @@
 import orderBtnBar from '../../../component/orderBtnBar/orderBtnBar';
 import orderGoodItem from '../../../component/orderGoodItem/orderGoodItem';
 import orderAddressMsg from '../../../component/orderAddressMsg/orderAddressMsg';
-import customHeaderBack from '../../../component/custom-header-back/custom-header-back';
+
 // pages/userPages/orderDetails/orderDetails.js
 const { payOrderApi, getOrderInfoApi, cancelOrderApi } = require('../../../api/index');
 const app = getApp();
@@ -150,12 +150,10 @@ export default {
     components: {
         orderBtnBar,
         orderGoodItem,
-        orderAddressMsg,
-        customHeaderBack
+        orderAddressMsg        
     },
     data() {
-        return {
-            menuHeight: app.globalData.menuHeight,
+        return {            
             currentId: 0,
             orderId: 0,
             orderInfo: [],
