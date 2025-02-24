@@ -4,6 +4,9 @@
 }
 .formItem{border-bottom:#cecdcd solid 1px;text-align: left;}
 .formItem input{font-size: 30rpx;height: 80rpx ;}
+
+.retrievePW{color:#01c53d;float: right;}
+
 .register{text-align: center;}
 .register span{color: #01c53d;}
 .login .box1 {

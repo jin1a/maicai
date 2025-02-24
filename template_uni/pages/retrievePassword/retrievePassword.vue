@@ -1,6 +1,6 @@
 <template>
-    <view class="login" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="找回密码"></custom-header-back>
+    <view class="login" >
+        <!-- <custom-header-back title="找回密码"></custom-header-back> -->
         <view class="box1">
             <view class="boxContainer">
                 <image class="logo" src="http://img.jxcyj.cn/images/logo.png" mode="widthFix" />
@@ -58,17 +58,17 @@
 </template>
 
 <script>
-import customHeaderBack from '../../component/custom-header-back/custom-header-back';
+// import customHeaderBack from '../../component/custom-header-back/custom-header-back';
 // pages/login/login.js
 const { loginApi } = require('../../api/index');
 const app = getApp();
 export default {
     components: {
-        customHeaderBack
+        // customHeaderBack
     },
     data() {
         return {
-            menuHeight: app.globalData.menuHeight,
+            
             userInfo: {},
             hasUserInfo: false,
             canIUseGetUserProfile: false,

@@ -1,5 +1,5 @@
 <template>
-    <view class="custom-header-back" :style="'padding: ' + menu.top + 'px ' + menuLeft + 'px 0;height: ' + menuHeight + 'px; background-color:' + bgColor">
+    <view class="custom-header-back" style="padding:25px ;height: 30px; background-color:#ccc">
         <view class="custom-header-container">
             <view class="backBtn" @tap="back">
                 <text class="iconfont icon-right-1-copy"></text>
@@ -20,9 +20,7 @@ const app = getApp();
 export default {
     data() {
         return {
-            menu: app.globalData.menu,
-            menuLeft: app.globalData.menuLeft,
-            menuHeight: app.globalData.menuHeight
+            
         };
     },
     /**

@@ -1,6 +1,6 @@
 <template>
-    <view class="login" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="菜亿家"></custom-header-back>
+    <view class="login" >
+        <!-- <custom-header-back title="菜亿家"></custom-header-back> -->
         <view class="box1">
             <view class="boxContainer">
                 <image class="logo" src="http://img.jxcyj.cn/images/logo.png" mode="widthFix" />
@@ -20,7 +20,8 @@
 								<input placeholder="请输入" v-model="phoneNub" />
 							</div>
 							<div class="formItem">
-								<div class="title">密码</div>														
+								<div class="title">密码</div>
+								<span class="retrievePW" @tap="toRetrievePW">忘记密码？</span>
 								<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />								
 							</div>
 						</div>
@@ -60,17 +61,16 @@
 </template>
 
 <script>
-import customHeaderBack from '../../component/custom-header-back/custom-header-back';
+// import customHeaderBack from '../../component/custom-header-back/custom-header-back';
 // pages/login/login.js
 const { loginApi } = require('../../api/index');
 const app = getApp();
 export default {
     components: {
-        customHeaderBack
+        // customHeaderBack
     },
     data() {
-        return {
-            menuHeight: app.globalData.menuHeight,
+        return {           
             userInfo: {},
             hasUserInfo: false,
             canIUseGetUserProfile: false,
@@ -125,7 +125,11 @@ export default {
                 checked: !this.checked
             });
         },
-
+		toRetrievePW(){
+			uni.navigateTo({
+			    url: '/pages/retrievePassword/retrievePassword'
+			});
+		},
         isChecked() {
             // #ifdef MP-WEIXIN
             // this.$scope.animate(

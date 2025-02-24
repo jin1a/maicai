@@ -1,15 +1,15 @@
 <template>
     <view class="orderDetails" style="padding-top: 25px;">
-        <block v-if="currentId == 2 || currentId == 0">
+        <!-- <block v-if="currentId == 2 || currentId == 0">
             <custom-header-back bgColor="RGBA(246, 247, 251, 1)" backTitle="商品已送达" backDes="包裹已送至前台"></custom-header-back>
         </block>
         <block v-else-if="currentId == 5">
             <!-- <custom-header-back bgColor="RGBA(246, 247, 251, 1)" backTitle="等待付款" backTime="请在{{date}}内支付"></custom-header-back> -->
-            <custom-header-back bgColor="RGBA(246, 247, 251, 1)" backTitle="等待付款"></custom-header-back>
+            <!-- <custom-header-back bgColor="RGBA(246, 247, 251, 1)" backTitle="等待付款"></custom-header-back>
         </block>
         <block v-else-if="currentId == 1">
             <custom-header-back bgColor="RGBA(246, 247, 251, 1)" backTitle="商品正在打包中" backDes="商品正在仓库打包中，请耐心等待"></custom-header-back>
-        </block>
+        </block> -->
         <view class="orderDetailsContainer">
             <view class="box1">
                 <orderAddressMsg
@@ -142,7 +142,7 @@
 import orderBtnBar from '../../../component/orderBtnBar/orderBtnBar';
 import orderGoodItem from '../../../component/orderGoodItem/orderGoodItem';
 import orderAddressMsg from '../../../component/orderAddressMsg/orderAddressMsg';
-
+// import customHeaderBack from '../../component/custom-header-back/custom-header-back';
 // pages/userPages/orderDetails/orderDetails.js
 const { payOrderApi, getOrderInfoApi, cancelOrderApi } = require('../../../api/index');
 const app = getApp();
@@ -150,7 +150,8 @@ export default {
     components: {
         orderBtnBar,
         orderGoodItem,
-        orderAddressMsg        
+        orderAddressMsg
+		// customHeaderBack
     },
     data() {
         return {            

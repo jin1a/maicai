@@ -1,6 +1,6 @@
 <template>
-    <view class="login" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="菜亿家"></custom-header-back>
+    <view class="login" >
+       <!-- <custom-header-back title="菜亿家"></custom-header-back> -->
         <view class="box1">
             <view class="boxContainer">
                 <image class="logo" src="http://img.jxcyj.cn/images/logo.png" mode="widthFix" />
