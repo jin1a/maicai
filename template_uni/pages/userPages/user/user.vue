@@ -42,7 +42,7 @@
                 <view class="box3">
                     <view class="title">我的订单</view>
                     <view class="list">
-                        <navigator url="/pages/userPages/allOrder/allOrder?currentId=1" class="item" hover-class="none">
+                        <navigator url="/pages/userPages/allOrder/allOrder?currentId=1" class="item relativeitem" hover-class="none">
                             <div class="icon icon1">
                                 <text class="iconfont icon-daifukuan-2"></text>
                             </div>
@@ -397,5 +397,13 @@ export default {
 	    margin-top: -50px;
 }
 
-
+.relativeitem{
+	position: relative;
+}
+.relativeitem sup{
+	position: absolute!important;
+	right: 7px!important;
+	top: -3px!important;
+	font-weight: 100!important;
+}
 </style>
