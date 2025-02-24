@@ -366,6 +366,7 @@ export default {
 		        provider: 'weixin',
 		        scene: 'WXSceneSession', // 分享到聊天界面
 		        type: 5, // 小程序类型
+				imageUrl: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/share-logo@3.png',
 		        title: '这是一个分享示例',
 				miniProgram:{
 					id:'gh_90eb4b1456f4',
