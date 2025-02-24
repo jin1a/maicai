@@ -368,7 +368,7 @@ export default {
 		        type: 5, // 小程序类型
 		        title: '这是一个分享示例',
 				miniProgram:{
-					id:'wxcd93b3d1cbb801d9',
+					id:'gh_90eb4b1456f4',
 					path:'pages/index/index',
 					type:0,
 					webUrl:'https://ask.dcloud.net.cn/article/287'
