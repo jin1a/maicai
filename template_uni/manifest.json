@@ -1,5 +1,5 @@
 {
-    "name" : "caiyijia",
+    "name" : "菜亿家",
     "appid" : "__UNI__60EF941",
     "description" : "",
     "versionName" : "1.0.0",
@@ -17,7 +17,8 @@
         },
         "modules" : {
             "Maps" : {},
-            "Payment" : {}
+            "Payment" : {},
+            "Share" : {}
         },
         "distribute" : {
             "android" : {
@@ -51,6 +52,12 @@
                 "payment" : {
                     "weixin" : {
                         "__platform__" : [ "ios", "android" ],
+                        "appid" : "wxcd93b3d1cbb801d9",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "share" : {
+                    "weixin" : {
                         "appid" : "wxcd93b3d1cbb801d9",
                         "UniversalLinks" : ""
                     }
