@@ -16,7 +16,7 @@
             <block v-if="skuType == 2">
                 <view class="addBtn2" @tap.stop.prevent="toggleContent">
                     <text v-if="!showContent">选规格</text>
-                    <text v-else-if="">收起</text>
+                    <text v-else>收起</text>
                 </view>
             </block>
             <block v-else>

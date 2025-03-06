@@ -86,7 +86,7 @@
 
                                 <view class="item3-t3 status" v-if="item.status == 0">未回收</view>
 
-                                <view class="item3-t3 status1" v-else-if="">已收回</view>
+                                <view class="item3-t3 status1" v-else>已收回</view>
                             </view>
                         </view>
                     </block>
@@ -104,11 +104,11 @@
 
                                 <view class="item3-t3 status" v-if="item.status == 0">未回收</view>
 
-                                <view class="item3-t3 status1" v-else-if="">已收回</view>
+                                <view class="item3-t3 status1" v-else>已收回</view>
                             </view>
                         </view>
                     </block>
-                    <block v-else-if="">
+                    <block v-else>
                         <view class="item1" v-for="(item, index) in listsClone" :key="index">
                             <view class="item1-t">
                                 <view class="item1-t-l">

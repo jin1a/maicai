@@ -58,7 +58,7 @@
                         </view>
                     </view>
                 </block>
-                <block v-else-if="">
+                <block v-else>
                     <view class="item">
                         <view class="item-l">发票抬头</view>
                         <view class="item-r">

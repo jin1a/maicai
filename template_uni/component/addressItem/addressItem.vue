@@ -14,7 +14,7 @@
                             <block v-if="isEditStatus">
                                 <text :style="'color: ' + (isDefaultId ? 'rgba(1, 197, 61, 1)' : '')">设为新地址</text>
                             </block>
-                            <block v-else-if="">
+                            <block v-else>
                                 <text :style="'color: ' + (isDefaultId ? 'rgba(1, 197, 61, 1)' : '')">设为默认</text>
                             </block>
                         </view>

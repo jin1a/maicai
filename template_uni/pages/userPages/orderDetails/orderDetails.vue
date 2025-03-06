@@ -262,7 +262,8 @@ export default {
             payOrderApi
                 .apiName({
                     orderId: this.orderId,
-                    type: this.check
+                    type: this.check,
+					trade_type:'T_APP'
                 })
                 .then((res) => {
                     if (that.check == 1) {

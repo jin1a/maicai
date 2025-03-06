@@ -53,7 +53,7 @@
             <block v-if="isShowAll">
                 <view class="text">收起</view>
             </block>
-            <block v-else-if="">
+            <block v-else>
                 <view class="text">查看全部商品</view>
             </block>
             <text class="iconfont icon-xia"></text>

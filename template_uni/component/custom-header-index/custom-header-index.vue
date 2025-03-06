@@ -1,6 +1,6 @@
 <template>
     <!-- component/custom-header-index/custom-header-index.wxml -->
-    <view :class="'custom-header ' + (scrollTop > 30 ? 'active' : '') + ' ' + (elderMode ? 'elder-mode' : '')" style="padding: 25px">
+    <view :class="'custom-header ' + (scrollTop > 30 ? 'active' : '') + ' ' + (elderMode ? 'elder-mode' : '')" style="padding: 40px 25px">
         <view class="custom-header-t" style="height: 30px;">
             <view class="address">
                 <picker @change="bindPickerChange" :value="citiesIndex" :range="cities">

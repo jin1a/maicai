@@ -18,7 +18,7 @@
                 <view class="item-r">李*胜</view>
             </view>
         </block>
-        <block v-else-if="">
+        <block v-else>
             <navigator class="list" :url="is_admin == 1 ? '/pages/address/address?resetAddress=0&orderId=' + orderId + '&addressId=' + addressId : 'false'">
                 <view>
                     <view class="item">

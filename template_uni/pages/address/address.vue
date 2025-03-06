@@ -24,7 +24,7 @@
                     </block>
                 </view>
             </block>
-            <block v-else-if="">
+            <block v-else>
                 <view class="empty">您还没有添加收货地址哦！</view>
             </block>
         </view>
@@ -35,7 +35,7 @@
             <block v-if="isEditStatus">
                 <view class="submit" @tap="handoff">确定</view>
             </block>
-            <block v-else-if="">
+            <block v-else>
                 <view class="submit" @tap="addAddress">+ 添加收货地址</view>
             </block>
         </view>

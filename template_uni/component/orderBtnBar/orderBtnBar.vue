@@ -23,7 +23,7 @@
                         </text>
                     </view>
                 </block>
-                <block v-else-if="">
+                <block v-else>
                     <view class="time">
                         剩余时间：
                         <text>{{ formattedTime }}</text>
@@ -46,7 +46,7 @@
                         </text>
                     </view>
                 </block>
-                <block v-else-if="">
+                <block v-else>
                     <view class="time">
                         剩余时间：
                         <text>{{ formattedTime }}</text>

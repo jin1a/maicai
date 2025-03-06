@@ -13,7 +13,7 @@
             </view>
         </block>
 
-        <block v-else-if="">
+        <block v-else>
             <view class="list list1">
                 <block v-for="(item, index) in lists" :key="index">
                     <view @tap="switchFun" :class="'item ' + (currentIdClone == item.key ? 'active' : '')" :data-id="item.key">
