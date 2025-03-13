@@ -1,5 +1,5 @@
 <template>
-    <view class="category" style="padding-top:25px;">
+    <view class="category" style="padding-top:35px;">
         <!-- <custom-header title="全部菜品"></custom-header> -->
         <view class="category-t">
             <inputSearch :title="searchTitle" @cancel="cancel" @search="search" :isSearch="isSearch" bgColor="rgba(249, 249, 251, 1)" placeholder="搜索商品"></inputSearch>

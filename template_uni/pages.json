@@ -12,6 +12,12 @@
 			}
 		},
 		{
+			"path": "pages/carousel/carousel",
+			"style": {
+				
+			}
+		},
+		{
 			"path": "pages/billingRecord/billingRecord",
 			"style": {
 				"usingComponents": {

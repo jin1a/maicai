@@ -223,7 +223,7 @@ export default {
     data() {
         return {
 			showMap:false,
-            menuHeight: app.globalData.menuHeight,
+            // menuHeight: app.globalData.menuHeight,
 			webviewStyles: {
 								progress: {
 									color: '#FF3333'
@@ -301,11 +301,11 @@ export default {
                 });
             })
             .catch((err) => {});
-        if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-            this.getTabBar().setData({
-                selected: 4
-            });
-        }
+        // if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+        //     this.getTabBar().setData({
+        //         selected: 4
+        //     });
+        // }
 
         //通过wx.request发起HTTPS接口请求
         let $this = this;
@@ -330,7 +330,7 @@ export default {
                 });
 				$this.setData({
 					showMap:true,
-					mapUrl:`https://m.amap.com/navi/?dest=115.004229,25.832464&destName=青峰大道199号&hideRouteIcon=1&key=30d9b0207cec4b75936ffdbfe748ff56&jscode=06e18b75b08a91b031be90cd29f81cd4`
+					mapUrl:`https://m.amap.com/navi/?dest=115.004229,25.832464&destName=赣州仓库 &hideRouteIcon=1&key=30d9b0207cec4b75936ffdbfe748ff56&jscode=06e18b75b08a91b031be90cd29f81cd4`
 				})
             }
         });

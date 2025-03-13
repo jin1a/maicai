@@ -4,6 +4,8 @@
     src: url('//at.alicdn.com/wf/webfont/zj9uPI5yvCN4/twlL36ifcn1Y.woff2') format('woff2'), url('//at.alicdn.com/wf/webfont/zj9uPI5yvCN4/3vkjotyjFMeM.woff') format('woff');
     font-display: swap;
 }
+uni-toast{z-index: 999999 !important;}
+uni-toast .uni-toast{z-index: 999999 !important;}
 image {
     width: auto;
     height: auto;

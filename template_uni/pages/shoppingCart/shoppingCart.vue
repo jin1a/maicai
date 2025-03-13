@@ -1,6 +1,6 @@
 <template>
     <view style="height: 100vh;display: flex;flex-direction: column;">
-        <view class="shoppingCart" style="padding-top:25px;">
+        <view class="shoppingCart" style="padding-top:35px;">
             <custom-header title="购物车"></custom-header>
             <view class="box1">
                 <navigator :url="url" class="content">
@@ -319,7 +319,7 @@ export default {
                 })
                 .then((res) => {
                     uni.navigateTo({
-                        url: '/pages/userPages/orderDetails/orderDetails?currentId=3&orderId=' + res.data.id
+                        url: '/pages/userPages/orderDetails/orderDetails?currentId=3&orderId=' + res.data.order_id
                     });
                 })
                 .catch((err) => {});

@@ -2,7 +2,10 @@
     <view class="rechargeCenter" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
         <custom-header-back title="钱包充值"></custom-header-back>
         <view class="box1">
-            <view class="title">余额充值，当前余额: {{ balance }} 元</view>
+            <view class="title">
+                余额充值，当前余额: {{ balance }} 元
+                <view class="btn" @tap="getUserInfo">同步余额</view>
+            </view>
             <view class="page_list">
                 <navigator url="/pages/changeFlows/changeFlows" open-type="navigate" delta="1" hover-class="none" class="page_item">
                     <text class="iconfont icon-qianbao2-xianxing"></text>
@@ -25,7 +28,7 @@
             </form>
             <view class="text-box">
                 <view class="text-title">会员充值说明:</view>
-                <view>1、充值的余额，可在充电时使用:</view>
+                <view>1、充值的余额，可在购买时使用:</view>
                 <view>2、会员余额长期有效，充值后，不支持转赠和提现。</view>
             </view>
         </view>
@@ -44,19 +47,38 @@
                 <view class="btn" @tap="topUp">立即充值</view>
             </view>
         </view>
+        <view class="invoicingModal" v-if="isShowModel">
+            <view class="container">
+                <form @submit="formSubmit">
+                    <view class="tips">请复制以下账户信息，去您所在银行，向以下账户中转账一样的金额，有效期为7天！！</view>
+                    <view class="input" v-for="(item, index) in accountInfo" :key="index">
+                        <view>{{ item.title }}：</view>
+
+                        {{ item.msg }}
+                    </view>
+                    <view class="input">
+                        <view>充值金额：</view>
+                        ￥{{ price }}
+                    </view>
+                    <view class="btns">
+                        <button class="btn" @tap="cancelModel">取消</button>
+                        <button class="btn" @tap="copyAccountInfo">复制账户</button>
+                    </view>
+                </form>
+            </view>
+        </view>
     </view>
 </template>
 
 <script>
 import customHeaderBack from '../../component/custom-header-back/custom-header-back';
 // pages/rechargeCenter/rechargeCenter.js
-const { getUserInfoApi, topUpApi } = require('../../api/index');
+const { getUserInfoApi, topUpApi, systemApi } = require('../../api/index');
 const app = getApp();
 export default {
     components: {
         customHeaderBack
     },
-    // getUserInfo() {},
     data() {
         return {
             menuHeight: app.globalData.menuHeight,
@@ -93,6 +115,8 @@ export default {
             radiocheck: true,
             price: 20,
             balance: 0,
+            isShowModel: false,
+            accountInfo: {},
             priceClone: ''
         };
     },
@@ -100,20 +124,8 @@ export default {
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        let that = this;
-        getUserInfoApi
-            .apiName()
-            .then((res) => {
-                if (res.data.firm.is_wallet == 0) {
-                    uni.navigateTo({
-                        url: '/pages/recharge/recharge'
-                    });
-                }
-                that.setData({
-                    balance: res.data.firm.amount
-                });
-            })
-            .catch((err) => {});
+        this.getUserInfo();
+        this.getTopUpAccountInfo();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -163,6 +175,14 @@ export default {
         },
 
         topUp() {
+            if (!this.radiocheck) {
+                uni.showToast({
+                    title: '请阅读充值说明！',
+                    icon: 'none',
+                    duration: 2000
+                });
+                return false;
+            }
             let price = this.price;
             let that = this;
             if (price <= 0) {
@@ -178,40 +198,23 @@ export default {
                 content: '充值金额' + price + '元',
                 success(res) {
                     if (res.confirm) {
+                        uni.showLoading({
+                            title: '加载中...',
+                            mask: true
+                        });
                         topUpApi
                             .apiName({
                                 price: price
                             })
                             .then((res) => {
-                                // 获取到后端返回的支付参数
-                                const payParams = res.data;
-                                // 调用微信支付接口发起支付请求
-                                uni.requestPayment({
-                                    timeStamp: payParams.timestamp,
-                                    nonceStr: payParams.nonceStr,
-                                    package: payParams.package,
-                                    signType: payParams.signType,
-                                    paySign: payParams.paySign,
-                                    success: function (res) {
-                                        uni.showToast({
-                                            title: '充值成功',
-                                            icon: 'success',
-                                            complete: function () {
-                                                let balance = parseFloat(that.balance) + parseFloat(price);
-                                                that.setData({
-                                                    balance: balance.toFixed(2)
-                                                });
-                                            }
-                                        });
-                                    },
-                                    fail: function (res) {
-                                        // 支付失败处理逻辑
-                                        console.log('支付失败', res);
-                                    }
-                                });
+                                that.cancelModel();
+                                uni.hideLoading();
                             })
-                            .catch((err) => {});
+                            .catch((err) => {
+                                uni.hideLoading();
+                            });
                     } else if (res.cancel) {
+                        //取消操作
                     }
                 }
             });
@@ -221,10 +224,78 @@ export default {
             this.setData({
                 radiocheck: !this.radiocheck
             });
+        },
+
+        cancelModel() {
+            this.setData({
+                isShowModel: !this.isShowModel
+            });
+        },
+
+        getTopUpAccountInfo() {
+            let that = this;
+            systemApi
+                .apiName()
+                .then((res) => {
+                    that.setData({
+                        accountInfo: res.data.topUpAccountInfo
+                    });
+                })
+                .catch((err) => {});
+        },
+
+        getUserInfo() {
+            let that = this;
+            uni.showLoading({
+                title: '加载中...',
+                mask: true
+            });
+            getUserInfoApi
+                .apiName()
+                .then((res) => {
+                    uni.hideLoading();
+                    if (res.data.firm.is_wallet == 0) {
+                        uni.navigateTo({
+                            url: '/pages/recharge/recharge'
+                        });
+                    }
+                    that.setData({
+                        balance: res.data.firm.amount
+                    });
+                })
+                .catch((err) => {});
+        },
+
+        copyAccountInfo() {
+            let text = '';
+            this.accountInfo.forEach((item) => {
+                text += `${item.title}：${item.msg}\n`;
+            });
+            uni.setClipboardData({
+                data: text,
+                success: function (res) {
+                    uni.getClipboardData({
+                        success: function (res) {
+							uni.showToast({
+								title: '复制成功',
+								duration: 2000
+							});
+                            // uni.showToast({
+                            //     title: '复制成功'
+                            // });
+                        }
+                    });
+                }
+            });
+        },
+
+        formSubmit() {
+            console.log('占位：函数 formSubmit 未声明');
         }
     }
 };
 </script>
+
 <style>
 @import './rechargeCenter.css';
 </style>

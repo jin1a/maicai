@@ -1,5 +1,5 @@
 <template>
-    <view class="allOrder" style="padding-top: 25px;">
+    <view class="allOrder" style="padding-top: 35px;">
         <custom-header-back title="我的订单"></custom-header-back>
         <view class="allOrderContainer">
             <view class="orderNav">
@@ -182,7 +182,7 @@ export default {
 
         cancelOrder2(e) {
             let type = parseInt(e.detail.type);
-            let orderId = parseInt(e.detail.orderId);
+            let orderId = e.detail.orderId;
             let that = this;
             uni.showModal({
                 title: '温馨提示',

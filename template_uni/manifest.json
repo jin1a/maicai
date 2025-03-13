@@ -51,14 +51,14 @@
                 },
                 "payment" : {
                     "weixin" : {
-                        "__platform__" : [ "ios", "android" ],
-                        "appid" : "wxcd93b3d1cbb801d9",
+                        "__platform__" : [ "android" ],
+                        "appid" : "wx60d3d14214268cff",
                         "UniversalLinks" : ""
                     }
                 },
                 "share" : {
                     "weixin" : {
-                        "appid" : "wxcd93b3d1cbb801d9",
+                        "appid" : "wx60d3d14214268cff",
                         "UniversalLinks" : ""
                     }
                 }

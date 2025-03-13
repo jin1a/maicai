@@ -45,7 +45,7 @@
             </block>
         </view>
         <orderGoodItem :goodsList="orderInfo.detail"></orderGoodItem>
-        <view class="item-b">
+        <view class="item-b">			
             <view class="total">共{{ orderInfo.total }}件 实付：￥{{ orderInfo.total_price }}</view>
             <orderBtnBar
                 :currId="currId"
@@ -53,7 +53,7 @@
                 @delOrder="delOrder"
                 @cancelOrder2="cancelOrder2"
                 :time="orderInfo.time"
-                :orderId="orderInfo.id"
+                :orderId="orderInfo.order_id"
                 :orderKey="orderInfo.order_id"
                 :addressId="orderInfo.address_id"
                 :price="orderInfo.total_price"

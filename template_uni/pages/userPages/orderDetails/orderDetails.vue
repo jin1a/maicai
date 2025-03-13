@@ -1,5 +1,5 @@
 <template>
-    <view class="orderDetails" style="padding-top: 25px;">
+    <view class="orderDetails" style="padding-top: 35px;">
         <!-- <block v-if="currentId == 2 || currentId == 0">
             <custom-header-back bgColor="RGBA(246, 247, 251, 1)" backTitle="商品已送达" backDes="包裹已送至前台"></custom-header-back>
         </block>
@@ -10,7 +10,7 @@
         <block v-else-if="currentId == 1">
             <custom-header-back bgColor="RGBA(246, 247, 251, 1)" backTitle="商品正在打包中" backDes="商品正在仓库打包中，请耐心等待"></custom-header-back>
         </block> -->
-        <view class="orderDetailsContainer">
+        <view class="orderDetailsContainer">			
             <view class="box1">
                 <orderAddressMsg
                     :address="orderInfo.user_address"
@@ -164,13 +164,16 @@ export default {
                 wallet: '',
                 monthlyBalance: ''
             },
-            check: 1
+            check: 1,
+			sweixin:null,
+			kk:0,
         };
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+		
         let currentId = options.currentId ? options.currentId : 0;
         let orderId = options.orderId ? options.orderId : 0;
         if (parseInt(currentId) == 3) {
@@ -204,6 +207,9 @@ export default {
      */
     onShow() {
         this.getOrderInfo();
+		
+		this.kk++
+		console.log(this.kk,9999)
     },
     /**
      * 生命周期函数--监听页面隐藏
@@ -258,7 +264,83 @@ export default {
         },
 
         payOrder() {
-            let that = this;
+			let that = this;
+			
+			if (that.check == 1) {	
+				let getServices = () => {
+					if(!plus){
+						return
+					}
+					plus.share.getServices(
+						res => {
+							var sweixin = null;
+							for (var i = 0; i < res.length; i++) {
+								var t = res[i];
+								if (t.id == 'weixin') {
+									sweixin = t;
+								}
+							}
+							that.sweixin = sweixin;
+						},
+						err => {
+							console.log(JSON.stringify(err));
+						}
+					);
+				}
+				
+				getServices()
+				console.log(that.check ,'that.check333 ')				
+				this.sweixin.launchMiniProgram({
+				    id: 'gh_90eb4b1456f4',
+				    path: `pages/userPages/payOrder/payOrder?orderId=${this.orderId}&token=${app.globalData.getStorage('token')}`,
+				    type: 2
+				},
+				(res)=>{
+					console.log(res,'res')
+				},
+				(err)=>{
+					console.log(err,'errr')
+				}
+				);			
+				
+				
+				
+				
+				//  0-正式版； 1-测试版； 2-体验版。 默认值为0。
+				// location.href = "weixin://dl/business/?appid=wxcd93b3d1cbb801d9&path=pages/userPages/payOrder/payOrder"
+				// uni.navigateToMiniProgram({
+				// 	appId: '目标小程序的AppID',
+				// 	path: 'pages/index/index?id=123', // 跳转的页面路径，可以带参数
+				// 	extraData: {
+				// 	foo: 'bar' // 需要传递给小程序的数据
+				// 	},
+				// 	envVersion: 'release', // 跳转的小程序版本，可以是develop、trial或release
+				// 	success(res) {
+				// 	// 跳转成功
+				// 	},
+				// 	fail(res) {
+				// 	// 跳转失败
+				// 	}
+				// 	// appId: 'wxcd93b3d1cbb801d9', // 替换为目标小程序的appId
+				// 	// path: `pages/index/index`, // 替换为目标小程序中的页面路径
+				// 	// envVersion: 'trial', // 可选，指定要打开的小程序版本，'release'表示正式版，'trial'表示体验版，'develop'表示开发版
+				// 	// success(res) {
+				// 	// 	console.log('成功跳转到小程序', res);
+				// 	// },
+				// 	// fail(err) {
+				// 	// 	console.error('跳转到小程序失败', err);
+				// 	// }
+				// });
+				console.log(that.check ,'that.check666 ')
+				// this.sweixin.launchMiniProgram({
+				//     id: 'wxcd93b3d1cbb801d9',
+				//     path: `pages/userPages/payOrder/payOrder?orderId=${this.orderId}`,
+				//     type: 2
+				// });
+				return
+			}
+			console.log(that.check ,'that.check222 ')
+			
             payOrderApi
                 .apiName({
                     orderId: this.orderId,
@@ -267,8 +349,9 @@ export default {
                 })
                 .then((res) => {
                     if (that.check == 1) {
+						
                         // 获取到后端返回的支付参数
-                        const payParams = res.data;
+                        // const payParams = res.data;
                         // 调用微信支付接口发起支付请求
                         uni.requestPayment({
 							// appid:,
@@ -335,6 +418,14 @@ export default {
                     orderId: that.orderId
                 })
                 .then((res) => {
+					if(res.data.orderInfo.status!==3){
+						setTimeout(function () {
+						    uni.redirectTo({
+						        url: '/pages/userPages/allOrder/allOrder?currentId=2'
+						    });
+						}, 1000);
+						return
+					};
                     let date = that.toDate(res.data.orderInfo.created_at);
                     console.log(date);
                     that.setData({
@@ -350,7 +441,7 @@ export default {
         },
 
         cancelOrder() {
-            let orderId = this.orderInfo.id;
+            let orderId = this.orderInfo.order_id;
             uni.showModal({
                 title: '温馨提示',
                 content: '是否取消订单！',

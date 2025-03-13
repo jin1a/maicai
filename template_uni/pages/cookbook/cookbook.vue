@@ -1,5 +1,5 @@
 <template>
-    <view class="cookbook" style="padding-top:25px">
+    <view class="cookbook" style="padding-top:35px">
         <custom-header title="全部菜品"></custom-header>
         <view class="box1">
             <inputSearch bgColor="rgba(249, 249, 251, 1)" placeholder="搜索菜品"></inputSearch>

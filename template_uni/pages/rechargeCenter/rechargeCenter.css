@@ -16,6 +16,16 @@
     font-weight: bold;
     font-family: HarmonyOS Sans SC;
 }
+.rechargeCenter .box1 .title .btn {
+    float: right;
+    background: #78e41e;
+    border-radius: 40rpx;
+    text-align: center;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    color: #fff;
+    padding: 5rpx 10rpx;
+}
 .rechargeCenter .box1 .list {
     margin-top: 35rpx;
     display: grid;
@@ -165,4 +175,93 @@
     font-size: 30rpx;
     font-family: 'HarmonyOS Sans SC';
     color: #333;
+}
+
+.invoicingModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    padding: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30rpx;
+}
+.invoicingModal .container {
+    background: #ffffff;
+    border-radius: 25rpx;
+    padding: 60rpx 35rpx 30rpx;
+    width: 100%;
+}
+.invoicingModal .container .title {
+    font-size: 34rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1;
+    text-align: center;
+}
+.invoicingModal .container .input {
+    margin: 40rpx 0;
+    /* line-height: 85rpx; */
+    display: flex;
+}
+.invoicingModal .container .input view {
+    width: 30%;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+}
+.invoicingModal .container .input input {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+    line-height: 35px;
+    height: 85rpx;
+    border-bottom: 1rpx solid rgba(191, 191, 191, 1);
+    width: 70%;
+}
+.invoicingModal .container .input input-placeholder {
+    font-size: 26rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #999999;
+    line-height: 1;
+}
+.invoicingModal .container .btns {
+    margin-top: 40rpx;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 20rpx;
+}
+.invoicingModal .container .btns .btn:first-child {
+    color: rgba(1, 197, 61, 1);
+    border: 1px solid rgba(1, 197, 61, 1);
+    background: transparent;
+}
+.invoicingModal .container .btns .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80rpx;
+    background: linear-gradient(90deg, #01c53d, #78e41e);
+    border-radius: 40rpx;
+    font-size: 28rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f5f5f5;
+    width: 100%;
+}
+.invoicingModal .tips {
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 400;
+    color: #e85454;
+    line-height: 40rpx;
+    padding: 30rpx 0;
+    width: 100%;
 }
