@@ -1,6 +1,6 @@
 <template>
     <view class="subAccountAddressPermission" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="地址权限"></custom-header-back>
+        <!-- <custom-header-back title="地址权限"></custom-header-back> -->
         <view class="box1">
             <radio-group @change="radioChange">
                 <view class="item" v-for="(item, index) in data" :key="index">

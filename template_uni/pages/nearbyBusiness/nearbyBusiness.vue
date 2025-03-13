@@ -1,6 +1,6 @@
 <template>
     <view class="nearbyBusiness" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="亿家菜"></custom-header-back>
+        <!-- <custom-header-back title="亿家菜"></custom-header-back> -->
         <view class="box1">
             <view class="list">
                 <view class="item" v-for="(item, index) in data" :key="index">

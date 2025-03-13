@@ -1,6 +1,6 @@
 <template>
     <view class="statement" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="对账单"></custom-header-back>
+        <!-- <custom-header-back title="对账单"></custom-header-back> -->
         <view class="box1">
             <queryForm id="child" @submit="submit($event, { tagId: 'child' })" url="statement" @emailInput="emailInput($event, { tagId: 'child' })"></queryForm>
             <view class="box-c" v-for="(item, index) in data" :key="index">

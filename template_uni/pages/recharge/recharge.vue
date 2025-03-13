@@ -1,6 +1,6 @@
 <template>
     <view class="recharge" style="padding-top:25px;" >
-        <custom-header-back title="钱包充值"></custom-header-back>
+        <!-- <custom-header-back title="钱包充值"></custom-header-back> -->
         <view class="box1">
             <view class="empty">
                 <view class="title">您当前企业还未开通钱包账户</view>

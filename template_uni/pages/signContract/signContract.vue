@@ -1,6 +1,6 @@
 <template>
     <view class="signContract" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="用户签约"></custom-header-back>
+        <!-- <custom-header-back title="用户签约"></custom-header-back> -->
         <view class="box1">
             <view class="title">中国工商银行工银e企付菜亿家平台交易方服务协议</view>
             <view class="box-c">

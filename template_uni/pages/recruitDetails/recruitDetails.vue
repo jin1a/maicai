@@ -1,6 +1,6 @@
 <template>
     <view class="recruitDetails" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="招聘详情"></custom-header-back>
+        <!-- <custom-header-back title="招聘详情"></custom-header-back> -->
         <view class="box1">
             <view class="box-c">
                 <view class="title">{{ info.name }}</view>

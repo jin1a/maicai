@@ -1,6 +1,6 @@
 <template>
     <view class="rechargeCenter" style="padding-top:25px;">
-        <custom-header-back title="钱包充值"></custom-header-back>
+        <!-- <custom-header-back title="钱包充值"></custom-header-back> -->
         <view class="box1">
             <view class="title">
                 余额充值，当前余额: {{ balance }} 元

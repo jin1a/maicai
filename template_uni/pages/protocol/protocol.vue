@@ -1,6 +1,6 @@
 <template>
     <view class="protocol" style="padding-top:25px;">
-        <custom-header-back title="菜亿家"></custom-header-back>
+        <!-- <custom-header-back title="菜亿家"></custom-header-back> -->
         <view class="box1">
             <view class="boxContainer">
                 <view class="name">

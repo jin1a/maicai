@@ -1,6 +1,6 @@
 <template>
     <view class="queryReport" style="padding-top:25px;">
-        <custom-header-back title="查询报表"></custom-header-back>
+        <!-- <custom-header-back title="查询报表"></custom-header-back> -->
         <view class="box1">
             <queryForm
                 id="child"

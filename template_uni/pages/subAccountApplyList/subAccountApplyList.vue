@@ -1,6 +1,6 @@
 <template>
     <view class="subAccountApplyList" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="申请管理"></custom-header-back>
+        <!-- <custom-header-back title="申请管理"></custom-header-back> -->
         <view class="box1">
             <view class="tips">请及时处理申请，点击「同意」，确认成为“江西菜亿家商城”的子账号;若为骚扰，点击「忽略」将此项删除。</view>
             <view class="box-c">
