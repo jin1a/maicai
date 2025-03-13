@@ -1,5 +1,5 @@
 <template>
-    <view class="newProductDemand" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="newProductDemand" style="padding-top:25px;">
         <custom-header-back title="新品需求"></custom-header-back>
         <view class="box1">
             <form @submit="submit">

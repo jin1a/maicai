@@ -1,6 +1,6 @@
 <template>
-    <view class="addSubaccount" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="子账号管理"></custom-header-back>
+    <view class="addSubaccount" style="padding-top:25px;">
+        
         <view class="box1">
             <view class="info" v-if="isShowChileModal">
                 <view class="info-title">

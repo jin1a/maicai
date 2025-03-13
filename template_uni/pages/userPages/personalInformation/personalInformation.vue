@@ -1,5 +1,5 @@
 <template>
-    <view class="personalInformation" :style="'padding-top: ' + (menuHeight + 10) + 'px;'">
+    <view class="personalInformation" style="padding-top:25px;">
         <custom-header-back title="个人信息"></custom-header-back>
         <view class="personalInformationContainer">
             <view class="content">

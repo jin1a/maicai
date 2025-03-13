@@ -1,5 +1,5 @@
 <template>
-    <view class="cookVideoDetails" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="cookVideoDetails" style="padding-top:25px;">
         <custom-header-back :title="info.title"></custom-header-back>
     </view>
 </template>

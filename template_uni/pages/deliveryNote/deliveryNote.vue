@@ -1,5 +1,5 @@
 <template>
-    <view class="deliveryNote" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="deliveryNote" style="padding-top:25px;">
         <custom-header-back title="送货单"></custom-header-back>
         <view class="box1">
             <queryForm id="child" @submit="submit($event, { tagId: 'child' })" url="deliveryNote" @emailInput="emailInput($event, { tagId: 'child' })"></queryForm>

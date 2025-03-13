@@ -1,5 +1,5 @@
 <template>
-    <view class="billingInstructions" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="billingInstructions" style="padding-top:25px;">
         <custom-header-back title="开票须知"></custom-header-back>
         <view class="box1">
             <view class="title">重要提示：</view>

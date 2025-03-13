@@ -1,5 +1,5 @@
 <template>
-    <view class="recruit" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="recruit" style="padding-top:25px;">
         <custom-header-back title="招聘求职"></custom-header-back>
         <view class="recruitNav">
             <view class="list">
@@ -97,7 +97,7 @@ export default {
     },
     data() {
         return {
-            menuHeight: app.globalData.menuHeight,
+           
             currentId: 1,
             list: ['招聘', '求职'],
             recruitList: [],

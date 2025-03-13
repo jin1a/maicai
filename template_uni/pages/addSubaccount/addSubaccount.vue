@@ -1,6 +1,6 @@
 <template>
-    <view class="addSubaccount" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="子账号管理"></custom-header-back>
+    <view class="addSubaccount" style="padding-top:25 px">
+        
         <view class="box1">
             <view class="box-t">
                 <view class="box-t-l">
@@ -70,7 +70,7 @@ export default {
     },
     data() {
         return {
-            menuHeight: app.globalData.menuHeight,
+            // menuHeight: app.globalData.menuHeight,
             isShowModal: false,
             isShowDeleteModal: false,
             data: [],

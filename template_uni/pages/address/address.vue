@@ -1,5 +1,5 @@
 <template>
-    <view class="address" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="address" style="padding-top:25px;">
         <custom-header-back :title="isEditStatus ? '修改地址' : '收货地址'"></custom-header-back>
         <view class="box1">
             <block v-if="addressLists.length > 0">
@@ -58,7 +58,7 @@ export default {
     },
     data() {
         return {
-            menuHeight: app.globalData.menuHeight,
+           
             defaultId: 0,
             deleteId: -1,
             addressLists: [],

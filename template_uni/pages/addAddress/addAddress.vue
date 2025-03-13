@@ -1,5 +1,5 @@
 <template>
-    <view class="addaddress" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="addaddress" style="padding-top:25px;" >
         <custom-header-back :title="headText"></custom-header-back>
         <view class="box1">
             <view class="item">

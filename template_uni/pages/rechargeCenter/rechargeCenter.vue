@@ -1,5 +1,5 @@
 <template>
-    <view class="rechargeCenter" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="rechargeCenter" style="padding-top:25px;">
         <custom-header-back title="钱包充值"></custom-header-back>
         <view class="box1">
             <view class="title">

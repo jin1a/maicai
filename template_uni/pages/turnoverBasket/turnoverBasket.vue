@@ -1,5 +1,5 @@
 <template>
-    <view class="turnoverBasket" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="turnoverBasket" style="padding-top:25px;">
         <custom-header-back title="周转筐"></custom-header-back>
         <view class="box1">
             <queryForm @submit="submit" url="turnoverBasket"></queryForm>
@@ -33,8 +33,7 @@ export default {
         customHeaderBack
     },
     data() {
-        return {
-            menuHeight: app.globalData.menuHeight,
+        return {            
 
             data: {
                 total: 0,

@@ -1,5 +1,5 @@
 <template>
-    <view class="addPersonalInformation" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="addPersonalInformation" style="padding-top:25px;">
         <custom-header-back title="基本信息"></custom-header-back>
         <view class="box1">
             <view class="box-c">

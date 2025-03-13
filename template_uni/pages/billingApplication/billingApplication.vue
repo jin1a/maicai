@@ -1,5 +1,5 @@
 <template>
-    <view class="billingApplication" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="billingApplication" style="padding-top:25px;">
         <custom-header-back title="开票申请"></custom-header-back>
         <view class="box1">
             <queryForm url="billingApplication" @submit="submit" @controlMOdal="controlMOdal"></queryForm>
