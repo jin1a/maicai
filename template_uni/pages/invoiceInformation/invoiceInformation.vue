@@ -1,6 +1,6 @@
 <template>
-    <view class="selectOrderInvoicing" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="填写发票信息"></custom-header-back>
+    <view class="selectOrderInvoicing" style="padding-top:50px;">
+        <!-- <custom-header-back title="填写发票信息"></custom-header-back> -->
         <view class="box1">
             <view class="box-container">
                 <view class="item">

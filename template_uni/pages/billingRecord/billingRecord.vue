@@ -1,5 +1,5 @@
 <template>
-    <view class="billingRecord" style="padding-top:25px;">
+    <view class="billingRecord" style="padding-top:50px;">
         <!-- <custom-header-back title="开票记录"></custom-header-back> -->
         <view class="box1">
             <queryForm

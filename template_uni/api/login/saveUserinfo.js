@@ -10,5 +10,14 @@ module.exports = {
             data,
             ignoreToken
         });
-    }
+    },
+	loginOut(data) {
+	    let url = 'api/login_out';
+	    let ignoreToken = false;
+	    return request.get({
+	        url,
+	        data,
+	        ignoreToken
+	    });
+	}
 };

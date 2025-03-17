@@ -1,6 +1,6 @@
 <template>
-    <view class="feedback" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
-        <custom-header-back title="反馈"></custom-header-back>
+    <view class="feedback" style="padding-top:50px;">
+        <!-- <custom-header-back title="反馈"></custom-header-back> -->
         <view class="box1">
             <view class="box-c">
                 <view class="item">

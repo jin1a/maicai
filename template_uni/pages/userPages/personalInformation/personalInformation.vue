@@ -1,5 +1,5 @@
 <template>
-    <view class="personalInformation" style="padding-top:25px;">
+    <view class="personalInformation" style="padding-top:50px;">
         <!-- <custom-header-back title="个人信息"></custom-header-back> -->
         <view class="personalInformationContainer">
             <view class="content">
@@ -83,6 +83,9 @@
             <view class="submitContainer">
                 <view class="submit" @tap="saveUserinfo">保存</view>
             </view>
+			<view class="submitContainer2">
+			    <view class="submit" @tap="loginOutFn">退出登录</view>
+			</view>
         </view>
     </view>
 </template>
@@ -178,6 +181,31 @@ export default {
      */
     onShareAppMessage() {},
     methods: {
+		// 退出
+		loginOutFn(){
+			saveUserinfoApi
+			    .loginOut()
+			    .then((res) => {
+					app.globalData.saveStorage('isLogin', false);
+					app.globalData.saveStorage('token', '');
+					app.globalData.saveStorage('userInfo', null);
+			        uni.showToast({
+			            title: '退出成功',
+			            icon: 'success',
+			            duration: 2000,
+			            complete: function () {
+			                setTimeout(()=>{
+			                	uni.navigateTo({
+			                	    url: '/pages/login/login'
+			                	});
+			                },2000)
+			            }
+			        });
+			    })
+			    .catch((err) => {
+					console.log(err,'err')
+				});
+		},
         bindDateChange: function (e) {
             this.setData({
                 date: e.detail.value,

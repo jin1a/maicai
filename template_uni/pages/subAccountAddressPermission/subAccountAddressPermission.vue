@@ -1,5 +1,5 @@
 <template>
-    <view class="subAccountAddressPermission" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="subAccountAddressPermission" style="padding-top:50px;">
         <!-- <custom-header-back title="地址权限"></custom-header-back> -->
         <view class="box1">
             <radio-group @change="radioChange">

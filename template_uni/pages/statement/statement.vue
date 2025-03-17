@@ -1,5 +1,5 @@
 <template>
-    <view class="statement" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="statement" style="padding-top:50px;">
         <!-- <custom-header-back title="对账单"></custom-header-back> -->
         <view class="box1">
             <queryForm id="child" @submit="submit($event, { tagId: 'child' })" url="statement" @emailInput="emailInput($event, { tagId: 'child' })"></queryForm>

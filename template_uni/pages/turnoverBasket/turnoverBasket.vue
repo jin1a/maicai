@@ -1,5 +1,5 @@
 <template>
-    <view class="turnoverBasket" style="padding-top:25px;">
+    <view class="turnoverBasket" style="padding-top:50px;">
         <!-- <custom-header-back title="周转筐"></custom-header-back> -->
         <view class="box1">
             <queryForm @submit="submit" url="turnoverBasket"></queryForm>

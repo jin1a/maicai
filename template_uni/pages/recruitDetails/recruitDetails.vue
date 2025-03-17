@@ -1,5 +1,5 @@
 <template>
-    <view class="recruitDetails" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="recruitDetails" style="padding-top:50px;">
         <!-- <custom-header-back title="招聘详情"></custom-header-back> -->
         <view class="box1">
             <view class="box-c">

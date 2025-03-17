@@ -1,5 +1,5 @@
 <template>
-    <view class="tofuBoard" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="tofuBoard" style="padding-top:50px;">
         <!-- <custom-header-back title="豆腐板"></custom-header-back> -->
         <view class="box1">
             <queryForm @submit="submit" url="tofuBoard"></queryForm>

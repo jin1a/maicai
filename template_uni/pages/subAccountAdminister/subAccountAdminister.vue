@@ -1,5 +1,5 @@
 <template>
-    <view class="addSubaccount" style="padding-top:25px;">
+    <view class="addSubaccount" style="padding-top:50px;">
         
         <view class="box1">
             <view class="info" v-if="isShowChileModal">

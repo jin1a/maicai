@@ -1,5 +1,5 @@
 <template>
-    <view class="answerDetails" style="padding-top:25px;">
+    <view class="answerDetails" style="padding-top:50px;">
         <custom-header-back title="常见问题"></custom-header-back>
         <view class="box1">
             <view class="box-c">

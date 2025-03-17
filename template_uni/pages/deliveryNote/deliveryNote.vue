@@ -1,6 +1,6 @@
 <template>
-    <view class="deliveryNote" style="padding-top:25px;">
-        <custom-header-back title="送货单"></custom-header-back>
+    <view class="deliveryNote" style="padding-top:50px;">
+        <!-- <custom-header-back title="送货单"></custom-header-back> -->
         <view class="box1">
             <queryForm id="child" @submit="submit($event, { tagId: 'child' })" url="deliveryNote" @emailInput="emailInput($event, { tagId: 'child' })"></queryForm>
             <view class="box-c" v-for="(item, index) in data" :key="index">

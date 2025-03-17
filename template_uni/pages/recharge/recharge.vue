@@ -1,5 +1,5 @@
 <template>
-    <view class="recharge" style="padding-top:25px;" >
+    <view class="recharge" style="padding-top:50px;" >
         <!-- <custom-header-back title="钱包充值"></custom-header-back> -->
         <view class="box1">
             <view class="empty">

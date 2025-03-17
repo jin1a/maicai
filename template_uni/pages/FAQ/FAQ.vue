@@ -1,6 +1,6 @@
 <template>
-    <view class="FAQ" style="padding-top:25px;">
-        <custom-header-back title="常见问题"></custom-header-back>
+    <view class="FAQ" style="padding-top:50px;">
+        <!-- <custom-header-back title="常见问题"></custom-header-back> -->
         <view class="box1">
             <view class="box-c">
                 <navigator :url="'/pages/answerDetails/answerDetails?id=' + item.id" hover-class="none" class="item" v-for="(item, ind) in data" :key="ind">

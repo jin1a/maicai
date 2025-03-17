@@ -1,6 +1,6 @@
 <template>
-    <view class="addPersonalInformation" style="padding-top:25px;">
-        <custom-header-back title="基本信息"></custom-header-back>
+    <view class="addPersonalInformation" style="padding-top:50px;">
+        <!-- <custom-header-back title="基本信息"></custom-header-back> -->
         <view class="box1">
             <view class="box-c">
                 <form @submit="formSubmit">

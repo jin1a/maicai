@@ -54,6 +54,7 @@
         </button> -->
                     <view class="btn cancelLogin" @tap="chennelLogin" hover-class="none">取消登录</view>
 					<view class="register" hover-class="none">还没有账号？<span  @tap="toRegister">去注册</span></view>
+					<div class="register">（原小程序用户可以通过忘记密码设定新密码）</div>
                 </view>
             </view>
         </view>

@@ -1,6 +1,6 @@
 <template>
 
-    <view :class="'user ' + (elderMode ? 'elder-mode' : '')" style="padding-top:25px;">
+    <view :class="'user ' + (elderMode ? 'elder-mode' : '')" style="padding-top:50px;">
         <scroll-view scroll-y="true" class="userContainer" >
             <view class="userView">
                 <view class="box1" v-if="isLogin">
@@ -166,14 +166,14 @@
                             </div>
                             <view class="text">在线反馈</view>
                         </navigator>
-                        <view :url="false" class="item" hover-class="none">
+                        <!-- <view :url="false" class="item" hover-class="none">
                             <button @tap="share">
                                 <div class="icon">
                                     <text class="iconfont icon-fenxiang1"></text>
                                 </div>
                                 <view class="text">分享</view>
                             </button>
-                        </view>
+                        </view> -->
                         <navigator url="/pages/FAQ/FAQ" class="item" hover-class="none">
                             <div class="icon">
                                 <text class="iconfont icon-jichu21-xianxing"></text>
@@ -330,7 +330,7 @@ export default {
                 });
 				$this.setData({
 					showMap:true,
-					mapUrl:`https://m.amap.com/navi/?dest=115.004229,25.832464&destName=赣州仓库 &hideRouteIcon=1&key=30d9b0207cec4b75936ffdbfe748ff56&jscode=06e18b75b08a91b031be90cd29f81cd4`
+					mapUrl:`https://m.amap.com/navi/?dest=115.004419,25.832587&destName=赣州仓库 &hideRouteIcon=1&key=30d9b0207cec4b75936ffdbfe748ff56&jscode=06e18b75b08a91b031be90cd29f81cd4`
 				})
             }
         });

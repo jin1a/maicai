@@ -1,6 +1,6 @@
 <template>
-    <view class="cookVideo" :style="'padding-top: ' + menuHeight + 'px'">
-        <custom-header-back title="走进菜亿家"></custom-header-back>
+    <view class="cookVideo" style="padding-top:50px;">
+        <!-- <custom-header-back title="走进菜亿家"></custom-header-back> -->
         <view class="box0"></view>
         <view class="box1">
             <view class="list">

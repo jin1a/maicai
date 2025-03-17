@@ -1,6 +1,6 @@
 <template>
-    <view class="addaddress" style="padding-top:25px;" >
-        <custom-header-back :title="headText"></custom-header-back>
+    <view class="addaddress" style="padding-top:50px;" >
+        <!-- <custom-header-back :title="headText"></custom-header-back> -->
         <view class="box1">
             <view class="item">
                 <view class="item-l">收货人</view>
@@ -27,9 +27,9 @@
                 <view class="item-l">详细地址</view>
                 <view class="item-r1">
                     <textarea :value="formData.detail" @input="inputDeatail" placeholder="街道、楼牌号等详细地址" />
-                    <view class="icon" @tap="chooseAddress">
+                    <!-- <view class="icon" @tap="chooseAddress">
                         <text class="iconfont icon-dingwei1"></text>
-                    </view>
+                    </view> -->
                 </view>
             </view>
             <view class="setDefault">

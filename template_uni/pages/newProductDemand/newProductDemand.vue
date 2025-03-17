@@ -1,5 +1,5 @@
 <template>
-    <view class="newProductDemand" style="padding-top:25px;">
+    <view class="newProductDemand" style="padding-top:50px;">
         <!-- <custom-header-back title="新品需求"></custom-header-back> -->
         <view class="box1">
             <form @submit="submit">

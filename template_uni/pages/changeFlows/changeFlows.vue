@@ -1,8 +1,8 @@
 <template>
     <view>
         <!-- pages/changeFlows/changeFlows.wxml -->
-        <view class="changeFlows" style="padding-top:25px;">
-            <custom-header-back title="零钱流水"></custom-header-back>
+        <view class="changeFlows" style="padding-top:50px;">
+            <!-- <custom-header-back title="零钱流水"></custom-header-back> -->
             <view class="box1">
                 <view class="title">零钱流水</view>
             </view>

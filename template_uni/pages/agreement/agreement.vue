@@ -1,6 +1,6 @@
 <template>
-    <view class="protocol" style="padding-top:25px;">
-        <custom-header-back :title="'菜亿家' + title"></custom-header-back>
+    <view class="protocol" style="padding-top:50px;">
+        <!-- <custom-header-back :title="'菜亿家' + title"></custom-header-back> -->
         <view class="box1">
             <view class="boxContainer">
                 <rich-text :nodes="content"></rich-text>

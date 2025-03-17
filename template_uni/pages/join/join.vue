@@ -1,6 +1,6 @@
 <template>
-    <view class="join" style="padding-top:25px;">
-        <custom-header-back title="加入他人企业"></custom-header-back>
+    <view class="join" style="padding-top:50px;">
+        <!-- <custom-header-back title="加入他人企业"></custom-header-back> -->
         <view class="box1">
             <view class="input-box">
                 <text>企业名称:</text>

@@ -1,5 +1,5 @@
 <template>
-    <view class="rechargeCenter" style="padding-top:25px;">
+    <view class="rechargeCenter" style="padding-top:50px;">
         <!-- <custom-header-back title="钱包充值"></custom-header-back> -->
         <view class="box1">
             <view class="title">
@@ -41,7 +41,7 @@
             </view>
             <view class="rechargeCenterBottom-bottom">
                 <view class="price">
-                    <text>{{ priceClone }}</text>
+                    <text>{{ price }}</text>
                     元
                 </view>
                 <view class="btn" @tap="topUp">立即充值</view>

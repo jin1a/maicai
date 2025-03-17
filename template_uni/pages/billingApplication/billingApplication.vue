@@ -1,6 +1,6 @@
 <template>
-    <view class="billingApplication" style="padding-top:25px;">
-        <custom-header-back title="开票申请"></custom-header-back>
+    <view class="billingApplication" style="padding-top:50px;">
+        <!-- <custom-header-back title="开票申请"></custom-header-back> -->
         <view class="box1">
             <queryForm url="billingApplication" @submit="submit" @controlMOdal="controlMOdal"></queryForm>
             <view class="tips">*现金客户开票时间: 客户每月5号-10号申请上月发票，平台受理后，5日内开具完成。(遇发票开具额度限制、节假日等特殊情况另</view>

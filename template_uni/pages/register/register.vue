@@ -27,12 +27,12 @@
 							</div>
 							<div class="formItem">
 								<div class="title">确认密码</div>														
-								<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />								
+								<input class="uni-input" password type="text" placeholder="请输入" v-model="password2"   />								
 							</div>
 							<div class="formItem2">
 								<div class="title">短信验证码</div>	
 								<div class="inputItem">
-									<input class="uni-input" password type="text" placeholder="请输入" v-model="password"   />									
+									<input class="uni-input"  type="text" placeholder="请输入" v-model="code"   />									
 									<button class="btn2"  open-type="getPhoneNumber" @tap="getVerificationCode">
 										<!-- <text class="iconfont icon-weixin"></text> -->
 										<text>{{verificationText}}</text>
@@ -86,7 +86,7 @@ export default {
     },
     data() {
         return {
-            menuHeight: app.globalData.menuHeight,
+            // menuHeight: app.globalData.menuHeight,
             userInfo: {},
             hasUserInfo: false,
             canIUseGetUserProfile: false,
@@ -94,6 +94,8 @@ export default {
             loadModal: false,			
 			phoneNub:'',
 			password:'',
+			password2:'',
+			code:'',
 			verificationText:'获取验证码',
 			isCountdown:false,
         };
@@ -286,40 +288,37 @@ export default {
 				}
 			},1000)
 		},
-        //点击登录按钮触发事件
+        //点击注册按钮触发事件
         loginInit(e) {
 			let that = this;
 			that.setData({
 			    loadModal: true
-			});
-			console.log(this.phoneNub,222)
-			let param ={"password":this.password,"phone":this.phoneNub};
+			});			
+			
+			let param ={"password":that.password,"phone":that.phoneNub,"rePassword":that.password2,"code":that.code};
 			loginApi
-			    .apiLogin(param)
-			    .then((res) => {
-					console.log(res,'loginInit111')
-			        //保存缓存
-			        app.globalData.saveStorage('userInfo', res.data);
-			        app.globalData.saveStorage('isLogin', true);
-			        app.globalData.saveStorage('token', res.data.token.token);
-			        app.globalData.saveStorage('elderMode', res.data.elderMode == 1 ? true : false);
+			    .apiRegister(param)
+			    .then((res) => {					
 			        that.setData({
 			            loadModal: false
 			        });
-			        if (res.data.firm_id == 0) {
-			            uni.navigateTo({
-			                url: '/pages/join/join'
-			            });
-			        } else {
-			            uni.switchTab({
-			                url: '/pages/userPages/user/user',
-			                fail: function (e) {
-			                    console.log(e);
-			                }
-			            });
-			        }
+					uni.showToast({
+						title: '注册成功，请重新登录',
+						duration: 2000
+					});
+					setTimeout(()=>{
+						uni.navigateTo({
+						    url: '/pages/login/login'
+						});
+					},2000)					
+					
+			        
 			    })
 			    .catch((err) => {
+					uni.showToast({
+						title: err,
+						duration: 2000
+					});
 			        console.log(err);
 			        that.setData({
 			            loadModal: false

@@ -1,5 +1,5 @@
 <template>
-    <view class="selectOrderInvoicing" :style="'padding-top: ' + (menuHeight + 20) + 'px'">
+    <view class="selectOrderInvoicing" style="padding-top:50px;">
         <!-- <custom-header-back title="选择订单开票"></custom-header-back> -->
         <view class="box1">
             <reportForms url="selectOrderInvoicing" title="菜亿家西乡店"></reportForms>
