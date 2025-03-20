@@ -293,7 +293,7 @@ export default {
 				this.sweixin.launchMiniProgram({
 				    id: 'gh_90eb4b1456f4',
 				    path: `pages/userPages/payOrder/payOrder?orderId=${this.orderId}&token=${app.globalData.getStorage('token')}`,
-				    type: 0
+				    type: 2
 				},
 				(res)=>{
 					console.log(res,'res')
