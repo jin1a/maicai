@@ -1,0 +1,9 @@
+.privacy{}
+.privacy2{padding: 20px;margin: 20px;border-radius: 5px;}
+.privacy .title{text-align: center;font-size:20px;padding-bottom: 20px;}
+.privacy .link{font-size:15px;color: blue;}
+.privacy .content{line-height: 180%;}
+.privacy .mask{ }
+.privacy .bt{padding-top:30px ;}
+.privacy .bt .btn{margin-bottom: 20px;}
+.privacy .bt .first{color: #f00;}

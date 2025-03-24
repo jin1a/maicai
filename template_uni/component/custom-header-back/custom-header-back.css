@@ -1,10 +1,6 @@
 @import '../../iconfont.css'; /* component/custom-header/custom-header.wxss */
-.custom-header-back {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 999;
+.custom-header-back {      
+    width: 100%;   
     background-color: #fff;
     box-sizing: border-box;
 }

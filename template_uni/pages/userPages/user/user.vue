@@ -69,7 +69,7 @@
                         </navigator>
                     </view>
                 </view>
-                <view class="box3">
+                <!-- <view class="box3">
                     <view class="title">常用工具</view>
                     <view class="list">
                         <navigator v-if="userinfo.is_admin == 1" url="/pages/subAccountAdminister/subAccountAdminister" class="item" hover-class="none">
@@ -151,8 +151,8 @@
                             <view class="text">送货信息</view>
                         </navigator>
                     </view>
-                </view>
-                <view class="box3">
+                </view> -->
+                <!-- <view class="box3">
                     <view class="list">
                         <navigator :url="userinfo.is_admin == 1 ? '/pages/address/address' : 'false'" class="item" hover-class="none">
                             <div class="icon">
@@ -166,14 +166,7 @@
                             </div>
                             <view class="text">在线反馈</view>
                         </navigator>
-                        <!-- <view :url="false" class="item" hover-class="none">
-                            <button @tap="share">
-                                <div class="icon">
-                                    <text class="iconfont icon-fenxiang1"></text>
-                                </div>
-                                <view class="text">分享</view>
-                            </button>
-                        </view> -->
+                        
                         <navigator url="/pages/FAQ/FAQ" class="item" hover-class="none">
                             <div class="icon">
                                 <text class="iconfont icon-jichu21-xianxing"></text>
@@ -181,7 +174,7 @@
                             <view class="text">常见问题</view>
                         </navigator>
                     </view>
-                </view>
+                </view> -->
                 <view class="box4">
                     <view class="title">客服中心</view>
                     <view class="box-c">

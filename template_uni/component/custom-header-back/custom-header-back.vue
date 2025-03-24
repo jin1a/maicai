@@ -1,5 +1,5 @@
 <template>
-    <view class="custom-header-back" style="padding:25px ;height: 30px; background-color:#ccc">
+    <view class="custom-header-back" style=" padding:25px ;height: 30px; background-color:#ccc">
         <view class="custom-header-container">
             <view class="backBtn" @tap="back">
                 <text class="iconfont icon-right-1-copy"></text>

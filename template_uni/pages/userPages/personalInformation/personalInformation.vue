@@ -1,6 +1,6 @@
 <template>
     <view class="personalInformation" style="padding-top:50px;">
-        <!-- <custom-header-back title="个人信息"></custom-header-back> -->
+        <custom-header-back title="个人信息"></custom-header-back>
         <view class="personalInformationContainer">
             <view class="content">
                 <form @submit="">
@@ -86,7 +86,12 @@
 			<view class="submitContainer2">
 			    <view class="submit" @tap="loginOutFn">退出登录</view>
 			</view>
-        </view>
+			<div class="privacy">
+				<text class="link" data-type="user" @tap="openAgreement('user')">《用户协议》</text>
+				
+				<text class="link" data-type="privacy" @tap="openAgreement('privacy')">《隐私协议》</text>
+			</div>
+		</view>
     </view>
 </template>
 
@@ -181,6 +186,20 @@ export default {
      */
     onShareAppMessage() {},
     methods: {
+		openAgreement(e) {		
+			
+		    if (e === 'user') {
+		        // 打开用户协议
+		        uni.navigateTo({
+		            url: '/pages/agreement/agreement?type=user'
+		        });
+		    } else if (e === 'privacy') {
+		        // 打开隐私协议
+		        uni.navigateTo({
+		            url: '/pages/agreement/agreement?type=privacy'
+		        });
+		    }
+		},
 		// 退出
 		loginOutFn(){
 			saveUserinfoApi

@@ -34,4 +34,12 @@ module.exports = {
 	        data
 	    });
 	},
+	// app更新
+	appUdata(data) {
+	    let url = 'api/app_version';
+	    return request.get({
+	        url,
+	        data
+	    });
+	},
 };

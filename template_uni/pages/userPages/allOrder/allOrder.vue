@@ -1,79 +1,83 @@
 <template>
-    <view class="allOrder" style="padding-top: 35px;">
-        <!-- <custom-header-back title="我的订单"></custom-header-back> -->
-        <view class="allOrderContainer">
-            <view class="orderNav">
-                <view class="list">
-                    <block v-for="(item, index) in list" :key="index">
-                        <view :class="'item ' + (index == currentId ? 'active' : '')" @tap="switcOrderNav" :data-id="index">{{ item }}</view>
-                    </block>
-                </view>
-            </view>
-            <view class="orderContainer">
-                <scroll-view scroll-with-animation scroll-y :scroll-top="offset" @scroll="viewScroll" id="scrollview" @scrolltolower="Reachbottom">
-                    <view class="seachOrder">
-                        <inputSearch @search="search" :isOrder="true" placeholder="搜索订单" :currId="currentId" title=""></inputSearch>
-                    </view>
-                    <view class="orderListBox">
-                        <block v-if="currentId == 0">
-                            <view class="list">
-                                <view class="item" v-for="(item, index) in orderList" :key="index">
-                                    <orderItem
-                                        @cancelOrder2="cancelOrder2"
-                                        @delOrder="delOrder"
-                                        @orderTake="orderTake"
-                                        currId="0"
-                                        :orderInfo="item"
-                                        :currentId="item.status"
-                                    ></orderItem>
-                                </view>
-                            </view>
-                        </block>
-                        <block v-if="currentId == 1">
-                            <view class="list">
-                                <view class="item" v-for="(item, index) in orderList" :key="index">
-                                    <orderItem @cancelOrder2="cancelOrder2" :orderInfo="item" :currentId="item.status"></orderItem>
-                                </view>
-                            </view>
-                        </block>
-                        <block v-if="currentId == 2">
-                            <view class="list">
-                                <view class="item" v-for="(item, index) in orderList" :key="index">
-                                    <orderItem :orderInfo="item" :currentId="item.status"></orderItem>
-                                </view>
-                            </view>
-                        </block>
-                        <block v-if="currentId == 3">
-                            <view class="list">
-                                <view class="item" v-for="(item, index) in orderList" :key="index">
-                                    <orderItem @orderTake="orderTake" currId="3" :orderInfo="item" :currentId="item.status"></orderItem>
-                                </view>
-                            </view>
-                        </block>
-                    </view>
-                </scroll-view>
-            </view>
-        </view>
-        <block v-if="showBackTop">
-            <view class="backTop" @tap="backTop">
-                <view class="iconfont icon-zhiding"></view>
-                <!-- <view class="">回到顶部</view> -->
-            </view>
-        </block>
-    </view>
+	<div style="padding-top: 35px;">
+		<custom-header-back title="我的订单"></custom-header-back>	
+		<view class="allOrder" style="padding-top: 10px;">
+			
+			<view class="allOrderContainer">
+				<view class="orderNav">
+					<view class="list">
+						<block v-for="(item, index) in list" :key="index">
+							<view :class="'item ' + (index == currentId ? 'active' : '')" @tap="switcOrderNav" :data-id="index">{{ item }}</view>
+						</block>
+					</view>
+				</view>
+				<view class="orderContainer">
+					<scroll-view scroll-with-animation scroll-y :scroll-top="offset" @scroll="viewScroll" id="scrollview" @scrolltolower="Reachbottom">
+						<view class="seachOrder">
+							<inputSearch @search="search" :isOrder="true" placeholder="搜索订单" :currId="currentId" title=""></inputSearch>
+						</view>
+						<view class="orderListBox">
+							<block v-if="currentId == 0">
+								<view class="list">
+									<view class="item" v-for="(item, index) in orderList" :key="index">
+										<orderItem
+											@cancelOrder2="cancelOrder2"
+											@delOrder="delOrder"
+											@orderTake="orderTake"
+											currId="0"
+											:orderInfo="item"
+											:currentId="item.status"
+										></orderItem>
+									</view>
+								</view>
+							</block>
+							<block v-if="currentId == 1">
+								<view class="list">
+									<view class="item" v-for="(item, index) in orderList" :key="index">
+										<orderItem @cancelOrder2="cancelOrder2" :orderInfo="item" :currentId="item.status"></orderItem>
+									</view>
+								</view>
+							</block>
+							<block v-if="currentId == 2">
+								<view class="list">
+									<view class="item" v-for="(item, index) in orderList" :key="index">
+										<orderItem :orderInfo="item" :currentId="item.status"></orderItem>
+									</view>
+								</view>
+							</block>
+							<block v-if="currentId == 3">
+								<view class="list">
+									<view class="item" v-for="(item, index) in orderList" :key="index">
+										<orderItem @orderTake="orderTake" currId="3" :orderInfo="item" :currentId="item.status"></orderItem>
+									</view>
+								</view>
+							</block>
+						</view>
+					</scroll-view>
+				</view>
+			</view>
+			<block v-if="showBackTop">
+				<view class="backTop" @tap="backTop">
+					<view class="iconfont icon-zhiding"></view>
+					<!-- <view class="">回到顶部</view> -->
+				</view>
+			</block>
+		</view>
+	</div>
 </template>
 
 <script>
 import inputSearch from '../../../component/inputSearch/inputSearch';
 import orderItem from '../../../component/orderItem/orderItem';
-// import customHeaderBack from '../../../component/custom-header-back/custom-header-back';
+import customHeaderBack from '../../../component/custom-header-back/custom-header-back';
 // pages/userPages/allOrder/allOrder.js
 const { getAllOrderApi, cancelOrderApi, orderTakeApi, delOrderApi } = require('../../../api/index');
 const app = getApp();
 export default {
     components: {
         inputSearch,
-        orderItem        
+        orderItem,
+		customHeaderBack
     },
     data() {
         return {           

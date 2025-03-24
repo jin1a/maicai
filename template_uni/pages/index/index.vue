@@ -108,6 +108,7 @@
                 </view>
             </view>
         </view>
+		
     </view>
 </template>
 
@@ -138,8 +139,19 @@ export default {
             selected: 0
         };
     },
-    onLoad() {},
-    onShow() {
+    onLoad() {		
+		let isFirst = app.globalData.getStorage('isFirst')
+		if(!isFirst){
+			console.log(999)
+			setTimeout(()=>{
+				uni.navigateTo({
+				    url: '/pages/privacy/privacy'
+				});				
+			},1000)
+		}	
+		
+	},
+    onShow() {		
         if (this.getTabBar && typeof this.getTabBar === 'function' && this.getTabBar()) {
             this.getTabBar().setData({
                 selected: 0

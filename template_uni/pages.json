@@ -391,6 +391,10 @@
 					"custom-header-back": "../../component/custom-header-back/custom-header-back"
 				}
 			}
+		},
+		{
+			"path": "pages/privacy/privacy",
+			"style": {}
 		}
 	],
 	"tabBar": {

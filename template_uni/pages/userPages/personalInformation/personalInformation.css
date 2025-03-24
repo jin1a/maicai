@@ -84,7 +84,7 @@
 .submitContainer {
     position: fixed;
     left: 0;
-    bottom: 55px;
+    bottom: 40px;
     width: 100%;
     height: 160rpx;
     background-color: RGBA(246, 247, 251, 1);
@@ -121,3 +121,5 @@
     font-weight: 500;
     color: #f5f5f5;
 }
+.privacy{ text-align: center;padding: 10px 0;}
+.privacy .link{color: blue;}

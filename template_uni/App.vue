@@ -1,10 +1,12 @@
 <script>
+const { loginApi } = require('./api/index');
 // app.js
 export default {
     data() {
         return {};
     },
     onLaunch() {
+		this.checkForUpdate();
         // 展示本地存储能力
         const logs = uni.getStorageSync('logs') || [];
         logs.unshift(Date.now());
@@ -26,6 +28,87 @@ export default {
         this.menuHeight = this.menu.top + this.menu.height;
         this.globalData.screenSize();
     },
+	methods:{
+		checkForUpdate() {			
+			// 获取当前应用版本
+			plus.runtime.getProperty(plus.runtime.appid, (widgetInfo) => {
+				const currentVersion = widgetInfo.version;
+				this.requestNewVersionInfo(currentVersion);
+			});
+		},
+		requestNewVersionInfo(currentVersion) {
+			loginApi
+			    .appUdata({})
+			    .then((res) => {
+					const latestVersion = res.data.version_name;
+					if (this.compareVersion(currentVersion, latestVersion)) {
+						// 如果有新版本，则提示用户进行更新
+						uni.showModal({
+							title: '发现新版本',
+							content: res.data.release_notes,
+							confirmText: '立即更新',
+							cancelText: '暂不更新',
+							success: (r) => {
+								if (r.confirm) {
+									this.downloadAndUpdateApp(res.data.download_url);
+								}
+							}
+						});
+					}			        
+			    })
+			    .catch((err) => {					
+			        console.log(err);
+			        
+			    });			
+		},
+		compareVersion(currentVersion, latestVersion) {
+			// 简单的版本比较，可以根据实际情况进行调整
+			const current = currentVersion.split('.');
+			const latest = latestVersion.split('.');
+			for (let i = 0; i < latest.length; i++) {
+				if (parseInt(latest[i]) > (parseInt(current[i]) || 0)) {
+					return true;
+				} else if (parseInt(latest[i]) < (parseInt(current[i]) || 0)) {
+					return false;
+				}
+			}
+			return false;
+		},
+		downloadAndUpdateApp(updateUrl) {
+			// 下载并安装新版本APK (需在安卓平台运行)
+			if (plus.os.name === 'Android') {
+				plus.nativeUI.toast('正在下载更新...');
+				const dtask = plus.downloader.createDownload(updateUrl, { filename: '_doc/update/' }, (download, status) => {
+					if (status !== 200) {
+						plus.nativeUI.toast('下载更新失败');
+						return;
+					}
+					const path = download.filename;
+					plus.nativeUI.toast('下载完成，准备安装...');
+					plus.runtime.install(path, {}, () => {
+						plus.nativeUI.toast('更新完成！');
+						plus.runtime.restart();
+					}, (error) => {
+						plus.nativeUI.toast('安装失败');
+						console.error('安装失败: ', error);
+					});
+				});
+				dtask.start();
+			} else {
+				// iOS平台需要跳转到App Store进行更新
+				uni.showModal({
+					title: '提示',
+					content: '请前往App Store更新应用',
+					showCancel: false,
+					confirmText: '知道了',
+					success: () => {
+						// 使用实际App的App Store链接
+						plus.runtime.openURL('‎Connecting to App Store');
+					}
+				});
+			}
+		}
+	},
     globalData: {
         userInfo: null,
         screenSize: function () {
