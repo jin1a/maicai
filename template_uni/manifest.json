@@ -71,6 +71,9 @@
                     "xxhdpi" : "E:/项目资料/卖菜/APP图标白色背景圆弧(1)/144-144圆弧.png",
                     "xxxhdpi" : "E:/项目资料/卖菜/APP图标白色背景圆弧(1)/192-192圆弧.png"
                 }
+            },
+            "splashscreen" : {
+                "useOriginalMsgbox" : true
             }
         }
     },
