@@ -26,15 +26,15 @@
     display: flex;
     height: 100%;
     align-items: center;
-    font-size: 28rpx;
-    font-family: HarmonyOS Sans SC;
-    font-weight: 400;
-    color: #ffffff;
+    font-size: 32rpx;
+    font-family:"黑体", HarmonyOS Sans SC;
+    font-weight: bolder;
+    color: #000;
     transition: all 1s;
 }
 .elder-mode .custom-header-t .address .picker {
     font-size: 32rpx;
-    font-weight: bold;
+    font-weight: bolder;
 }
 .custom-header.active .custom-header-t .title,
 .custom-header.active .custom-header-t .address .picker {

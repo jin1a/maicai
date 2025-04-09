@@ -1,7 +1,6 @@
 .personalInformation {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+   
+    flex-direction: column;    
     overflow: scroll;
     background-color: #fff;
     padding: 0 0 160rpx;
@@ -81,18 +80,15 @@
     transform: scale(0.7);
     transform-origin: right center;
 }
-.submitContainer {
-    position: fixed;
-    left: 0;
-    bottom: 40px;
+.submitContainer {   
     width: 100%;
-    height: 160rpx;
+   
     background-color: RGBA(246, 247, 251, 1);
-    padding: 0 20rpx;
+    padding: 20px 0 20px 0;
 }
 
 .submitContainer .submit {
-    line-height: 80rpx;
+    line-height: 50px;
     background: linear-gradient(-90deg, #61c50d, #78e41e);
     border-radius: 40rpx;
     text-align: center;
@@ -101,18 +97,31 @@
     font-weight: 500;
     color: #f5f5f5;
 }
-.submitContainer2 {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+.submitContainer2 {    
     width: 100%;
-    height: 160rpx;
+    
     background-color: RGBA(246, 247, 251, 1);
-    padding: 0 20rpx;
+    padding:0px 0 20px 0;
 }
 
 .submitContainer2 .submit {
-    line-height: 80rpx;
+    line-height: 50px;
+    background: linear-gradient(-90deg, #61c50d, #78e41e);
+    border-radius: 40rpx;
+    text-align: center;
+    font-size: 30rpx;
+    font-family: HarmonyOS Sans SC;
+    font-weight: 500;
+    color: #f5f5f5;
+}
+.submitContainer3 {   
+    width: 100%;
+   
+    background-color: RGBA(246, 247, 251, 1);
+    padding: 0px 0 20px 0;
+}
+.submitContainer3 .submit {
+    line-height: 50px;
     background: linear-gradient(-90deg, #61c50d, #78e41e);
     border-radius: 40rpx;
     text-align: center;

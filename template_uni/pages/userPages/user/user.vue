@@ -10,7 +10,7 @@
                     <view class="text-box">
                         <view class="text-box-l">
                             <view class="name">{{ userinfo.firm_name }}</view>
-                            <view class="des">{{ userinfo.username }}</view>
+                            <view class="des">{{ userinfo.username.substring(0,4) }}****{{ userinfo.username.substring(8,12) }}</view>
                         </view>
                         <navigator url="/pages/userPages/personalInformation/personalInformation" class="text-box-r" hover-class="none">
                             <text class="iconfont icon-shezhi-xianxing"></text>
@@ -262,15 +262,7 @@ export default {
             });
             return false;
         }
-        let that = this;
-        systemApi
-            .apiName()
-            .then((res) => {
-                that.setData({
-                    list: res.data
-                });
-            })
-            .catch((err) => {});
+        
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -282,7 +274,17 @@ export default {
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        let that = this;
+		let that = this;
+		systemApi
+		    .apiName()
+		    .then((res) => {
+				that.list=res.data
+		        // that.setData({
+		        //     list: res.data
+		        // });
+		    })
+		    .catch((err) => {});
+        
         getUserInfoApi
             .apiName()
             .then((res) => {

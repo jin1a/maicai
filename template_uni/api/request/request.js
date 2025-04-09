@@ -39,12 +39,30 @@ function request(options) {
         header.Authorizations = `${token}`;
     }
     return new Promise((resolve, reject) => {
+		// uni.showModal({
+		//     title: '监听',
+		//     content: `${url}:：${JSON.stringify(header)}::11111`,
+		//     success(res) {
+		        
+		//     }
+		// });
+		
+		console.log(header,url,'url1111')
         uni.request({
             url: BASEURL + url,
             data,
             header,
             method,
             success: (res) => {
+				// uni.showModal({
+				//     title: '监听',
+				//     content: `${JSON.stringify(res)}:：${header}:：${url}::2222`,
+				//     success(res) {
+				        
+				//     }
+				// });
+				console.log(res,'request11')
+				
                 let { statusCode: code } = res;
                 if (code === statusCode.SUCCESS) {
                     if (res.data.code !== 1) {

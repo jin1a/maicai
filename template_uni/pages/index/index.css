@@ -3,7 +3,7 @@
     background-color: RGBA(246, 247, 251, 1);
 }
 .banner swiper {
-    height: 1138rpx;
+    height: 750rpx;
     /* pointer-events: none; */
 }
 .banner swiper-item image {

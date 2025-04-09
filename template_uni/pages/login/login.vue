@@ -271,18 +271,21 @@ export default {
 			        that.setData({
 			            loadModal: false
 			        });
-			        if (res.data.firm_id == 0) {
-			            uni.navigateTo({
-			                url: '/pages/join/join'
-			            });
-			        } else {
-			            uni.switchTab({
-			                url: '/pages/userPages/user/user',
-			                fail: function (e) {
-			                    console.log(e);
-			                }
-			            });
-			        }
+					setTimeout(()=>{
+						if (res.data.firm_id == 0) {
+						    uni.navigateTo({
+						        url: '/pages/join/join'
+						    });
+						} else {
+						    uni.switchTab({
+						        url: '/pages/userPages/user/user',
+						        fail: function (e) {
+						            console.log(e);
+						        }
+						    });
+						}
+					},2000)
+			        
 			    })
 			    .catch((err) => {
 			        console.log(err);

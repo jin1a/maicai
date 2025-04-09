@@ -140,15 +140,15 @@ export default {
         };
     },
     onLoad() {		
-		let isFirst = app.globalData.getStorage('isFirst')
-		if(!isFirst){
-			console.log(999)
-			setTimeout(()=>{
-				uni.navigateTo({
-				    url: '/pages/privacy/privacy'
-				});				
-			},1000)
-		}	
+		// let isFirst = app.globalData.getStorage('isFirst')
+		// if(!isFirst){
+		// 	console.log(999)
+		// 	setTimeout(()=>{
+		// 		uni.navigateTo({
+		// 		    url: '/pages/privacy/privacy'
+		// 		});				
+		// 	},1000)
+		// }	
 		
 	},
     onShow() {		

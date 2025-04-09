@@ -6,6 +6,49 @@ export default {
         return {};
     },
     onLaunch() {
+		uni.getNetworkType({
+		  success: function (res) {
+		    // 获取网络类型
+		    const networkType = res.networkType
+		    if (networkType === 'none') {
+		      // 当前无网络连接，展示无网络页面
+		      uni.redirectTo({
+		        url: '/pages/noNetwork/noNetwork'
+		      })
+		    }
+		  }
+		})
+		uni.onNetworkStatusChange(function (res) {
+		  if (res.isConnected) {
+		    // 网络连接恢复，重新加载应用程序
+		    uni.reLaunch({
+		      url: '/pages/index/index'
+		    })
+		  }
+		})
+		loginApi
+		    .appUdata({})
+		    .then((res) => {
+				const latestVersion = res.data.version_name;
+				if (this.compareVersion(currentVersion, latestVersion)) {
+					// 如果有新版本，则提示用户进行更新
+					uni.showModal({
+						title: '发现新版本',
+						content: res.data.release_notes,
+						confirmText: '立即更新',
+						cancelText: '暂不更新',
+						success: (r) => {
+							if (r.confirm) {
+								this.downloadAndUpdateApp(res.data.download_url);
+							}
+						}
+					});
+				}			        
+		    })
+		    .catch((err) => {					
+		        console.log(err);
+		        
+		    });	
 		this.checkForUpdate();
         // 展示本地存储能力
         const logs = uni.getStorageSync('logs') || [];

@@ -20,4 +20,14 @@ module.exports = {
 	        ignoreToken
 	    });
 	}
+	,
+	loginOut2(data) {
+	    let url = 'api/deregister_account';
+	    let ignoreToken = false;
+	    return request.get({
+	        url,
+	        data,
+	        ignoreToken
+	    });
+	}
 };

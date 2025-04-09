@@ -2,7 +2,7 @@
     "name" : "菜亿家",
     "appid" : "__UNI__60EF941",
     "description" : "",
-    "versionName" : "1.0.0",
+    "versionName" : "2.1.11",
     "versionCode" : "100",
     "transformPx" : false,
     "app-plus" : {
@@ -16,9 +16,7 @@
             "delay" : 0
         },
         "modules" : {
-            "Maps" : {},
-            "Payment" : {},
-            "Share" : {}
+            "Maps" : {}
         },
         "distribute" : {
             "android" : {
@@ -39,10 +37,12 @@
                     "<uses-feature android:name=\"android.hardware.camera\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
                 ],
-                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ]
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ],
+                "targetSdkVersion" : 30
             },
             "ios" : {
-                "dSYMs" : false
+                "dSYMs" : false,
+                "idfa" : false
             },
             "sdkConfigs" : {
                 "maps" : {
@@ -66,11 +66,39 @@
             },
             "icons" : {
                 "android" : {
-                    "hdpi" : "E:/项目资料/卖菜/APP图标白色背景圆弧(1)/72-72圆弧.png",
-                    "xhdpi" : "E:/项目资料/卖菜/APP图标白色背景圆弧(1)/96-96圆弧.png",
-                    "xxhdpi" : "E:/项目资料/卖菜/APP图标白色背景圆弧(1)/144-144圆弧.png",
-                    "xxxhdpi" : "E:/项目资料/卖菜/APP图标白色背景圆弧(1)/192-192圆弧.png"
+                    "hdpi" : "E:/项目资料/卖菜/图标/安卓直角图标png/72-72.png",
+                    "xhdpi" : "E:/项目资料/卖菜/图标/安卓直角图标png/96-96.png",
+                    "xxhdpi" : "E:/项目资料/卖菜/图标/安卓直角图标png/144-144.png",
+                    "xxxhdpi" : "E:/项目资料/卖菜/图标/安卓直角图标png/192-192.png"
+                },
+                "ios" : {
+                    "iphone" : {
+                        "app@2x" : "E:/项目资料/卖菜/图标/IOS直角图标/120-120.png",
+                        "app@3x" : "E:/项目资料/卖菜/图标/IOS直角图标/180-180.png",
+                        "spotlight@2x" : "E:/项目资料/卖菜/图标/IOS直角图标/80-80.png",
+                        "spotlight@3x" : "E:/项目资料/卖菜/图标/IOS直角图标/120-120.png",
+                        "settings@2x" : "E:/项目资料/卖菜/图标/IOS直角图标/58-58.png",
+                        "settings@3x" : "E:/项目资料/卖菜/图标/IOS直角图标/87-87.png",
+                        "notification@2x" : "E:/项目资料/卖菜/图标/IOS直角图标/40-40.png",
+                        "notification@3x" : "E:/项目资料/卖菜/图标/IOS直角图标/60-60.png"
+                    },
+                    "ipad" : {
+                        "app" : "E:/项目资料/卖菜/图标/IOS直角图标/76-76.png",
+                        "app@2x" : "E:/项目资料/卖菜/图标/IOS直角图标/152-152.png",
+                        "proapp@2x" : "E:/项目资料/卖菜/图标/IOS直角图标/167-167.png",
+                        "spotlight" : "E:/项目资料/卖菜/图标/IOS直角图标/40-40.png",
+                        "spotlight@2x" : "E:/项目资料/卖菜/图标/IOS直角图标/80-80.png",
+                        "settings" : "E:/项目资料/卖菜/图标/IOS直角图标/29-29.png",
+                        "settings@2x" : "E:/项目资料/卖菜/图标/IOS直角图标/58-58.png",
+                        "notification" : "E:/项目资料/卖菜/图标/IOS直角图标/20-20.png",
+                        "notification@2x" : "E:/项目资料/卖菜/图标/IOS直角图标/40-40.png"
+                    },
+                    "appstore" : "E:/项目资料/卖菜/图标/安卓直角图标png/1024-1024.png"
                 }
+            },
+            "splashscreen" : {
+                "useOriginalMsgbox" : true,
+                "iosStyle" : "common"
             }
         }
     },

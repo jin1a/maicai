@@ -80,17 +80,21 @@
                     </view>
                 </form>
             </view>
+			<div class="privacy">
+				<text class="link" data-type="user" @tap="openAgreement('user')">《用户协议》</text>				
+				<text class="link" data-type="privacy" @tap="openAgreement('privacy')">《隐私协议》</text>
+			</div>
             <view class="submitContainer">
                 <view class="submit" @tap="saveUserinfo">保存</view>
             </view>
+			
 			<view class="submitContainer2">
 			    <view class="submit" @tap="loginOutFn">退出登录</view>
 			</view>
-			<div class="privacy">
-				<text class="link" data-type="user" @tap="openAgreement('user')">《用户协议》</text>
-				
-				<text class="link" data-type="privacy" @tap="openAgreement('privacy')">《隐私协议》</text>
-			</div>
+			<view class="submitContainer3">
+			    <view class="submit" @tap="loginOutFn2">注销</view>
+			</view>
+			
 		</view>
     </view>
 </template>
@@ -210,6 +214,31 @@ export default {
 					app.globalData.saveStorage('userInfo', null);
 			        uni.showToast({
 			            title: '退出成功',
+			            icon: 'success',
+			            duration: 2000,
+			            complete: function () {
+			                setTimeout(()=>{
+			                	uni.navigateTo({
+			                	    url: '/pages/login/login'
+			                	});
+			                },2000)
+			            }
+			        });
+			    })
+			    .catch((err) => {
+					console.log(err,'err')
+				});
+		},
+		// 注销
+		loginOutFn2(){
+			saveUserinfoApi
+			    .loginOut2()
+			    .then((res) => {
+					app.globalData.saveStorage('isLogin', false);
+					app.globalData.saveStorage('token', '');
+					app.globalData.saveStorage('userInfo', null);
+			        uni.showToast({
+			            title: '注销成功',
 			            icon: 'success',
 			            duration: 2000,
 			            complete: function () {
