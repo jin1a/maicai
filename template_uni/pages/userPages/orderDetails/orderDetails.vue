@@ -109,10 +109,10 @@
                     <block v-if="currentId == 5">
                         <view class="item">
                             <view class="item-l">支付方式</view>
-                            <view class="item-r">在线支付</view>
+                            <!-- <view class="item-r">在线支付</view>
                             <radio-group @change="radioChange">
                                 <radio value="1" :checked="check == 1" />
-                            </radio-group>
+                            </radio-group> -->
                         </view>
                         <view class="item">
                             <view class="item-l"></view>
@@ -164,7 +164,7 @@ export default {
                 wallet: '',
                 monthlyBalance: ''
             },
-            check: 1,
+            check: 2,
 			sweixin:null,
 			kk:0,
         };
@@ -293,7 +293,7 @@ export default {
 				this.sweixin.launchMiniProgram({
 				    id: 'gh_90eb4b1456f4',
 				    path: `pages/userPages/payOrder/payOrder?orderId=${this.orderId}&token=${app.globalData.getStorage('token')}`,
-				    type: 2
+				    type: 0
 				},
 				(res)=>{
 					console.log(res,'res')
